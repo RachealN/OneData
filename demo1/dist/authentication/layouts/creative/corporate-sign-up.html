@@ -79,21 +79,128 @@
 				</div>
 			</div>
 
-
 			<div class="d-flex flex-column-fluid justify-content-center p-10 bg-gray-100">
 				<div class="d-flex flex-center flex-column flex-column-fluid rounded-4">
-					<div class="card h-800px w-900px">
+					<div class="card w-lg-400px w-xl-900px">
 						<div class="card-body mx-20">
-							<form class="form" novalidate="novalidate" id="kt_sign_up_form" data-kt-redirect-url="#"
-								action="#">
+							<form class="form-100" novalidate="novalidate" id="kt_modal_add_customer_form"
+								data-kt-redirect-url="#" action="#">
 								<div class="current" data-kt-stepper-element="content">
 									<div class="w-100">
-										<div class="text-center mb-12 mt-15">
+										<div class="text-center mb-4 mt-15">
 											<h2 class="fw-bold">Corporate Account</h2>
 											<div class="text-gray-500 fw fs-6">Enter your details below to sign up for a
 												One
 												Data
 												corporate account</div>
+										</div>
+
+										<div class="modal-body py-4 px-lg-17">
+											<!--begin::Scroll-->
+											<div class="scroll-y me-n7 pe-7" id="kt_modal_add_customer_scroll"
+												data-kt-scroll="true"
+												data-kt-scroll-activate="{default: false, lg: true}"
+												data-kt-scroll-max-height="auto"
+												data-kt-scroll-dependencies="#kt_modal_add_customer_header"
+												data-kt-scroll-wrappers="#kt_modal_add_customer_scroll"
+												data-kt-scroll-offset="300px">
+												<div class="fv-row mb-7">
+													<label class="required fs-6 fw-semibold mb-2">Organization</label>
+													<input type="text" class="form-control"
+														placeholder="Registered name of the organization" name=""
+														value="" />
+												</div>
+
+												<div class="fv-row mb-7">
+													<label class="required fs-6 fw-semibold mb-2">Organization short
+														name</label>
+													<input type="text" class="form-control"
+														placeholder="Orgnaization short name" name="" value="" />
+												</div>
+
+												<div class="fw-bold fs-3   mb-7 mt-15"
+													 href="#" role="button"
+													aria-expanded="false" aria-controls="kt_customer_view_details">
+													Contact
+													Information
+													
+												</div>
+
+												<div class="fv-row mb-7">
+													<label class="required fs-6 fw-semibold mb-2">Address</label>
+													<input type="text" class="form-control"
+														placeholder="Contact Address" name="" value="" />
+												</div>
+
+												<div class="row g-9 mb-7">
+													<!--begin::Col-->
+													<div class="col-md-6 fv-row">
+														<!--begin::Label-->
+														<label class="required fs-6 fw-semibold mb-2">Country</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<select class="form-select" data-kt-select2="true"
+															data-placeholder="Select Country" data-dropdown-parent=""
+															data-allow-clear="true">
+															<option></option>
+															<option value="1">Country1</option>
+															<option value="2">Country2</option>
+															<option value="2">Country3</option>
+															<option value="2">Country4</option>
+														</select>
+														<!--end::Input-->
+													</div>
+													<!--end::Col-->
+													<!--begin::Col-->
+													<div class="col-md-6 fv-row">
+														<!--begin::Label-->
+														<label class="required fs-6 fw-semibold mb-2">Telephone</label>
+														<!--end::Label-->
+														<!--begin::Input-->
+														<input type="tel" class="form-control" placeholder="" name=""
+															value="" />
+														<!--end::Input-->
+													</div>
+													<!--end::Col-->
+												</div>
+
+
+
+												<div class="fv-row mb-7">
+													<label class="fs-6 fw-semibold mb-2">
+														<span class="required">Email</span>
+														<span class="ms-1" data-bs-toggle="tooltip"
+															title="Email address must be active">
+															<i class="ki-duotone ki-information fs-7">
+																<span class="path1"></span>
+																<span class="path2"></span>
+																<span class="path3"></span>
+															</i>
+														</span>
+													</label>
+
+													<input type="email" class="form-control" placeholder="Email"
+														name="email" value="" />
+												</div>
+												<div class="fv-row mb-7">
+													<label class="fs-6 fw-semibold mb-2">Website</label>
+													<input type="text" class="form-control" placeholder="website"
+														name="" value="" />
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="" data-kt-stepper-element="content">
+									<div class="w-100">
+										<div class="text-center mb-12 mt-15">
+											<h2 class="fw-bold">Corporate Account Managers</h2>
+											<div class="text-gray-500 fw fs-6">You can add up to 3 people that will
+												manage
+												your One
+												Data corporate account</div>
 										</div>
 
 										<div class="modal-body py-10 px-lg-17">
@@ -106,118 +213,14 @@
 												data-kt-scroll-wrappers="#kt_modal_add_customer_scroll"
 												data-kt-scroll-offset="300px">
 												<div class="fv-row mb-7">
-													<label class="required fs-6 fw-semibold mb-2">Organization</label>
-													<input type="text" class="form-control"
-														placeholder="Registered name of organization" name=""
-														value="" />
-												</div>
-												<div class="fv-row mb-15">
-													<label class="required fs-6 fw-semibold mb-2">Organization short
-														name</label>
-													<input type="text" class="form-control"
-														placeholder="Organization short name" name="" value="" />
-												</div>
-
-												<div class="fw-bold fs-3 rotate collapsible mb-7"
-													data-bs-toggle="collapse" href="#" role="button"
-													aria-expanded="false" aria-controls="kt_customer_view_details">
-													Contact
-													Information
-													<span class="ms-2 rotate-180">
-														<i class="ki-duotone ki-down fs-3"></i>
-													</span>
-												</div>
-												<div id="kt_modal_add_customer_billing_info" class="collapse show">
-													<!--begin::Input group-->
-													<div class="d-flex flex-column mb-7 fv-row">
-														<!--begin::Label-->
-														<label class="required fs-6 fw-semibold mb-2">Address
-														</label>
-														<input class="form-control " placeholder="Contact Address"
-															name="" value="" />
-													</div>
-
-													<div class="row g-9 mb-7">
-														<div class="col-md-6 fv-row">
-															<label class="required fs-6 fw-semibold mb-2">
-																Country</label>
-															<select class="form-select" data-kt-select2="true"
-																data-placeholder="Select Country"
-																data-dropdown-parent="" data-allow-clear="true">
-																<option></option>
-																<option value="1">Country1</option>
-																<option value="2">Country2</option>
-																<option value="2">Country3</option>
-																<option value="2">Country4</option>
-															</select>
-														</div>
-														<div class="col-md-6 fv-row">
-															<label class="required fs-6 fw-semibold mb-2">Phone
-															</label>
-															<input class="form-control" placeholder="" name="Telephone"
-																value="" />
-														</div>
-
-
-														<div class="fv-row">
-															<label class="fs-6 fw-semibold mb-2">
-																<span class="required">Email</span>
-																<span class="ms-1" data-bs-toggle="tooltip"
-																	title="Email address must be active">
-																	<i class="ki-duotone ki-information fs-7">
-																		<span class="path1"></span>
-																		<span class="path2"></span>
-																		<span class="path3"></span>
-																	</i>
-																</span>
-															</label>
-
-															<input type="email" class="form-control" placeholder="Email"
-																name="email" value="" />
-														</div>
-
-														<div class="d-flex flex-column fv-row ">
-															<label
-																class="fs-6 fw-semibold mb-2">Website</label>
-															<input class="form-control" placeholder="Website"
-																name="website" value="" />
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="" data-kt-stepper-element="content">
-									<div class="w-100 mt-15">
-										<div class="text-center">
-											<h2 class="text-dark fw-bolder mb-2">Corporate Account Managers</h2>
-											<div class="text-gray-500 fw fs-6">You can add up to 3 people that will
-												manage
-												your One
-												Data corporate account</div>
-										</div>
-
-										<div class="modal-body py-10 px-lg-17 mb-15">
-											<!--begin::Scroll-->
-											<div class="scroll-y me-n7 pe-7" id="kt_modal_add_customer_scroll"
-												data-kt-scroll="true"
-												data-kt-scroll-activate="{default: false, lg: true}"
-												data-kt-scroll-max-height="auto"
-												data-kt-scroll-dependencies="#kt_modal_add_customer_header"
-												data-kt-scroll-wrappers="#kt_modal_add_customer_scroll"
-												data-kt-scroll-offset="300px">
-												<div class="fv-row mb-7">
 													<label class="required fs-6 fw-semibold mb-2">Name</label>
-													<input type="text" class="form-control " placeholder="Fullname"
-														name="name" value="" 
-														/>
+													<input type="text" class="form-control" placeholder="Fullname"
+														name="" value="" />
 												</div>
 
 												<div class="fv-row mb-7">
 													<label class="required fs-6 fw-semibold mb-2">Telephone</label>
-													<input type="tel" class="form-control "
+													<input type="text" class="form-control"
 														placeholder="Telephone number" name="" value="" />
 												</div>
 
@@ -237,9 +240,12 @@
 													<input type="email" class="form-control" placeholder="Email Address"
 														name="email" value="" />
 												</div>
-												<a href="#" class="btn btn-secondary" data-bs-toggle="modal"
+
+												<a href="#" class="btn btn-light-primary" data-bs-toggle="modal"
 													data-bs-target="#kt_modal_add_customer">
 													<i class="ki-duotone ki-plus fs-2"></i>Add a Manager</a>
+
+
 											</div>
 										</div>
 									</div>
@@ -248,21 +254,16 @@
 								<div class="" data-kt-stepper-element="content">
 									<div class="w-100 mt-15">
 										<div class="modal-body py-10 px-lg-17">
-
 											<div class="card card-flush py-4">
 												<div class="card-header">
 													<div class="">
-														<h4 class="text-dark fw-semibold">Terms and Conditions</h4>
-														<div class="text-gray-500 fw fs-6">Enter your details below to
-															sign
-															up
-															for a One Data
-															personal account</div>
+														<h2 class="text-dark fw-semibold">Terms and Conditions</h2>
+														<div class="text-gray-500 fw fs-6">Please read and accept the terms and conditions of One Data inorder to sign-up</div>
 													</div>
 												</div>
-												<div class="card-body pt-0">
+												<div class="card-body pt-12 text-wrap" style="width: 40rem;">
 													<div class="separator"></div>
-													<div class="hover-scroll h-400px px-5">
+													<div class="hover-scroll h-400px px-5 ">
 														<p class="text-gray-600">1.1 Contract</p>
 														<div class="text-gray-600">
 															Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -424,7 +425,7 @@
 									</div>
 								</div>
 
-								<div class="modal-body py-2 px-lg-17">
+								<div class="modal-body py-2 px-lg-17 mb-12">
 									<div class="d-flex flex-stack">
 										<div class="mr-2">
 											<button type="button" class="btn btn-lg btn-light-primary me-3"
@@ -455,6 +456,8 @@
 										</div>
 									</div>
 								</div>
+
+
 							</form>
 						</div>
 					</div>
