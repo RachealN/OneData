@@ -23,318 +23,495 @@
 	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body id="kt_body" class="app-blank">
+<body id="kt_app_body" data-kt-app-layout="dark-sidebar" data-kt-app-header-fixed="true"
+	data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-hoverable="true"
+	data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true"
+	data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
+	<!--begin::Theme mode setup on page load-->
 	<script>var defaultThemeMode = "light"; var themeMode; if (document.documentElement) { if (document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if (localStorage.getItem("data-bs-theme") !== null) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }</script>
-	<div class="d-flex flex-column flex-root" id="kt_app_root">
-		<div class="d-flex flex-column flex-lg-row flex-column-fluid stepper stepper-pills stepper-column stepper-multistep"
-			id="kt_create_account_stepper">
-			<div class="d-flex flex-column flex-lg-row-auto w-lg-350px w-xl-500px">
-				<div
-					class="d-flex flex-column position-lg-fixed top-0 bottom-0 w-lg-350px w-xl-500px scroll-y bgi-size-cover bgi-position-center bg-gray-100">
-					<div class="d-flex flex-center py-10 py-lg-20 mt-lg-20">
-						<a href="#">
-							<img alt="Logo" src="assets/media/logos/onedata_logo.png" class="h-50px" />
-						</a>
-					</div>
-					<div class="separator border-gray-300 mx-12"></div>
-					<div class="d-flex flex-row-fluid justify-content-center p-10">
-						<div class="stepper-nav">
-							<div class="stepper-item current" data-kt-stepper-element="nav">
-								<div class="stepper-wrapper">
-									<div class="stepper-icon rounded-3">
-										<i class="ki-duotone ki-check fs-2 stepper-check"></i>
-										<span class="stepper-number text-gray-900">1</span>
-									</div>
-									<div class="stepper-label">
-										<h1 class="fw-bold fs-2">Personal Details</h1>
-									</div>
-								</div>
-								<div class="stepper-line h-40px"></div>
-							</div>
+	<!--end::Theme mode setup on page load-->
+	<!--begin::App-->
+	<div class="d-flex flex-column flex-root app-root" id="kt_app_root">
+		<!--begin::Page-->
+		<div class="app-page flex-column flex-column-fluid" id="kt_app_page">
+			<div class="">
 
-							<div class="stepper-item" data-kt-stepper-element="nav">
-								<div class="stepper-wrapper">
-									<div class="stepper-icon">
-										<i class="ki-duotone ki-check fs-2 stepper-check"></i>
-										<span class="stepper-number text-gray-900">2</span>
-									</div>
-									<div class="stepper-label">
-										<h3 class="fw-bold fs-2 text-gray-600">Terms and Conditions</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
-			<div class="d-flex flex-column-fluid justify-content-center p-10 bg-gray-100">
-				<div class="d-flex flex-center flex-column flex-column-fluid rounded-4">
-					<div class="card w-lg-400px w-xl-900px">
-						<div class="card-body mx-20">
-							<form class="form-100" novalidate="novalidate" id="kt_modal_add_customer_form"
-								data-kt-redirect-url="#" action="#">
-								<div class="current" data-kt-stepper-element="content">
-									<div class="w-100">
-										<div class="text-center mb-4 mt-15">
-											<h2 class="fw-bold">Personal Account</h2>
-											<div class="text-gray-500 fw fs-6">Enter your details below to sign up for a
-												One Data
-												personal account</div>
+
+
+				<!--begin::Main-->
+				<div class="app-main flex-column flex-row-fluid" id="kt_app_main">
+					<!--begin::Content wrapper-->
+					<div class="d-flex flex-column flex-column-fluid">
+
+
+						<!--begin::Content-->
+						<div id="kt_app_content" class="app-content flex-column-fluid">
+							<!--begin::Content container-->
+							<div id="kt_app_content_container" class="app-container container-xxl">
+								<!--begin::Stepper-->
+								<div class="stepper stepper-pills stepper-column d-flex flex-column flex-xl-row flex-row-fluid gap-10"
+									id="kt_create_account_stepper">
+									<!--begin::Aside-->
+
+									<div
+										class="card d-flex justify-content-center justify-content-xl-start flex-row-auto w-100 w-xl-300px w-xxl-400px">
+										<!--begin::Wrapper-->
+										<div class="card-body px-6 px-lg-10 px-xxl-15 py-20">
+											<div class="d-flex flex-start pb-8 pt-20">
+												<a href="#">
+													<img alt="Logo" src="assets/media/logos/onedata_logo.png"
+														class="h-40px" />
+												</a>
+											</div>
+											<div class="separator border-gray-300 mb-8"></div>
+
+											<!--begin::Nav-->
+											<div class="stepper-nav">
+												<div class="stepper-item current" data-kt-stepper-element="nav">
+													<div class="stepper-wrapper">
+														<div class="stepper-icon rounded-3">
+															<i class="ki-duotone ki-check fs-2 stepper-check"></i>
+															<span class="stepper-number text-gray-900">1</span>
+														</div>
+														<div class="stepper-label">
+															<h2 class="stepper-title fs-2">
+																Personal Details</h2>
+														</div>
+													</div>
+													<div class="stepper-line h-40px"></div>
+												</div>
+
+												<div class="stepper-item" data-kt-stepper-element="nav">
+													<div class="stepper-wrapper">
+														<div class="stepper-icon">
+															<i class="ki-duotone ki-check fs-2 stepper-check"></i>
+															<span class="stepper-number text-gray-900">2</span>
+														</div>
+														<div class="stepper-label">
+															<h2 class="stepper-title fs-2">
+																Terms and Conditions</h2>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!--end::Nav-->
 										</div>
+										<!--end::Wrapper-->
+									</div>
+									<!--begin::Aside-->
 
-										<div class="modal-body py-10 px-lg-17">
-											<!--begin::Scroll-->
-											<div class="scroll-y me-n7 pe-7" id="kt_modal_add_customer_scroll"
-												data-kt-scroll="true"
-												data-kt-scroll-activate="{default: false, lg: true}"
-												data-kt-scroll-max-height="auto"
-												data-kt-scroll-dependencies="#kt_modal_add_customer_header"
-												data-kt-scroll-wrappers="#kt_modal_add_customer_scroll"
-												data-kt-scroll-offset="300px">
-												<div class="fv-row mb-7">
-													<label class="required fs-6 fw-semibold mb-2">Name</label>
-													<input type="text" class="form-control" placeholder="Fullname"
-														name="" value="" />
+
+									<!--begin::Content-->
+									<div class="card d-flex flex-row-fluid flex-center">
+										<!--begin::Form-->
+										<form class="card-body py-20 w-100 mw-xl-700px px-9" novalidate="novalidate"
+											id="kt_create_account_form">
+											<!--begin::Step 1-->
+											<div class="current" data-kt-stepper-element="content">
+												<!--begin::Wrapper-->
+												<div class="w-100 px-8">
+													<!--begin::Heading-->
+													<div class=" text-center pb-10 pb-lg-15">
+														<!--begin::Title-->
+
+
+														<h1 class="fw-bold align-items-center text-dark"> Personal
+															Account </h1>
+
+														<!--end::Title-->
+														<!--begin::Notice-->
+														<div class="text-muted fw-semibold fs-6">Enter your details
+															below to sign up for OneData personal account
+															<a href="#" class="link-primary fw-bold"></a>.
+														</div>
+														<!--end::Notice-->
+													</div>
+													<!--end::Heading-->
+													<!--begin::Input group-->
+													<div class="fv-row mb-7">
+														<label class="required fs-6 fw-semibold mb-2">Name</label>
+														<input type="text" class="form-control" placeholder="Fullname"
+															name="" value="" />
+													</div>
+
+													<div class="fv-row mb-7">
+														<label class="required fs-6 fw-semibold mb-2">Country</label>
+														<select class="form-select" data-kt-select2="true"
+															data-placeholder="Select Country" data-dropdown-parent=""
+															data-allow-clear="true">
+															<option></option>
+															<option value="1">Country1</option>
+															<option value="2">Country2</option>
+															<option value="2">Country3</option>
+															<option value="2">Country4</option>
+														</select>
+													</div>
+
+													<div class="fv-row mb-7">
+														<label class="required fs-6 fw-semibold mb-2">TelePhone</label>
+														<input type="tel" class="form-control"
+															placeholder="Telephone number" name="" value="" />
+													</div>
+
+													<div class="fv-row mb-7">
+														<label class="fs-6 fw-semibold mb-2">
+															<span class="required">Email</span>
+															<span class="ms-1" data-bs-toggle="tooltip"
+																title="Email address must be active">
+																<i class="ki-duotone ki-information fs-7">
+																	<span class="path1"></span>
+																	<span class="path2"></span>
+																	<span class="path3"></span>
+																</i>
+															</span>
+														</label>
+
+														<input type="email" class="form-control" placeholder="Email"
+															name="email" value="" />
+													</div>
+
+
+													<div class="fv-row mb-8" data-kt-password-meter="true">
+														<label class="required fs-6 fw-semibold mb-2">Password</label>
+														<div class="mb-1">
+															<div class="position-relative mb-3">
+																<input class="form-control bg-transparent"
+																	type="password" placeholder="Password"
+																	name="password" autocomplete="off" />
+																<span
+																	class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2"
+																	data-kt-password-meter-control="visibility">
+																	<i class="ki-duotone ki-eye-slash fs-2"></i>
+																	<i class="ki-duotone ki-eye fs-2 d-none"></i>
+																</span>
+															</div>
+															<div class="d-flex align-items-center mb-3"
+																data-kt-password-meter-control="highlight">
+																<div
+																	class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2">
+																</div>
+																<div
+																	class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2">
+																</div>
+																<div
+																	class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2">
+																</div>
+																<div
+																	class="flex-grow-1 bg-secondary bg-active-success rounded h-5px">
+																</div>
+															</div>
+														</div>
+														<div class="text-muted">Use 8 or more characters with a mix of
+															letters, numbers &
+															symbols.</div>
+													</div>
+
+													<div class="fv-row mb-7">
+														<label class="required fs-6 fw-semibold mb-2">Confirm
+															Password</label>
+														<input type="password" class="form-control"
+															placeholder="Confirm Password" name="" value="" />
+													</div>
+
+													<div class="text-gray-600 text-center fw-semibold fs-6 mt-4 mb-12">
+														Already member?
+														<a href="#" class="link-primary fw-semibold">Sign in</a>
+													</div>
+
+													<!--end::Input group-->
 												</div>
+												<!--end::Wrapper-->
+											</div>
+											<!--end::Step 1-->
 
-												<div class="fv-row mb-7">
-													<label class="required fs-6 fw-semibold mb-2">Country</label>
-													<select class="form-select" data-kt-select2="true"
-														data-placeholder="Select Country" data-dropdown-parent=""
-														data-allow-clear="true">
-														<option></option>
-														<option value="1">Country1</option>
-														<option value="2">Country2</option>
-														<option value="2">Country3</option>
-														<option value="2">Country4</option>
-													</select>
+											<!--begin::Step 3-->
+											<div data-kt-stepper-element="content">
+												<!--begin::Wrapper-->
+												<div class="w-100">
+													<!--begin::Heading-->
+													<div class=" text-center pb-10 pb-lg-12">
+														<!--begin::Title-->
+														<h1 class="fw-bold text-dark">Terms and Conditions</h1>
+														<!--end::Title-->
+														<!--begin::Notice-->
+														<div class="text-muted fw-semibold fs-6">Please read and accept
+															the terms and conditions of One Data in order to sign-up
+															<a href="#" class="link-primary fw-bold"></a>.
+														</div>
+														<!--end::Notice-->
+													</div>
+													<!--end::Heading-->
+													<div class="card-body pt-12 text-wrap" style="width: 40rem;">
+														<div class="separator"></div>
+														<div class="hover-scroll h-400px px-5 ">
+															<p class="text-gray-600">1.1 Contract</p>
+															<div class="text-gray-600">
+																Lorem ipsum dolor sit amet consectetur adipisicing elit.
+																Maxime
+																mollitia,
+																molestiae quas vel sint commodi repudiandae consequuntur
+																voluptatum
+																laborum
+																numquam blanditiis harum quisquam eius sed odit fugiat
+																iusto
+																fuga
+																praesentium
+																optio, eaque rerum! Provident similique accusantium nemo
+																autem.
+																Veritatis
+																obcaecati tenetur iure eius earum ut molestias
+																architecto
+																voluptate
+																aliquam
+																nihil, eveniet aliquid culpa officia aut! Impedit sit
+																sunt
+																quaerat,
+																odit,
+																tenetur error, harum nesciunt ipsum debitis quas
+																aliquid.
+																Reprehenderit,
+																quia.
+															</div>
+															<p class="text-gray-600 mt-4">1.2 Services</p>
+															<div class="text-gray-600">
+																Lorem ipsum dolor sit amet consectetur adipisicing elit.
+																Maxime
+																mollitia,
+																molestiae quas vel sint commodi repudiandae consequuntur
+																voluptatum
+																laborum
+																numquam blanditiis harum quisquam eius sed odit fugiat
+																iusto
+																fuga
+																praesentium
+																optio, eaque rerum! Provident similique accusantium nemo
+																autem.
+																Veritatis
+																obcaecati tenetur iure eius earum ut molestias
+																architecto
+																voluptate
+																aliquam
+																nihil, eveniet aliquid culpa officia aut! Impedit sit
+																sunt
+																quaerat,
+																odit,
+																tenetur error, harum nesciunt ipsum debitis quas
+																aliquid.
+																Reprehenderit,
+																quia.
+															</div>
+
+															<p class="text-gray-600 mt-4">1.2 Services</p>
+															<div class="text-gray-600">
+																Lorem ipsum dolor sit amet consectetur adipisicing elit.
+																Maxime
+																mollitia,
+																molestiae quas vel sint commodi repudiandae consequuntur
+																voluptatum
+																laborum
+																numquam blanditiis harum quisquam eius sed odit fugiat
+																iusto
+																fuga
+																praesentium
+																optio, eaque rerum! Provident similique accusantium nemo
+																autem.
+																Veritatis
+																obcaecati tenetur iure eius earum ut molestias
+																architecto
+																voluptate
+																aliquam
+																nihil, eveniet aliquid culpa officia aut! Impedit sit
+																sunt
+																quaerat,
+																odit,
+																tenetur error, harum nesciunt ipsum debitis quas
+																aliquid.
+																Reprehenderit,
+																quia.
+															</div>
+
+														</div>
+													</div>
+
+													<div class="d-flex fv-row ">
+														<div class="form-check form-check-custom form-check-solid">
+															<input class="form-check-input me-3" type="checkbox"
+																value="0" id="kt_ecommerce_add_category_automation_0" />
+															<label class="form-check form-check-custom  me-5">
+																<div class="fw-semibold text-gray-800">I accept the One
+																	Data
+																	Terms
+																	and
+																	Conditions</div>
+															</label>
+														</div>
+													</div>
 												</div>
+												<!--end::Wrapper-->
+											</div>
+											<!--end::Step 3-->
 
-												<div class="fv-row mb-7">
-													<label class="required fs-6 fw-semibold mb-2">TelePhone</label>
-													<input type="tel" class="form-control"
-														placeholder="Telephone number" name="" value="" />
+											<!--end::Step 5-->
+											<!--begin::Actions-->
+											<div class="d-flex flex-stack pt-10 px-8">
+												<!--begin::Wrapper-->
+												<div class="mr-2">
+													<button type="button" class="btn btn-lg btn-light-primary me-3"
+														data-kt-stepper-action="previous">
+														<i class="ki-duotone ki-arrow-left fs-4 me-1">
+															<span class="path1"></span>
+															<span class="path2"></span>
+														</i>Previous</button>
 												</div>
-
-												<div class="fv-row mb-7">
-													<label class="fs-6 fw-semibold mb-2">
-														<span class="required">Email</span>
-														<span class="ms-1" data-bs-toggle="tooltip"
-															title="Email address must be active">
-															<i class="ki-duotone ki-information fs-7">
+												<!--end::Wrapper-->
+												<!--begin::Wrapper-->
+												<div>
+													<button type="button" class="btn btn-lg btn-primary me-3"
+														data-kt-stepper-action="submit">
+														<span class="indicator-label">Submit
+															<i class="ki-duotone ki-arrow-right fs-3 ms-2 me-0">
 																<span class="path1"></span>
 																<span class="path2"></span>
-																<span class="path3"></span>
-															</i>
-														</span>
-													</label>
-
-													<input type="email" class="form-control" placeholder="Email"
-														name="email" value="" />
-												</div>
-
-												<div class="fv-row mb-8" data-kt-password-meter="true">
-													<label class="required fs-6 fw-semibold mb-2">Password</label>
-													<div class="mb-1">
-														<div class="position-relative mb-3">
-															<input class="form-control bg-transparent" type="password"
-																placeholder="Password" name="password"
-																autocomplete="off" />
+															</i></span>
+														<span class="indicator-progress">Please wait...
 															<span
-																class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2"
-																data-kt-password-meter-control="visibility">
-																<i class="ki-duotone ki-eye-slash fs-2"></i>
-																<i class="ki-duotone ki-eye fs-2 d-none"></i>
-															</span>
-														</div>
-														<div class="d-flex align-items-center mb-3"
-															data-kt-password-meter-control="highlight">
-															<div
-																class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2">
-															</div>
-															<div
-																class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2">
-															</div>
-															<div
-																class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2">
-															</div>
-															<div
-																class="flex-grow-1 bg-secondary bg-active-success rounded h-5px">
-															</div>
-														</div>
-													</div>
-													<div class="text-muted">Use 8 or more characters with a mix of
-														letters, numbers &
-														symbols.</div>
+																class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+													</button>
+													<button type="button" class="btn btn-lg btn-primary"
+														data-kt-stepper-action="next">Proceed
+														<i class="ki-duotone ki-arrow-right fs-4 ms-1 me-0">
+															<span class="path1"></span>
+															<span class="path2"></span>
+														</i></button>
 												</div>
-
-
-												<div class="fv-row mb-7">
-													<label class="required fs-6 fw-semibold mb-2">Confirm
-														Password</label>
-													<input type="password" class="form-control"
-														placeholder="Confirm Password" name="" value="" />
-												</div>
-
+												<!--end::Wrapper-->
 											</div>
-										</div>
-									</div>
-								</div>
 
-								<div class="" data-kt-stepper-element="content">
-									<div class="w-100 mt-15">
-										<div class="modal-body py-10 px-lg-17">
-											<div class="card card-flush py-4">
-												<div class="card-header">
-													<div class="">
-														<h2 class="text-dark fw-bold">Terms and Conditions</h2>
-														<div class="text-gray-500 fw fs-6">Please read and accept the
-															terms and conditions of One Data inorder to sign-up</div>
-													</div>
-												</div>
-												<div class="card-body pt-12 text-wrap" style="width: 40rem;">
-													<div class="separator"></div>
-													<div class="hover-scroll h-400px px-5">
-														<p class="text-gray-600">1.1 Contract</p>
-														<div class="text-gray-600">
-															Lorem ipsum dolor sit amet consectetur adipisicing elit.
-															Maxime
-															mollitia,
-															molestiae quas vel sint commodi repudiandae consequuntur
-															voluptatum
-															laborum
-															numquam blanditiis harum quisquam eius sed odit fugiat iusto
-															fuga
-															praesentium
-															optio, eaque rerum! Provident similique accusantium nemo
-															autem.
-															Veritatis
-															obcaecati tenetur iure eius earum ut molestias architecto
-															voluptate
-															aliquam
-															nihil, eveniet aliquid culpa officia aut! Impedit sit sunt
-															quaerat,
-															odit,
-															tenetur error, harum nesciunt ipsum debitis quas aliquid.
-															Reprehenderit,
-															quia.
-														</div>
-														<p class="text-gray-600 mt-4">1.2 Services</p>
-														<div class="text-gray-600">
-															Lorem ipsum dolor sit amet consectetur adipisicing elit.
-															Maxime
-															mollitia,
-															molestiae quas vel sint commodi repudiandae consequuntur
-															voluptatum
-															laborum
-															numquam blanditiis harum quisquam eius sed odit fugiat iusto
-															fuga
-															praesentium
-															optio, eaque rerum! Provident similique accusantium nemo
-															autem.
-															Veritatis
-															obcaecati tenetur iure eius earum ut molestias architecto
-															voluptate
-															aliquam
-															nihil, eveniet aliquid culpa officia aut! Impedit sit sunt
-															quaerat,
-															odit,
-															tenetur error, harum nesciunt ipsum debitis quas aliquid.
-															Reprehenderit,
-															quia.
-														</div>
+											<div class="modal fade" id="kt_modal_add_customer" tabindex="-1"
+												aria-hidden="true">
+												<div class="modal-dialog modal-dialog-centered mw-650px">
+													<div class="modal-content">
+														<form class="form" action="#" id="kt_modal_add_customer_form"
+															data-kt-redirect="#">
+															<div class="modal-header" id="kt_modal_add_customer_header">
+																<h2 class="fw-bold">Add a Manager</h2>
+																<div id="kt_modal_add_customer_close"
+																	class="btn btn-icon btn-sm btn-active-icon-primary">
+																	<i class="ki-duotone ki-cross fs-1">
+																		<span class="path1"></span>
+																		<span class="path2"></span>
+																	</i>
+																</div>
+															</div>
+															<div class="modal-body py-10 px-lg-17">
+																<div class="me-n7 pe-7">
+																	<div class="fv-row mb-7">
+																		<label
+																			class="required fs-6 fw-semibold mb-2">Name</label>
+																		<input type="text" class="form-control"
+																			placeholder="" name="name"
+																			value="Fullname" />
+																	</div>
 
-														<p class="text-gray-600 mt-4">1.2 Services</p>
-														<div class="text-gray-600">
-															Lorem ipsum dolor sit amet consectetur adipisicing elit.
-															Maxime
-															mollitia,
-															molestiae quas vel sint commodi repudiandae consequuntur
-															voluptatum
-															laborum
-															numquam blanditiis harum quisquam eius sed odit fugiat iusto
-															fuga
-															praesentium
-															optio, eaque rerum! Provident similique accusantium nemo
-															autem.
-															Veritatis
-															obcaecati tenetur iure eius earum ut molestias architecto
-															voluptate
-															aliquam
-															nihil, eveniet aliquid culpa officia aut! Impedit sit sunt
-															quaerat,
-															odit,
-															tenetur error, harum nesciunt ipsum debitis quas aliquid.
-															Reprehenderit,
-															quia.
-														</div>
+																	<div class="fv-row mb-7">
+																		<label
+																			class="required fs-6 fw-semibold mb-2">Phone</label>
+																		<input type="tel" class="form-control"
+																			placeholder="" name="telephone"
+																			value="Telephone" />
+																	</div>
 
+																	<div class="fv-row mb-7">
+																		<label class="fs-6 fw-semibold mb-2">
+																			<span class="required">Email</span>
+																			<span class="ms-1" data-bs-toggle="tooltip"
+																				title="Email address must be active">
+																				<i
+																					class="ki-duotone ki-information fs-7">
+																					<span class="path1"></span>
+																					<span class="path2"></span>
+																					<span class="path3"></span>
+																				</i>
+																			</span>
+																		</label>
+																		<input type="email" class="form-control"
+																			placeholder="" name="email"
+																			value="Email Address" />
+																	</div>
+																</div>
+															</div>
+															<div class="modal-footer flex-center">
+																<button type="reset" id="kt_modal_add_customer_cancel"
+																	class="btn btn-light me-3">Cancel</button>
+																<button type="submit" id="kt_modal_add_customer_submit"
+																	class="btn btn-primary">
+																	<span class="indicator-label">Add </span>
+																	<span class="indicator-progress">Please wait...
+																		<span
+																			class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+																</button>
+															</div>
+														</form>
 													</div>
 												</div>
 											</div>
-											<div class="d-flex fv-row ">
-												<div class="form-check form-check-custom form-check-solid">
-													<input class="form-check-input me-3" type="checkbox" value="0"
-														id="kt_ecommerce_add_category_automation_0" />
-													<label class="form-check form-check-custom  me-5">
-														<div class="fw-semibold text-gray-800">I accept the One Data
-															Terms
-															and
-															Conditions</div>
-													</label>
-												</div>
-											</div>
-										</div>
+											<!--end::Actions-->
+										</form>
+										<!--end::Form-->
 									</div>
+									<!--end::Content-->
 								</div>
-
-								<div class="modal-body py-2 px-lg-17">
-									<div class="d-flex flex-stack">
-										<div class="mr-2">
-											<button type="button" class="btn btn-lg btn-light-primary me-3"
-												data-kt-stepper-action="previous">
-												<i class="ki-duotone ki-arrow-left fs-4 me-1">
-													<span class="path1"></span>
-													<span class="path2"></span>
-												</i>Previous</button>
-										</div>
-										<div>
-											<button type="button" class="btn btn-lg btn-primary"
-												data-kt-stepper-action="submit">
-												<span class="indicator-label">Submit
-													<i class="ki-duotone ki-arrow-right fs-4 ms-2">
-														<span class="path1"></span>
-														<span class="path2"></span>
-													</i></span>
-												<span class="indicator-progress">Please wait...
-													<span
-														class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-											</button>
-											<button type="button" class="btn btn-lg btn-primary"
-												data-kt-stepper-action="next">Proceed
-												<i class="ki-duotone ki-arrow-right fs-4 ms-1">
-													<span class="path1"></span>
-													<span class="path2"></span>
-												</i></button>
-										</div>
-									</div>
-								</div>
-
-								<div class="text-gray-600 text-center fw-semibold fs-6 mt-4 mb-12">Already member?
-									<a href="#" class="link-primary fw-semibold">Sign in</a>
-								</div>
-							</form>
+								<!--end::Stepper-->
+							</div>
+							<!--end::Content container-->
 						</div>
+						<!--end::Content-->
 					</div>
+					<!--end::Content wrapper-->
 				</div>
+				<!--end:::Main-->
+
+
+
+
+
 			</div>
 		</div>
+		<!--end::Page-->
 	</div>
+	<!--end::App-->
+	<!--begin::Drawers-->
+
+
+	<!--begin::Scrolltop-->
+	<div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+		<i class="ki-duotone ki-arrow-up">
+			<span class="path1"></span>
+			<span class="path2"></span>
+		</i>
+	</div>
+	<!--end::Scrolltop-->
+
+
 	<script>var hostUrl = "assets/";</script>
+	<!--begin::Global Javascript Bundle(mandatory for all pages)-->
 	<script src="assets/plugins/global/plugins.bundle.js"></script>
 	<script src="assets/js/scripts.bundle.js"></script>
+	<!--end::Global Javascript Bundle-->
+	<!--begin::Vendors Javascript(used for this page only)-->
+	<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+	<!--end::Vendors Javascript-->
+	<!--begin::Custom Javascript(used for this page only)-->
 	<script src="assets/js/custom/utilities/modals/create-account.js"></script>
+	<script src="assets/js/widgets.bundle.js"></script>
+	<script src="assets/js/custom/widgets.js"></script>
+	<script src="assets/js/custom/apps/chat/chat.js"></script>
+	<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
+	<script src="assets/js/custom/utilities/modals/create-app.js"></script>
+	<script src="assets/js/custom/utilities/modals/users-search.js"></script>
+	<!--end::Custom Javascript-->
+	<!--end::Javascript-->
 </body>
 
 </html>
