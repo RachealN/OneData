@@ -616,17 +616,17 @@
 									<div class="card-body pt-0">
 										<!--begin::Table-->
 
-										<table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_ecommerce_products_table">
+										<table class="table align-middle table-row-dashed fs-6 gy-5" >
 											<thead>
 												<tr class="text-start text-gray-900 fw-bold fs-7 text-uppercase gs-0">
 													<th class="w-10px pe-2">
 													</th>
-													<th class="min-w-70px">Investor Name</th>
+													<th class="min-w-100px">Investor Name</th>
 													<th class="min-w-100px">Account</th>
-													<th class="min-w-100px"></th>
-													<th class="min-w-100px">Country</th>
-													<th class="min-w-100px"></th>
-													<th class="min-w-250px">Date Created</th>
+													<th></th>
+													<th class="min-w-50px">Country</th>
+													<th></th>
+													<th class="min-w-200px">Date Created</th>
 													<th class="min-w-100px">Action</th>
 												</tr>
 											</thead>
@@ -641,7 +641,7 @@
 																<span class="path2"></span>
 															</i>
 															<input type="text" data-kt-customer-table-filter="search"
-																class="form-control form-control-solid w-250px ps-12 fs-8"
+																class="form-control form-control w-175px ps-12 fs-8"
 																placeholder="filter investor by name" />
 														</div>
 													</td>
@@ -665,8 +665,15 @@
 																class="breadcrumb breadcrumb-separatorless fs-7 my-0 pt-1 ">
 																<!--begin::Item-->
 
-																<input type="date" iid="date" name="" value="" class="form-control form-control-sm p-1 m-2" style="width: 100px;"   />
-																<input type="date" name="" value="" id="date" class="form-control form-control-sm p-1 " style="width: 100px;" />
+																<label class="fw-bolder">From</label>
+																<input type="date" id="date" name="" value=""
+																	class="form-control form-control-sm p-1 m-3"
+																	style="width: 100px;" />
+
+																<label class="fw-bolder">To</label>
+																<input type="date" id="date" name="" value=""
+																	class="form-control form-control-sm p-1 m-2"
+																	style="width: 100px;" />
 																<!--end::Item-->
 															</ul>
 														</div>
@@ -1088,6 +1095,37 @@
 											</tbody>
 										</table>
 										<!--end::Table-->
+
+                                        <div class="separator mb-3"></div>
+										<div class="px-6 pb-6">
+											<!--begin::Pagination-->
+											<div class="d-flex flex-stack flex-wrap">
+												<div class="fs-7 fw-semibold text-gray-700">Showing 1 to 10 of 50
+													records</div>
+												<!--begin::Pages-->
+												<ul class="pagination">
+													<li class="page-item previous">
+														<a href="#" class="page-link">
+															<i class="previous"></i>
+														</a>
+													</li>
+													<li class="page-item active">
+														<a href="#" class="page-link">1</a>
+													</li>
+													<li class="page-item">
+														<a href="#" class="page-link">2</a>
+													</li>
+
+													<li class="page-item next">
+														<a href="#" class="page-link">
+															<i class="next"></i>
+														</a>
+													</li>
+												</ul>
+												<!--end::Pages-->
+											</div>
+											<!--end::Pagination-->
+										</div>
 									</div>
 									<!--end::Card body-->
 								</div>
