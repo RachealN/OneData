@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="../" />
+    <title>Single Project Dashboard</title>
+    <meta charset="utf-8" />
+    <meta name="description"
+        content="The most advanced Bootstrap 5 Admin Theme with 40 unique prebuilt layouts on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel versions. Grab your copy now and get life-time updates for free." />
+    <meta name="keywords"
+        content="metronic, bootstrap, bootstrap 5, angular, VueJs, React, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel starter kits, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title"
+        content="Metronic - Bootstrap Admin Template, HTML, VueJS, React, Angular. Laravel, Asp.Net Core, Ruby on Rails, Spring Boot, Blazor, Django, Express.js, Node.js, Flask Admin Dashboard Theme & Template" />
+    <meta property="og:url" content="https://keenthemes.com/metronic" />
+    <meta property="og:site_name" content="Keenthemes | Metronic" />
+    <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
+    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+    <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="kt_app_body" data-kt-app-layout="dark-sidebar" data-kt-app-header-fixed="true"
+    data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-hoverable="true"
+    data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true"
+    data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
+    <script>var defaultThemeMode = "light"; var themeMode; if (document.documentElement) { if (document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if (localStorage.getItem("data-bs-theme") !== null) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }</script>
+    <!--end::Theme mode setup on page load-->
+    <!--begin::App-->
+    <div class="d-flex flex-column flex-root app-root" id="kt_app_root">
+        <!--begin::Page-->
+        <div class="app-page flex-column flex-column-fluid" id="kt_app_page">
+            <!--begin::Header-->
+            <div id="kt_app_header" class="app-header">
+                <!--begin::Header container-->
+                <div class="app-container container-fluid d-flex align-items-stretch justify-content-between bg-gray-900"
+                    id="kt_app_header_container">
+                    <!--begin::Sidebar mobile toggle-->
+                    <div class="d-flex align-items-center d-lg-none ms-n3 me-1 me-md-2" title="Show sidebar menu">
+                        <div class="btn btn-icon btn-active-color-primary w-35px h-35px"
+                            id="kt_app_sidebar_mobile_toggle">
+                            <i class="ki-duotone ki-abstract-14 fs-2 fs-md-1">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                            </i>
+                        </div>
+                    </div>
+                    <!--end::Sidebar mobile toggle-->
+                    <!--begin::Mobile logo-->
+                    <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
+                        <a href="../../demo1/dist/main-dashboard.html" class="d-lg-none">
+                            <img alt="Logo" src="assets/media/dashboard/onedata-logo.png" class="h-25px" />
+                        </a>
+                    </div>
+                    <!--end::Mobile logo-->
+
+                    <!--begin::Header wrapper-->
+                    <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1"
+                        id="kt_app_header_wrapper">
+                        <!--begin::Menu wrapper-->
+                        <div class="app-header-menu app-header-mobile-drawer align-items-stretch" data-kt-drawer="true"
+                            data-kt-drawer-name="app-header-menu" data-kt-drawer-activate="{default: true, lg: false}"
+                            data-kt-drawer-overlay="true" data-kt-drawer-width="250px" data-kt-drawer-direction="end"
+                            data-kt-drawer-toggle="#kt_app_header_menu_toggle" data-kt-swapper="true"
+                            data-kt-swapper-mode="{default: 'append', lg: 'prepend'}"
+                            data-kt-swapper-parent="{default: '#kt_app_body', lg: '#kt_app_header_wrapper'}">
+                            <!--begin::Menu-->
+                            <div class="menu menu-rounded menu-column menu-lg-row my-5 my-lg-0 align-items-stretch fw-semibold px-2 px-lg-0"
+                                id="kt_app_header_menu" data-kt-menu="true">
+                                <!--begin:Menu item-->
+                                <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                                    data-kt-menu-placement="bottom-start"
+                                    class="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
+                                    <!--begin:Menu link-->
+                                    <span class="menu-link">
+                                        <img alt="Logo" src="assets/media/dashboard/home.png"
+                                            class="h-10px app-sidebar-logo-default" />
+                                        <span class="menu-title m-2 fs-7">Home</span>
+                                        <span class="menu-arrow d-lg-none"></span>
+                                    </span>
+                                    <!--end:Menu link-->
+
+                                </div>
+                                <!--end:Menu item-->
+                                <!--begin:Menu item-->
+                                <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                                    data-kt-menu-placement="bottom-start"
+                                    class="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
+                                    <!--begin:Menu link-->
+                                    <span class="menu-link">
+                                        <img alt="Logo" src="assets/media/dashboard/projects.png"
+                                            class="h-10px app-sidebar-logo-default" />
+                                        <span class="menu-title m-2 fs-7">Projects</span>
+                                        <span class="menu-arrow d-lg-none"></span>
+                                    </span>
+                                    <!--end:Menu link-->
+
+                                </div>
+                                <!--end:Menu item-->
+                                <!--begin:Menu item-->
+                                <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                                    data-kt-menu-placement="bottom-start"
+                                    class="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
+                                    <!--begin:Menu link-->
+                                    <span class="menu-link">
+                                        <img alt="Logo" src="assets/media/dashboard/sponsors.png"
+                                            class="h-10px app-sidebar-logo-default" />
+                                        <span class="menu-title m-2 fs-7">Sponsors</span>
+                                        <span class="menu-arrow d-lg-none"></span>
+                                    </span>
+                                    <!--end:Menu link-->
+
+                                </div>
+                                <!--end:Menu item-->
+                                <!--begin:Menu item-->
+                                <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                                    data-kt-menu-placement="bottom-start"
+                                    class="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
+                                    <!--begin:Menu link-->
+                                    <span class="menu-link">
+                                        <img alt="Logo" src="assets/media/dashboard/investors.png"
+                                            class="h-10px app-sidebar-logo-default" />
+                                        <span class="menu-title m-2 fs-7">Investors</span>
+                                        <span class="menu-arrow d-lg-none"></span>
+                                    </span>
+                                    <!--end:Menu link-->
+
+                                </div>
+                                <!--end:Menu item-->
+                                <!--begin:Menu item-->
+                                <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                                    data-kt-menu-placement="bottom-start"
+                                    class="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
+                                    <!--begin:Menu link-->
+                                    <span class="menu-link">
+                                        <img alt="Logo" src="assets/media/dashboard/lenders.png"
+                                            class="h-10px app-sidebar-logo-default" />
+                                        <span class="menu-title m-2 fs-7">Lenders</span>
+                                        <span class="menu-arrow d-lg-none"></span>
+                                    </span>
+                                    <!--end:Menu link-->
+
+                                </div>
+                                <!--end:Menu item-->
+                                <!--begin:Menu item-->
+                                <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                                    data-kt-menu-placement="bottom-start"
+                                    class="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
+                                    <!--begin:Menu link-->
+                                    <span class="menu-link">
+                                        <img alt="Logo" src="assets/media/dashboard/service-providers.png"
+                                            class="h-10px app-sidebar-logo-default" />
+                                        <span class="menu-title m-2 fs-7">Service Providers</span>
+                                        <span class="menu-arrow d-lg-none"></span>
+                                    </span>
+                                    <!--end:Menu link-->
+
+                                </div>
+                                <!--end:Menu item-->
+
+                            </div>
+                            <!--end::Menu-->
+                        </div>
+                        <!--end::Menu wrapper-->
+                        <!--begin::Navbar-->
+                        <div class="app-navbar flex-shrink-0">
+                            <!--begin::Search-->
+                            <div class="app-navbar-item align-items-stretch ms-1 ms-md-3">
+                                <!--begin::Search-->
+                                <div id="kt_header_search" class="header-search d-flex align-items-stretch"
+                                    data-kt-search-keypress="true" data-kt-search-min-length="2"
+                                    data-kt-search-enter="enter" data-kt-search-layout="menu"
+                                    data-kt-menu-trigger="auto" data-kt-menu-overflow="false"
+                                    data-kt-menu-permanent="true" data-kt-menu-placement="bottom-end">
+                                    <!--begin::Search toggle-->
+                                    <div class="d-flex align-items-center" data-kt-search-element="toggle"
+                                        id="kt_header_search_toggle">
+                                        <div
+                                            class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-30px h-30px w-md-40px h-md-40px">
+                                            <i class="ki-duotone ki-magnifier fs-1 fs-lg-1">
+                                                <span class="path1"></span>
+                                                <span class="path2"></span>
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <!--end::Search toggle-->
+
+                                </div>
+                                <!--end::Search-->
+                            </div>
+                            <!--end::Search-->
+
+
+                            <!--begin::Chat-->
+                            <div class="app-navbar-item ms-1 ms-md-3">
+                                <!--begin::Menu wrapper-->
+                                <div class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-30px h-30px w-md-40px h-md-40px position-relative"
+                                    id="kt_drawer_chat_toggle">
+                                    <a href="../../demo1/dist/main-dashboard.html">
+                                        <img alt="Logo" src="assets/media/dashboard/message.png"
+                                            class="h-20px app-sidebar-logo-default" />
+                                    </a>
+                                </div>
+                                <!--end::Menu wrapper-->
+                            </div>
+                            <!--end::Chat-->
+
+                            <!--begin::Chat-->
+                            <div class="app-navbar-item ms-1 ms-md-3">
+                                <!--begin::Menu wrapper-->
+                                <div class="d-flex align-items-center m-2">
+                                    <a href="../../demo1/dist/main-dashboard.html">
+                                        <img alt="Logo" src="assets/media/dashboard/bell.png"
+                                            class="h-20px app-sidebar-logo-default" />
+
+                                    </a>
+                                </div>
+                                <!--end::Menu wrapper-->
+                            </div>
+                            <!--end::Chat-->
+
+                            <!--begin::Theme mode-->
+                            <div class="app-navbar-item ms-1 ms-md-3">
+                                <div class="d-flex align-items-center m-2">
+                                    <a href="../../demo1/dist/main-dashboard.html">
+                                        <img alt="Logo" src="assets/media/dashboard/start-logo.png"
+                                            class="h-20px app-sidebar-logo-default" />
+
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!--end::Theme mode-->
+                            <!--begin::User menu-->
+                            <div class="app-navbar-item ms-1 ms-md-3" id="kt_header_user_menu_toggle">
+                                <!--begin::Menu wrapper-->
+                                <div class="cursor-pointer symbol symbol-30px symbol-md-40px"
+                                    data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent"
+                                    data-kt-menu-placement="bottom-end">
+                                    <img src="assets/media/avatars/300-1.jpg" alt="user" />
+                                </div>
+
+                            </div>
+                            <!--end::User menu-->
+
+                        </div>
+                        <!--end::Navbar-->
+                    </div>
+                    <!--end::Header wrapper-->
+                </div>
+                <!--end::Header container-->
+            </div>
+            <!--end::Header-->
+
+            <!--begin::Wrapper-->
+            <div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
+                <!--begin::Sidebar-->
+                <div id="kt_app_sidebar" class="app-sidebar flex-column" data-kt-drawer="true"
+                    data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}"
+                    data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start"
+                    data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
+                    <!--begin::Logo-->
+                    <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
+                        <!--begin::Logo image-->
+                        <a href="../../demo1/dist/main-dashboard.html">
+                            <img alt="Logo" src="assets/media/dashboard/onedata-logo.png"
+                                class="h-25px app-sidebar-logo-default" />
+                            <img alt="Logo" src="assets/media/dashboard/onedata-logo.png"
+                                class="h-20px app-sidebar-logo-minimize" />
+                        </a>
+                        <!--end::Logo image-->
+                        <!--begin::Sidebar toggle-->
+                        <!--begin::Minimized sidebar setup:
+            if (isset($_COOKIE["sidebar_minimize_state"]) && $_COOKIE["sidebar_minimize_state"] === "on") {
+                1. "src/js/layout/sidebar.js" adds "sidebar_minimize_state" cookie value to save the sidebar minimize state.
+                2. Set data-kt-app-sidebar-minimize="on" attribute for body tag.
+                3. Set data-kt-toggle-state="active" attribute to the toggle element with "kt_app_sidebar_toggle" id.
+                4. Add "active" class to to sidebar toggle element with "kt_app_sidebar_toggle" id.
+            }
+        -->
+                        <div id="kt_app_sidebar_toggle"
+                            class="app-sidebar-toggle btn btn-icon btn-shadow btn-sm btn-color-muted btn-active-color-primary body-bg h-30px w-30px position-absolute top-50 start-100 translate-middle rotate"
+                            data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"
+                            data-kt-toggle-name="app-sidebar-minimize">
+                            <i class="ki-duotone ki-double-left fs-2 rotate-180">
+                                <span class="path1"></span>
+                                <span class="path2"></span>
+                            </i>
+                        </div>
+                        <!--end::Sidebar toggle-->
+                    </div>
+
+                    <!--end::Logo-->
+                    <!--begin::sidebar menu-->
+                    <div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+                        <!--begin::Menu wrapper-->
+                        <div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5"
+                            data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto"
+                            data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer"
+                            data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px"
+                            data-kt-scroll-save-state="true">
+                            <!--begin::Menu-->
+                            <div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu"
+                                data-kt-menu="true" data-kt-menu-expand="false">
+                                <!--begin:Menu item-->
+                                <div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
+                                    <!--begin:Menu link-->
+
+                                    <!--end:Menu link-->
+                                    <!--begin:Menu sub-->
+                                    <div class="menu-sub menu-sub-accordion">
+                                        <!--begin:Menu item-->
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link active" href="../../demo1/dist/main-dashboard.html">
+                                                <svg width="15" height="15" viewBox="0 0 21 21" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M10.324 20.821C7.48801 20.821 5.034 19.808 3.03 17.808C1.026 15.8091 0.0100098 13.3561 0.0100098 10.5201C0.0100098 7.68304 1.02399 5.22906 3.02301 3.22607C5.02301 1.22205 7.47501 0.206055 10.312 0.206055C13.148 0.206055 15.602 1.21906 17.606 3.21808C19.61 5.21808 20.626 7.67108 20.626 10.5071C20.626 13.3431 19.612 15.7971 17.613 17.8011C15.613 19.8051 13.161 20.821 10.324 20.821ZM10.312 1.41205C7.772 1.41205 5.66699 2.28406 3.87701 4.07806C2.08701 5.87207 1.21701 7.97906 1.21701 10.5201C1.21701 13.0591 2.08899 15.1641 3.883 16.954C5.677 18.7441 7.784 19.6151 10.324 19.6151C12.864 19.6151 14.969 18.743 16.759 16.949C18.549 15.1551 19.419 13.048 19.419 10.5071C19.419 7.96704 18.547 5.86304 16.754 4.07306C14.959 2.28204 12.852 1.41205 10.312 1.41205Z"
+                                                        fill="white" />
+                                                    <rect x="9.48853" y="4.4585" width="1.65902" height="7.71396"
+                                                        fill="white" />
+                                                    <path
+                                                        d="M11.073 16.411C10.857 16.626 10.606 16.734 10.318 16.734C10.03 16.734 9.77899 16.626 9.56299 16.411C9.34799 16.195 9.23999 15.944 9.23999 15.656C9.23999 15.369 9.34799 15.117 9.56299 14.901C9.77899 14.686 10.03 14.578 10.318 14.578C10.606 14.578 10.857 14.686 11.073 14.901C11.289 15.117 11.396 15.369 11.396 15.656C11.396 15.944 11.289 16.195 11.073 16.411Z"
+                                                        fill="white" />
+                                                </svg>
+                                                <span class="menu-title fs-7 mx-1">Introduction</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+                                        <!--end:Menu item-->
+                                        <!--begin:Menu item-->
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link" href="../../demo1/dist/main-dashboard.html">
+                                                <svg width="12" height="12" viewBox="0 0 17 17" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M2.29689 16.256C1.84988 16.256 1.46788 16.098 1.15388 15.783C0.838886 15.469 0.681885 15.088 0.681885 14.64V1.87099C0.681885 1.42299 0.838886 1.04199 1.15388 0.727982C1.46788 0.412979 1.84988 0.255981 2.29689 0.255981H15.0659C15.5139 0.255981 15.8949 0.412979 16.2089 0.727982C16.5239 1.04199 16.6819 1.42299 16.6819 1.87099V14.64C16.6819 15.088 16.5239 15.469 16.2089 15.783C15.8949 16.098 15.5139 16.256 15.0659 16.256H2.29689ZM2.29689 15.256H15.0659C15.2459 15.256 15.3929 15.198 15.5079 15.082C15.6239 14.967 15.6819 14.82 15.6819 14.64V3.25598H1.68188V14.64C1.68188 14.82 1.73888 14.967 1.85489 15.082C1.96989 15.198 2.11689 15.256 2.29689 15.256ZM3.68188 7.75598V6.75598H13.6819V7.75598H3.68188ZM3.68188 11.756V10.756H9.68188V11.756H3.68188Z"
+                                                        fill="#7D7F8F" />
+                                                </svg>
+                                                <span class="menu-title fs-7 mx-1">Overview</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+
+                                        <!--begin:Menu item-->
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link" href="../../demo1/dist/main-dashboard.html">
+                                                <svg width="14" height="14" viewBox="0 0 17 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M1.47503 11.214V12.967C1.47503 13.101 1.53102 13.225 1.64303 13.337C1.75603 13.449 1.87903 13.505 2.01403 13.505H15.349C15.484 13.505 15.607 13.449 15.72 13.337C15.832 13.225 15.888 13.101 15.888 12.967V11.214H1.47503ZM2.01403 2.82996H5.30603C5.23303 2.69897 5.16603 2.54898 5.10503 2.37997C5.04502 2.21097 5.01403 2.04398 5.01403 1.87897C5.01403 1.40598 5.17803 1.00797 5.50503 0.685974C5.83203 0.36496 6.22803 0.203979 6.69103 0.203979C6.98703 0.203979 7.26603 0.280975 7.52703 0.435974C7.78802 0.59198 7.99603 0.78598 8.15003 1.01996L8.65303 1.75797L9.15503 1.01996C9.32103 0.778961 9.52703 0.58197 9.77402 0.430969C10.021 0.278961 10.295 0.203979 10.596 0.203979C11.071 0.203979 11.47 0.36496 11.795 0.687958C12.119 1.00998 12.281 1.41196 12.281 1.89398C12.281 2.03796 12.255 2.18997 12.202 2.34998C12.148 2.51096 12.079 2.67096 11.995 2.82996H15.349C15.686 2.82996 15.972 2.94797 16.208 3.18396C16.444 3.41998 16.562 3.70596 16.562 4.04297V12.967C16.562 13.303 16.444 13.589 16.208 13.825C15.972 14.061 15.686 14.179 15.349 14.179H2.01403C1.67702 14.179 1.39103 14.061 1.15503 13.825C0.919025 13.589 0.801025 13.303 0.801025 12.967V4.04297C0.801025 3.70596 0.919025 3.41998 1.15503 3.18396C1.39103 2.94797 1.67702 2.82996 2.01403 2.82996ZM1.47503 9.46097H15.888V4.04297C15.888 3.90796 15.832 3.78397 15.72 3.67197C15.607 3.55997 15.484 3.50397 15.349 3.50397H9.79803L11.684 6.14197L11.155 6.54297L8.64803 3.08496L6.14103 6.54297L5.61203 6.14197L7.51503 3.50397H2.01403C1.87903 3.50397 1.75603 3.55997 1.64303 3.67197C1.53102 3.78397 1.47503 3.90796 1.47503 4.04297V9.46097ZM6.69403 2.89398C6.97203 2.89398 7.21003 2.79596 7.40803 2.59897C7.60603 2.40198 7.70503 2.16498 7.70503 1.88797C7.70503 1.60995 7.60703 1.37198 7.41003 1.17398C7.21303 0.975983 6.97603 0.876984 6.69803 0.876984C6.42103 0.876984 6.18303 0.974976 5.98503 1.17197C5.78703 1.36896 5.68803 1.60596 5.68803 1.88397C5.68803 2.16098 5.78603 2.39896 5.98303 2.59695C6.18003 2.79498 6.41703 2.89398 6.69403 2.89398ZM10.594 2.89398C10.873 2.89398 11.112 2.79596 11.31 2.59897C11.509 2.40198 11.608 2.16498 11.608 1.88797C11.608 1.60995 11.509 1.37198 11.31 1.17398C11.112 0.975983 10.873 0.876984 10.594 0.876984C10.326 0.876984 10.092 0.974976 9.89103 1.17197C9.69103 1.36896 9.59103 1.60596 9.59103 1.88397C9.59103 2.16098 9.69103 2.39896 9.89103 2.59695C10.092 2.79498 10.326 2.89398 10.594 2.89398Z"
+                                                        fill="#7D7F8F" />
+                                                </svg>
+                                                <span class="menu-title fs-7 mx-1">Sponsors</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+                                        <!--end:Menu item-->
+                                        <!--begin:Menu item-->
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link" href="../../demo1/dist/main-dashboard.html">
+                                                <svg width="13" height="13" viewBox="0 0 17 17" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M2.29689 16.1589C1.83689 16.1589 1.45189 16.0049 1.14389 15.6969C0.835884 15.3889 0.681885 15.0039 0.681885 14.5439V1.77493C0.681885 1.31494 0.835884 0.929932 1.14389 0.621948C1.45189 0.313934 1.83689 0.158936 2.29689 0.158936H12.2579L16.6819 4.58295V14.5439C16.6819 15.0039 16.5269 15.3889 16.2189 15.6969C15.9109 16.0049 15.5259 16.1589 15.0659 16.1589H2.29689ZM2.29689 15.1589H15.0659C15.2459 15.1589 15.3929 15.1019 15.5079 14.9859C15.6239 14.8709 15.6819 14.7239 15.6819 14.5439V5.15894H11.6819V1.15894H2.29689C2.11689 1.15894 1.96989 1.21695 1.85489 1.33295C1.73888 1.44794 1.68188 1.59494 1.68188 1.77493V14.5439C1.68188 14.7239 1.73888 14.8709 1.85489 14.9859C1.96989 15.1019 2.11689 15.1589 2.29689 15.1589ZM4.18188 12.1589H13.1819V11.1589H4.18188V12.1589ZM4.18188 5.15894H8.68188V4.15894H4.18188V5.15894ZM4.18188 8.65894H13.1819V7.65894H4.18188V8.65894Z"
+                                                        fill="#7D7F8F" />
+                                                </svg>
+                                                <span class="menu-title fs-7 mx-1">Description</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+
+                                        <!--begin:Menu item-->
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link" href="../../demo1/dist/main-dashboard.html">
+                                                <svg width="13" height="13" viewBox="0 0 19 17" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M1.68188 15.3469H6.35489V7.34692H1.68188V15.3469ZM7.35489 15.3469H12.0079V1.34692H7.35489V15.3469ZM13.0079 15.3469H17.6819V9.34692H13.0079V15.3469ZM0.681885 16.3469V6.34692H6.35489V0.346924H13.0079V8.34692H18.6819V16.3469H0.681885Z"
+                                                        fill="#7D7F8F" />
+                                                </svg>
+                                                <span class="menu-title fs-7 mx-1">Data</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+                                        <!--end:Menu item-->
+                                        <!--begin:Menu item-->
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link" href="../../demo1/dist/main-dashboard.html">
+                                                <svg width="13" height="12" viewBox="0 0 17 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M12.7929 17.864L12.1049 17.175L13.6799 15.575L12.1049 14L12.7929 13.287L14.3929 14.887L15.9679 13.287L16.6819 14L15.0819 15.575L16.6819 17.175L15.9679 17.864L14.3929 16.289L12.7929 17.864ZM3.18188 16.864C3.59288 16.864 3.94588 16.717 4.23989 16.423C4.53389 16.128 4.68188 15.775 4.68188 15.364C4.68188 14.952 4.53389 14.6 4.23989 14.305C3.94588 14.011 3.59288 13.864 3.18188 13.864C2.76989 13.864 2.41689 14.011 2.12289 14.305C1.82888 14.6 1.68188 14.952 1.68188 15.364C1.68188 15.775 1.82888 16.128 2.12289 16.423C2.41689 16.717 2.76989 16.864 3.18188 16.864ZM3.18188 17.864C2.48888 17.864 1.89989 17.62 1.41188 17.133C0.924885 16.646 0.681885 16.056 0.681885 15.364C0.681885 14.672 0.924885 14.082 1.41188 13.595C1.89989 13.108 2.48888 12.864 3.18188 12.864C3.77288 12.864 4.29689 13.048 4.75389 13.415C5.21088 13.782 5.49789 14.258 5.61589 14.841C6.39389 14.773 7.04889 14.453 7.57888 13.881C8.10889 13.309 8.37389 12.637 8.37389 11.864V8.15201C8.37389 6.91 8.81289 5.849 9.69189 4.97101C10.5709 4.09201 11.6319 3.65201 12.8739 3.65201H14.7549L12.6799 1.577L13.3929 0.864014L16.6819 4.15201L13.3929 7.44101L12.6799 6.75201L14.7349 4.65201H12.8739C11.8999 4.65201 11.0729 4.992 10.3929 5.672C9.71389 6.35101 9.37389 7.17801 9.37389 8.15201V11.864C9.37389 12.914 9.01089 13.818 8.28489 14.576C7.55989 15.335 6.67389 15.758 5.62788 15.847C5.51688 16.438 5.23188 16.922 4.77089 17.299C4.30989 17.675 3.77988 17.864 3.18188 17.864ZM1.36988 6.44101L0.681885 5.75201L2.25689 4.15201L0.681885 2.577L1.36988 1.86401L2.96989 3.46399L4.54488 1.86401L5.25788 2.577L3.65789 4.15201L5.25788 5.75201L4.54488 6.44101L2.96989 4.866L1.36988 6.44101Z"
+                                                        fill="#7D7F8F" />
+                                                </svg>
+                                                <span class="menu-title fs-7 mx-1">Strategy</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+
+                                        <!--begin:Menu item-->
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link" href="../../demo1/dist/main-dashboard.html">
+                                                <svg width="13" height="13" viewBox="0 0 19 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M12.2329 17.0131L8.67591 13.4551L9.38291 12.748L12.2329 15.5981L17.9219 9.90906L18.6299 10.6171L12.2329 17.0131ZM16.7329 7.80005H15.7329V3.41504C15.7329 3.26105 15.6689 3.12006 15.5409 2.99207C15.4129 2.86407 15.2719 2.80005 15.1179 2.80005H12.7329V5.03009H4.73291V2.80005H2.34891C2.19491 2.80005 2.05391 2.86407 1.92591 2.99207C1.79791 3.12006 1.73291 3.26105 1.73291 3.41504V16.1841C1.73291 16.3381 1.79791 16.4791 1.92591 16.6071C2.05391 16.7361 2.19491 16.8 2.34891 16.8H7.73291V17.8H2.34891C1.90091 17.8 1.51991 17.6421 1.20591 17.3281C0.890907 17.0131 0.73291 16.6321 0.73291 16.1841V3.41504C0.73291 2.96808 0.890907 2.58606 1.20591 2.27203C1.51991 1.95703 1.90091 1.80005 2.34891 1.80005H6.98491C7.07891 1.40906 7.28691 1.08008 7.60791 0.814087C7.92991 0.548035 8.30491 0.415039 8.73291 0.415039C9.16891 0.415039 9.54691 0.548035 9.86691 0.814087C10.1869 1.08008 10.3939 1.40906 10.4869 1.80005H15.1179C15.5659 1.80005 15.9469 1.95703 16.2609 2.27203C16.5759 2.58606 16.7329 2.96808 16.7329 3.41504V7.80005ZM8.73291 3.03009C8.96591 3.03009 9.15791 2.95404 9.31091 2.80109C9.46491 2.64703 9.54091 2.45508 9.54091 2.22308C9.54091 1.99109 9.46491 1.79803 9.31091 1.64508C9.15791 1.49207 8.96591 1.41504 8.73291 1.41504C8.50091 1.41504 8.30891 1.49207 8.15591 1.64508C8.00191 1.79803 7.92591 1.99109 7.92591 2.22308C7.92591 2.45508 8.00191 2.64703 8.15591 2.80109C8.30891 2.95404 8.50091 3.03009 8.73291 3.03009Z"
+                                                        fill="#7D7F8F" />
+                                                </svg>
+                                                <span class="menu-title fs-7 mx-1">Products & Services</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+                                        <!--end:Menu item-->
+                                        <!--begin:Menu item-->
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link" href="../../demo1/dist/main-dashboard.html">
+                                                <svg width="13" height="12" viewBox="0 0 20 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M18.1819 7.59204V15.5811C18.1819 16.0411 18.0269 16.425 17.7189 16.7341C17.4109 17.0421 17.0259 17.196 16.5659 17.196H2.79691C2.33691 17.196 1.95191 17.0421 1.64391 16.7341C1.33591 16.425 1.18191 16.0411 1.18191 15.5811V7.55408C0.759907 7.24207 0.450908 6.83405 0.255909 6.32904C0.0599095 5.82404 0.0559079 5.28503 0.242908 4.71106L1.21591 1.50409C1.34991 1.09607 1.56491 0.776062 1.86091 0.544067C2.15791 0.312073 2.52491 0.196045 2.96191 0.196045H16.3619C16.7999 0.196045 17.1659 0.305054 17.4599 0.522034C17.7549 0.739075 17.9709 1.05408 18.1079 1.46509L19.1199 4.71106C19.3069 5.28503 19.3029 5.82806 19.1079 6.34204C18.9119 6.85608 18.6029 7.27307 18.1819 7.59204ZM11.8819 7.19604C12.5239 7.19604 13.0029 7.01605 13.3199 6.65704C13.6369 6.29706 13.7699 5.92609 13.7199 5.54205L13.0549 1.19604H10.1819V5.39606C10.1819 5.88708 10.3499 6.31006 10.6849 6.66406C11.0209 7.01904 11.4199 7.19604 11.8819 7.19604ZM7.38191 7.19604C7.91891 7.19604 8.35291 7.01904 8.68391 6.66406C9.01591 6.31006 9.18191 5.88708 9.18191 5.39606V1.19604H6.30791L5.64291 5.61908C5.60191 5.92908 5.73791 6.27008 6.04991 6.64008C6.36191 7.01105 6.80591 7.19604 7.38191 7.19604ZM2.93191 7.19604C3.37291 7.19604 3.74691 7.04608 4.05591 6.74603C4.36391 6.44604 4.55591 6.07208 4.63191 5.62305L5.25791 1.19604H2.96191C2.74391 1.19604 2.57091 1.24408 2.44291 1.34009C2.31491 1.43604 2.21891 1.58105 2.15491 1.77307L1.23191 4.93109C1.06691 5.45605 1.13791 5.96509 1.44191 6.45807C1.74691 6.95007 2.24291 7.19604 2.93191 7.19604ZM16.4319 7.19604C17.0299 7.19604 17.5079 6.96307 17.8659 6.49603C18.2239 6.02905 18.3119 5.50806 18.1319 4.93109L17.1589 1.73505C17.0939 1.54205 16.9979 1.40405 16.8699 1.32104C16.7419 1.23804 16.5689 1.19604 16.3509 1.19604H14.1049L14.7319 5.62305C14.8069 6.07208 14.9989 6.44604 15.3079 6.74603C15.6159 7.04608 15.9909 7.19604 16.4319 7.19604ZM2.79691 16.196H16.5659C16.7459 16.196 16.8929 16.1381 17.0079 16.0231C17.1239 15.9081 17.1819 15.7601 17.1819 15.5811V8.06903C17.0469 8.11505 16.9189 8.14807 16.7979 8.16705C16.6769 8.18604 16.5549 8.19604 16.4319 8.19604C15.9819 8.19604 15.5859 8.10803 15.2439 7.93304C14.9019 7.75708 14.5779 7.47705 14.2699 7.09204C14.0079 7.41809 13.6859 7.68304 13.3029 7.88806C12.9189 8.09308 12.4529 8.19604 11.9049 8.19604C11.5059 8.19604 11.1269 8.10309 10.7669 7.91705C10.4079 7.73108 10.0459 7.45605 9.68191 7.09204C9.34691 7.45605 8.97591 7.73108 8.56891 7.91705C8.16191 8.10309 7.77391 8.19604 7.40491 8.19604C6.98491 8.19604 6.57691 8.11609 6.17891 7.95605C5.78091 7.79504 5.43191 7.50806 5.13191 7.09204C4.64091 7.58307 4.21091 7.89008 3.84391 8.01208C3.47691 8.13507 3.17291 8.19604 2.93191 8.19604C2.80791 8.19604 2.68391 8.18604 2.55891 8.16705C2.43391 8.14807 2.30791 8.11505 2.18191 8.06903V15.5811C2.18191 15.7601 2.23891 15.9081 2.35491 16.0231C2.46991 16.1381 2.61691 16.196 2.79691 16.196Z"
+                                                        fill="#7D7F8F" />
+                                                </svg>
+                                                <span class="menu-title fs-7 mx-1">Martkets & Industry</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+
+                                        <!--begin:Menu item-->
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link" href="../../demo1/dist/main-dashboard.html">
+                                                <svg width="18" height="12" viewBox="0 0 20 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M0.278076 13.8751V12.2291C0.278076 11.764 0.398075 11.3651 0.638077 11.0311C0.879078 10.6971 1.20208 10.4311 1.60707 10.2311C2.47507 9.81805 3.33607 9.48804 4.19108 9.24304C5.04608 8.99707 6.07508 8.87506 7.27808 8.87506C8.48008 8.87506 9.50908 8.99707 10.3641 9.24304C11.2191 9.48804 12.0811 9.81805 12.9481 10.2311C13.3541 10.4311 13.6771 10.6971 13.9171 11.0311C14.1581 11.3651 14.2781 11.764 14.2781 12.2291V13.8751H0.278076ZM16.2781 13.8751V12.1821C16.2781 11.6031 16.1601 11.0561 15.9261 10.5411C15.6911 10.027 15.3591 9.58508 14.9281 9.21704C15.4191 9.31708 15.8921 9.45605 16.3471 9.63306C16.8021 9.81104 17.2521 10.011 17.6971 10.2321C18.1301 10.4501 18.4701 10.7291 18.7161 11.069C18.9621 11.4091 19.0851 11.7801 19.0851 12.1821V13.8751H16.2781ZM7.27808 6.64404C6.45308 6.64404 5.74607 6.35004 5.15908 5.76306C4.57108 5.17505 4.27808 4.46906 4.27808 3.64404C4.27808 2.81903 4.57108 2.11304 5.15908 1.52509C5.74607 0.938049 6.45308 0.644043 7.27808 0.644043C8.10308 0.644043 8.80907 0.938049 9.39608 1.52509C9.98408 2.11304 10.2781 2.81903 10.2781 3.64404C10.2781 4.46906 9.98408 5.17505 9.39608 5.76306C8.80907 6.35004 8.10308 6.64404 7.27808 6.64404ZM14.5471 3.64404C14.5471 4.46906 14.2531 5.17505 13.6661 5.76306C13.0781 6.35004 12.3721 6.64404 11.5471 6.64404C11.5051 6.64404 11.4511 6.63904 11.3851 6.62909C11.3201 6.62006 11.2661 6.60907 11.2241 6.59808C11.5631 6.18304 11.8231 5.72308 12.0051 5.21704C12.1871 4.71106 12.2781 4.18604 12.2781 3.64209C12.2781 3.09705 12.1831 2.57709 11.9921 2.08008C11.8021 1.58405 11.5461 1.12103 11.2241 0.690063C11.2781 0.671082 11.3321 0.658081 11.3851 0.653076C11.4391 0.647034 11.4931 0.644043 11.5471 0.644043C12.3721 0.644043 13.0781 0.938049 13.6661 1.52509C14.2531 2.11304 14.5471 2.81903 14.5471 3.64404ZM1.27808 12.8751H13.2781V12.2291C13.2781 11.9941 13.2191 11.7891 13.1021 11.613C12.9841 11.4371 12.7741 11.2701 12.4701 11.1091C11.7241 10.7111 10.9371 10.4051 10.1101 10.1931C9.28308 9.98108 8.33908 9.87506 7.27808 9.87506C6.21608 9.87506 5.27208 9.98108 4.44508 10.1931C3.61808 10.4051 2.83208 10.7111 2.08508 11.1091C1.78208 11.2701 1.57108 11.4371 1.45407 11.613C1.33607 11.7891 1.27808 11.9941 1.27808 12.2291V12.8751ZM7.27808 5.64404C7.82808 5.64404 8.29908 5.44806 8.69007 5.05609C9.08208 4.66504 9.27808 4.19403 9.27808 3.64404C9.27808 3.09406 9.08208 2.62305 8.69007 2.23108C8.29908 1.84009 7.82808 1.64404 7.27808 1.64404C6.72808 1.64404 6.25708 1.84009 5.86508 2.23108C5.47408 2.62305 5.27808 3.09406 5.27808 3.64404C5.27808 4.19403 5.47408 4.66504 5.86508 5.05609C6.25708 5.44806 6.72808 5.64404 7.27808 5.64404Z"
+                                                        fill="#7D7F8F" />
+                                                </svg>
+                                                <span class="menu-title fs-7 mx-1">Team</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+                                        <!--end:Menu item-->
+                                        <!--begin:Menu item-->
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link" href="../../demo1/dist/main-dashboard.html">
+                                                <svg width="12" height="13" viewBox="0 0 17 19" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M4.68188 11.8221C4.47488 11.8221 4.29488 11.746 4.14188 11.5931C3.98888 11.4391 3.91188 11.2601 3.91188 11.053C3.91188 10.847 3.98888 10.6671 4.14188 10.514C4.29488 10.36 4.47488 10.2841 4.68188 10.2841C4.88789 10.2841 5.06789 10.36 5.22089 10.514C5.37389 10.6671 5.45089 10.847 5.45089 11.053C5.45089 11.2601 5.37389 11.4391 5.22089 11.5931C5.06789 11.746 4.88789 11.8221 4.68188 11.8221ZM8.68188 11.8221C8.47488 11.8221 8.29488 11.746 8.14188 11.5931C7.98888 11.4391 7.91188 11.2601 7.91188 11.053C7.91188 10.847 7.98888 10.6671 8.14188 10.514C8.29488 10.36 8.47488 10.2841 8.68188 10.2841C8.88789 10.2841 9.06789 10.36 9.22089 10.514C9.37389 10.6671 9.45089 10.847 9.45089 11.053C9.45089 11.2601 9.37389 11.4391 9.22089 11.5931C9.06789 11.746 8.88789 11.8221 8.68188 11.8221ZM12.6819 11.8221C12.4749 11.8221 12.2949 11.746 12.1419 11.5931C11.9889 11.4391 11.9119 11.2601 11.9119 11.053C11.9119 10.847 11.9889 10.6671 12.1419 10.514C12.2949 10.36 12.4749 10.2841 12.6819 10.2841C12.8879 10.2841 13.0679 10.36 13.2209 10.514C13.3739 10.6671 13.4509 10.847 13.4509 11.053C13.4509 11.2601 13.3739 11.4391 13.2209 11.5931C13.0679 11.746 12.8879 11.8221 12.6819 11.8221ZM2.29689 18.938C1.83689 18.938 1.45189 18.7841 1.14389 18.475C0.835884 18.1671 0.681885 17.7831 0.681885 17.3221V4.55304C0.681885 4.09308 0.835884 3.70905 1.14389 3.40009C1.45189 3.09204 1.83689 2.93805 2.29689 2.93805H4.06589V0.707031H5.14289V2.93805H12.2969V0.707031H13.2969V2.93805H15.0659C15.5259 2.93805 15.9109 3.09204 16.2189 3.40009C16.5269 3.70905 16.6819 4.09308 16.6819 4.55304V17.3221C16.6819 17.7831 16.5269 18.1671 16.2189 18.475C15.9109 18.7841 15.5259 18.938 15.0659 18.938H2.29689ZM2.29689 17.938H15.0659C15.2199 17.938 15.3609 17.8741 15.4889 17.7451C15.6169 17.6171 15.6819 17.4761 15.6819 17.3221V8.55304H1.68188V17.3221C1.68188 17.4761 1.74588 17.6171 1.87389 17.7451C2.00188 17.8741 2.14289 17.938 2.29689 17.938ZM1.68188 7.55304H15.6819V4.55304C15.6819 4.39905 15.6169 4.25806 15.4889 4.13007C15.3609 4.00208 15.2199 3.93805 15.0659 3.93805H2.29689C2.14289 3.93805 2.00188 4.00208 1.87389 4.13007C1.74588 4.25806 1.68188 4.39905 1.68188 4.55304V7.55304Z"
+                                                        fill="#7D7F8F" />
+                                                </svg>
+                                                <span class="menu-title fs-7 mx-1">Schedules</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+
+                                        <!--begin:Menu item-->
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link" href="../../demo1/dist/main-dashboard.html">
+                                                <svg width="13" height="15" viewBox="0 0 15 19" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M1.68188 18.278V17.278H7.18188V12.548H4.68188C3.56689 12.548 2.62189 12.159 1.84589 11.383C1.06989 10.607 0.681885 9.66199 0.681885 8.54797C0.681885 7.66302 0.968887 6.88 1.54488 6.198C2.12088 5.51703 2.82389 4.99701 3.65488 4.64001C3.79189 3.32599 4.22488 2.315 4.95589 1.60797C5.68589 0.901001 6.59389 0.546997 7.68188 0.546997C8.76889 0.546997 9.67688 0.901001 10.4079 1.60797C11.1379 2.315 11.5709 3.32599 11.7079 4.64001C12.5519 4.97198 13.2589 5.48499 13.8279 6.17902C14.3969 6.87299 14.6819 7.66302 14.6819 8.54797C14.6819 9.66199 14.2929 10.607 13.5169 11.383C12.7409 12.159 11.7959 12.548 10.6819 12.548H8.18188V17.278H13.6819V18.278H1.68188ZM4.68188 11.548H10.6819C11.5149 11.548 12.2229 11.256 12.8069 10.673C13.3899 10.089 13.6819 9.38098 13.6819 8.54797C13.6819 7.85797 13.4559 7.25299 13.0059 6.73401C12.5549 6.21503 11.9969 5.82599 11.3319 5.56702L10.7819 5.34802L10.7079 4.69702C10.5959 3.65302 10.2699 2.86603 9.73088 2.33899C9.19189 1.81097 8.50788 1.54797 7.68188 1.54797C6.85489 1.54797 6.17189 1.81097 5.63288 2.33899C5.09288 2.86603 4.76688 3.65302 4.65488 4.69702L4.58189 5.34802L3.87788 5.64398C3.26389 5.90302 2.74389 6.28497 2.31889 6.79199C1.89389 7.29797 1.68188 7.883 1.68188 8.54797C1.68188 9.38098 1.97289 10.089 2.55688 10.673C3.13988 11.256 3.84789 11.548 4.68188 11.548Z"
+                                                        fill="#7D7F8F" />
+                                                </svg>
+                                                <span class="menu-title fs-7 mx-1">Environment & Social</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+                                        <!--end:Menu item-->
+                                        <!--begin:Menu item-->
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link" href="../../demo1/dist/main-dashboard.html">
+                                                <svg width="15" height="11" viewBox="0 0 19 11" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M1.38889 10.5181L0.681885 9.81104L6.98489 3.45703L10.9849 7.45703L17.0119 1.51807H13.6819V0.518066H18.6819V5.51807H17.6819V2.22607L10.9849 8.92206L6.98489 4.92206L1.38889 10.5181Z"
+                                                        fill="#7D7F8F" />
+                                                </svg>
+                                                <span class="menu-title fs-7 mx-1">Investment</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+
+                                        <!--begin:Menu item-->
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link" href="../../demo1/dist/main-dashboard.html">
+                                                <svg width="15" height="13" viewBox="0 0 18 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M0.181885 17.055V15.767L1.18188 14.767V17.055H0.181885ZM4.18188 17.055V11.767L5.18188 10.767V17.055H4.18188ZM8.18188 17.055V10.767L9.18188 11.792V17.055H8.18188ZM12.1819 17.055V11.792L13.1819 10.792V17.055H12.1819ZM16.1819 17.055V7.76703L17.1819 6.76703V17.055H16.1819ZM0.181885 11.169V9.76703L6.68188 3.26703L10.6819 7.26703L17.1819 0.767029V2.16901L10.6819 8.66901L6.68188 4.66901L0.181885 11.169Z"
+                                                        fill="#7D7F8F" />
+                                                </svg>
+                                                <span class="menu-title fs-7 mx-1">Financial Perfomances</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+                                        <!--end:Menu item-->
+                                        <!--begin:Menu item-->
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link" href="../../demo1/dist/main-dashboard.html">
+                                                <svg width="15" height="15" viewBox="0 0 21 19" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M10.3741 17.6C10.5051 17.6 10.6391 17.57 10.7761 17.511C10.9131 17.452 11.0241 17.38 11.1091 17.296L18.9051 9.5C19.1561 9.24799 19.3501 8.99103 19.4871 8.72803C19.6231 8.466 19.6921 8.177 19.6921 7.86298C19.6921 7.54498 19.6231 7.23602 19.4871 6.93701C19.3501 6.638 19.1561 6.36401 18.9051 6.117L15.1551 2.367C14.9081 2.11603 14.6531 1.93103 14.3931 1.81403C14.1321 1.69702 13.8421 1.638 13.5241 1.638C13.2101 1.638 12.9191 1.69702 12.6491 1.81403C12.3801 1.93103 12.1261 2.11603 11.8881 2.367L11.0171 3.23798L12.8671 5.09399C13.0651 5.289 13.2131 5.51001 13.3111 5.75897C13.4081 6.008 13.4571 6.26001 13.4571 6.51703C13.4571 7.03699 13.2871 7.46802 12.9461 7.80798C12.6061 8.14899 12.1761 8.31897 11.6551 8.31897C11.3991 8.31897 11.1481 8.28003 10.9041 8.20099C10.6601 8.12299 10.4401 7.987 10.2451 7.79199L8.33212 5.88397L4.01512 10.201C3.91312 10.303 3.83712 10.418 3.78712 10.547C3.73612 10.676 3.71112 10.805 3.71112 10.936C3.71112 11.172 3.78612 11.367 3.93812 11.52C4.08912 11.673 4.28312 11.75 4.51912 11.75C4.64912 11.75 4.78312 11.72 4.92012 11.661C5.05812 11.602 5.16912 11.53 5.25312 11.446L8.42212 8.276L9.13012 8.98401L5.96712 12.153C5.86512 12.255 5.78912 12.37 5.73912 12.499C5.68812 12.627 5.66312 12.757 5.66312 12.888C5.66312 13.111 5.74212 13.301 5.89912 13.459C6.05712 13.617 6.24712 13.696 6.47012 13.696C6.60112 13.696 6.73512 13.666 6.87212 13.607C7.01012 13.548 7.12012 13.476 7.20512 13.392L10.6051 9.99799L11.3131 10.705L7.91912 14.105C7.83012 14.19 7.75712 14.301 7.70012 14.438C7.64312 14.575 7.61512 14.709 7.61512 14.84C7.61512 15.063 7.69412 15.253 7.85112 15.411C8.00912 15.569 8.19912 15.648 8.42212 15.648C8.55312 15.648 8.68312 15.622 8.81212 15.572C8.94112 15.521 9.05612 15.445 9.15712 15.344L12.5571 11.95L13.2651 12.657L9.86512 16.057C9.76312 16.159 9.68712 16.28 9.63712 16.422C9.58612 16.563 9.56112 16.693 9.56112 16.811C9.56112 17.047 9.64412 17.237 9.81012 17.382C9.97612 17.527 10.1641 17.6 10.3741 17.6ZM10.3691 18.6C9.85412 18.6 9.41412 18.411 9.04812 18.035C8.68212 17.659 8.52212 17.194 8.56712 16.642C8.00012 16.648 7.52812 16.479 7.15112 16.134C6.77412 15.789 6.59512 15.308 6.61512 14.69C5.99712 14.696 5.51012 14.52 5.15412 14.16C4.79812 13.801 4.63612 13.326 4.66912 12.738C4.11212 12.744 3.64712 12.588 3.27212 12.269C2.89812 11.95 2.71112 11.505 2.71112 10.936C2.71112 10.68 2.76112 10.423 2.86012 10.166C2.95912 9.909 3.10612 9.68298 3.30112 9.48798L8.33212 4.46301L10.9151 7.04602C10.9991 7.13397 11.1041 7.20697 11.2281 7.26398C11.3531 7.32098 11.4931 7.34998 11.6491 7.34998C11.8631 7.34998 12.0531 7.27502 12.2171 7.12598C12.3811 6.97601 12.4631 6.78198 12.4631 6.54199C12.4631 6.38501 12.4341 6.245 12.3771 6.12097C12.3201 5.99597 12.2471 5.89203 12.1591 5.80701L8.71912 2.367C8.47112 2.11603 8.21412 1.93103 7.94612 1.81403C7.67912 1.69702 7.38612 1.638 7.06912 1.638C6.75412 1.638 6.46912 1.69702 6.21312 1.81403C5.95612 1.93103 5.70312 2.11603 5.45112 2.367L2.40712 5.41699C2.19312 5.63098 2.02012 5.88599 1.88812 6.18201C1.75612 6.47803 1.68612 6.784 1.67812 7.09998C1.67012 7.32501 1.69012 7.54199 1.73612 7.75098C1.78212 7.95898 1.85512 8.15503 1.95512 8.33801L1.19712 9.09601C1.02912 8.828 0.898119 8.51898 0.803122 8.16998C0.70812 7.82001 0.665121 7.46399 0.672121 7.09998C0.68012 6.646 0.77112 6.211 0.94512 5.79498C1.12012 5.37903 1.36912 5.00897 1.69412 4.68402L4.71912 1.659C5.06712 1.31403 5.43612 1.05798 5.82512 0.890015C6.21412 0.721985 6.63512 0.638 7.08812 0.638C7.54012 0.638 7.95812 0.721985 8.34112 0.890015C8.72312 1.05798 9.08712 1.31403 9.43212 1.659L10.3031 2.53003L11.1741 1.659C11.5231 1.31403 11.8891 1.05798 12.2711 0.890015C12.6541 0.721985 13.0721 0.638 13.5241 0.638C13.9771 0.638 14.3981 0.721985 14.7871 0.890015C15.1761 1.05798 15.5431 1.31403 15.8881 1.659L19.6131 5.38397C19.9581 5.729 20.2241 6.11603 20.4111 6.54602C20.5981 6.97498 20.6921 7.41602 20.6921 7.86902C20.6921 8.32098 20.5981 8.73901 20.4111 9.12201C20.2241 9.50403 19.9581 9.86798 19.6131 10.213L11.8171 18.003C11.6091 18.211 11.3831 18.362 11.1391 18.457C10.8951 18.552 10.6381 18.6 10.3691 18.6Z"
+                                                        fill="#7D7F8F" />
+                                                </svg>
+                                                <span class="menu-title fs-7 mx-1">Partners</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+
+                                        <!--begin:Menu item-->
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link" href="../../demo1/dist/main-dashboard.html">
+                                                <svg width="15" height="18" viewBox="0 0 21 22" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.72006 15.115V7.11499H4.72006V15.115H3.72006ZM8.72006 15.115V7.11499H9.72006V15.115H8.72006ZM0.758057 5.11499V4.26898L9.22006 0.22998L17.6821 4.26898V5.11499H0.758057ZM3.40706 4.11499H15.0331L9.22006 1.36499L3.40706 4.11499ZM0.758057 18.115V17.115H11.8661C11.8741 17.298 11.8901 17.469 11.9141 17.627C11.9391 17.786 11.9691 17.948 12.0051 18.115H0.758057ZM13.7201 12.384V7.11499H14.7201V11.884L13.7201 12.384ZM17.2201 21.346C16.2371 21.101 15.4271 20.541 14.7901 19.666C14.1541 18.791 13.8351 17.816 13.8351 16.742V14.576L17.2201 12.884L20.6051 14.576V16.742C20.6051 17.816 20.2861 18.791 19.6501 19.666C19.0131 20.541 18.2031 21.101 17.2201 21.346ZM16.4951 18.692L19.5281 15.665L18.9011 15.038L16.4951 17.432L15.5201 16.457L14.8931 17.09L16.4951 18.692Z"
+                                                        fill="#7D7F8F" />
+                                                </svg>
+                                                <span class="menu-title fs-7 mx-1">Government Support</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+                                        <!--end:Menu item-->
+                                        <!--begin:Menu item-->
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link" href="../../demo1/dist/main-dashboard.html">
+                                                <svg width="13" height="13" viewBox="0 0 19 17" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M2.29689 16.965C1.83689 16.965 1.45189 16.811 1.14389 16.502C0.835884 16.194 0.681885 15.8101 0.681885 15.349V5.57996C0.681885 5.12 0.835884 4.73596 1.14389 4.427C1.45189 4.11902 1.83689 3.96497 2.29689 3.96497H6.68188V2.57996C6.68188 2.12 6.83588 1.73596 7.14389 1.427C7.45189 1.11902 7.83689 0.964966 8.29689 0.964966H11.0659C11.5259 0.964966 11.9109 1.11902 12.2189 1.427C12.5269 1.73596 12.6819 2.12 12.6819 2.57996V3.96497H17.0659C17.5259 3.96497 17.9109 4.11902 18.2189 4.427C18.5269 4.73596 18.6819 5.12 18.6819 5.57996V15.349C18.6819 15.8101 18.5269 16.194 18.2189 16.502C17.9109 16.811 17.5259 16.965 17.0659 16.965H2.29689ZM2.29689 15.965H17.0659C17.2199 15.965 17.3609 15.901 17.4889 15.772C17.6169 15.644 17.6819 15.5031 17.6819 15.349V5.57996C17.6819 5.42603 17.6169 5.28503 17.4889 5.15698C17.3609 5.02905 17.2199 4.96497 17.0659 4.96497H2.29689C2.14289 4.96497 2.00188 5.02905 1.87389 5.15698C1.74588 5.28503 1.68188 5.42603 1.68188 5.57996V15.349C1.68188 15.5031 1.74588 15.644 1.87389 15.772C2.00188 15.901 2.14289 15.965 2.29689 15.965ZM7.68188 3.96497H11.6819V2.57996C11.6819 2.42603 11.6169 2.28503 11.4889 2.15698C11.3609 2.02905 11.2199 1.96497 11.0659 1.96497H8.29689C8.14289 1.96497 8.00188 2.02905 7.87389 2.15698C7.74588 2.28503 7.68188 2.42603 7.68188 2.57996V3.96497Z"
+                                                        fill="#7D7F8F" />
+                                                </svg>
+
+                                                <span class="menu-title fs-7 mx-1">Legal Compliance</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+
+
+                                        <!--begin:Menu item-->
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link" href="../../demo1/dist/main-dashboard.html">
+                                                <svg width="15" height="15" viewBox="0 0 17 17" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M8.68188 12.8051C8.85588 12.8051 9.00188 12.746 9.11988 12.629C9.23788 12.511 9.29689 12.364 9.29689 12.1899C9.29689 12.016 9.23788 11.87 9.11988 11.752C9.00188 11.634 8.85588 11.575 8.68188 11.575C8.50689 11.575 8.36089 11.634 8.24289 11.752C8.12489 11.87 8.06589 12.016 8.06589 12.1899C8.06589 12.364 8.12489 12.511 8.24289 12.629C8.36089 12.746 8.50689 12.8051 8.68188 12.8051ZM8.18188 9.84399H9.18188V3.76697H8.18188V9.84399ZM5.35489 16.382L0.681885 11.718V5.05505L5.34589 0.381958H12.0079L16.6819 5.04602V11.709L12.0179 16.382H5.35489ZM5.78189 15.382H11.5819L15.6819 11.282V5.48206L11.5819 1.38196H5.78189L1.68188 5.48206V11.282L5.78189 15.382Z"
+                                                        fill="#7D7F8F" />
+                                                </svg>
+
+                                                <span class="menu-title fs-7 mx-1">Risk Management</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+                                        <!--end:Menu item-->
+                                        <!--begin:Menu item-->
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link" href="../../demo1/dist/main-dashboard.html">
+                                                <svg width="13" height="14" viewBox="0 0 15 19" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M2.29689 18.397C1.83689 18.397 1.45189 18.243 1.14389 17.9351C0.835884 17.626 0.681885 17.2419 0.681885 16.782V6.01294C0.681885 5.552 0.835884 5.16797 1.14389 4.85999C1.45189 4.55103 1.83689 4.39697 2.29689 4.39697H4.18188V3.89697C4.18188 2.92505 4.52188 2.099 5.20288 1.41797C5.88288 0.738037 6.70988 0.396973 7.68188 0.396973C8.65289 0.396973 9.47989 0.738037 10.1599 1.41797C10.8409 2.099 11.1819 2.92505 11.1819 3.89697V4.39697H13.0659C13.5259 4.39697 13.9109 4.55103 14.2189 4.85999C14.5269 5.16797 14.6819 5.552 14.6819 6.01294V16.782C14.6819 17.2419 14.5269 17.626 14.2189 17.9351C13.9109 18.243 13.5259 18.397 13.0659 18.397H2.29689ZM2.29689 17.397H13.0659C13.2199 17.397 13.3609 17.333 13.4889 17.205C13.6169 17.077 13.6819 16.936 13.6819 16.782V6.01294C13.6819 5.85901 13.6169 5.71802 13.4889 5.58997C13.3609 5.46106 13.2199 5.39697 13.0659 5.39697H11.1819V7.89697C11.1819 8.04004 11.1339 8.15796 11.0379 8.25403C10.9429 8.34998 10.8239 8.39697 10.6819 8.39697C10.5389 8.39697 10.4199 8.34998 10.3249 8.25403C10.2289 8.15796 10.1819 8.04004 10.1819 7.89697V5.39697H5.18188V7.89697C5.18188 8.04004 5.13388 8.15796 5.03788 8.25403C4.94289 8.34998 4.82389 8.39697 4.68188 8.39697C4.53889 8.39697 4.41988 8.34998 4.32489 8.25403C4.22889 8.15796 4.18188 8.04004 4.18188 7.89697V5.39697H2.29689C2.14289 5.39697 2.00188 5.46106 1.87389 5.58997C1.74588 5.71802 1.68188 5.85901 1.68188 6.01294V16.782C1.68188 16.936 1.74588 17.077 1.87389 17.205C2.00188 17.333 2.14289 17.397 2.29689 17.397ZM5.18188 4.39697H10.1819V3.89697C10.1819 3.19299 9.94089 2.60095 9.45889 2.11902C8.97789 1.63794 8.38488 1.39697 7.68188 1.39697C6.97789 1.39697 6.38488 1.63794 5.90388 2.11902C5.42189 2.60095 5.18188 3.19299 5.18188 3.89697V4.39697Z"
+                                                        fill="#7D7F8F" />
+                                                </svg>
+                                                <span class="menu-title fs-7 mx-1">Procurement</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+
+                                        <div class="menu-item">
+                                            <!--begin:Menu link-->
+                                            <a class="menu-link" href="../../demo1/dist/pages/lender-contact-information.html">
+                                                <svg width="18" height="12" viewBox="0 0 20 14" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M0.278076 13.8751V12.2291C0.278076 11.764 0.398075 11.3651 0.638077 11.0311C0.879078 10.6971 1.20208 10.4311 1.60707 10.2311C2.47507 9.81805 3.33607 9.48804 4.19108 9.24304C5.04608 8.99707 6.07508 8.87506 7.27808 8.87506C8.48008 8.87506 9.50908 8.99707 10.3641 9.24304C11.2191 9.48804 12.0811 9.81805 12.9481 10.2311C13.3541 10.4311 13.6771 10.6971 13.9171 11.0311C14.1581 11.3651 14.2781 11.764 14.2781 12.2291V13.8751H0.278076ZM16.2781 13.8751V12.1821C16.2781 11.6031 16.1601 11.0561 15.9261 10.5411C15.6911 10.027 15.3591 9.58508 14.9281 9.21704C15.4191 9.31708 15.8921 9.45605 16.3471 9.63306C16.8021 9.81104 17.2521 10.011 17.6971 10.2321C18.1301 10.4501 18.4701 10.7291 18.7161 11.069C18.9621 11.4091 19.0851 11.7801 19.0851 12.1821V13.8751H16.2781ZM7.27808 6.64404C6.45308 6.64404 5.74607 6.35004 5.15908 5.76306C4.57108 5.17505 4.27808 4.46906 4.27808 3.64404C4.27808 2.81903 4.57108 2.11304 5.15908 1.52509C5.74607 0.938049 6.45308 0.644043 7.27808 0.644043C8.10308 0.644043 8.80907 0.938049 9.39608 1.52509C9.98408 2.11304 10.2781 2.81903 10.2781 3.64404C10.2781 4.46906 9.98408 5.17505 9.39608 5.76306C8.80907 6.35004 8.10308 6.64404 7.27808 6.64404ZM14.5471 3.64404C14.5471 4.46906 14.2531 5.17505 13.6661 5.76306C13.0781 6.35004 12.3721 6.64404 11.5471 6.64404C11.5051 6.64404 11.4511 6.63904 11.3851 6.62909C11.3201 6.62006 11.2661 6.60907 11.2241 6.59808C11.5631 6.18304 11.8231 5.72308 12.0051 5.21704C12.1871 4.71106 12.2781 4.18604 12.2781 3.64209C12.2781 3.09705 12.1831 2.57709 11.9921 2.08008C11.8021 1.58405 11.5461 1.12103 11.2241 0.690063C11.2781 0.671082 11.3321 0.658081 11.3851 0.653076C11.4391 0.647034 11.4931 0.644043 11.5471 0.644043C12.3721 0.644043 13.0781 0.938049 13.6661 1.52509C14.2531 2.11304 14.5471 2.81903 14.5471 3.64404ZM1.27808 12.8751H13.2781V12.2291C13.2781 11.9941 13.2191 11.7891 13.1021 11.613C12.9841 11.4371 12.7741 11.2701 12.4701 11.1091C11.7241 10.7111 10.9371 10.4051 10.1101 10.1931C9.28308 9.98108 8.33908 9.87506 7.27808 9.87506C6.21608 9.87506 5.27208 9.98108 4.44508 10.1931C3.61808 10.4051 2.83208 10.7111 2.08508 11.1091C1.78208 11.2701 1.57108 11.4371 1.45407 11.613C1.33607 11.7891 1.27808 11.9941 1.27808 12.2291V12.8751ZM7.27808 5.64404C7.82808 5.64404 8.29908 5.44806 8.69007 5.05609C9.08208 4.66504 9.27808 4.19403 9.27808 3.64404C9.27808 3.09406 9.08208 2.62305 8.69007 2.23108C8.29908 1.84009 7.82808 1.64404 7.27808 1.64404C6.72808 1.64404 6.25708 1.84009 5.86508 2.23108C5.47408 2.62305 5.27808 3.09406 5.27808 3.64404C5.27808 4.19403 5.47408 4.66504 5.86508 5.05609C6.25708 5.44806 6.72808 5.64404 7.27808 5.64404Z"
+                                                        fill="#7D7F8F" />
+                                                </svg>
+                                                <span class="menu-title fs-7 mx-1">Contact Information</span>
+                                            </a>
+                                            <!--end:Menu link-->
+                                        </div>
+
+
+
+                                    </div>
+                                    <!--end:Menu sub-->
+                                </div>
+
+
+                            </div>
+                            <!--end::Menu-->
+                        </div>
+                        <!--end::Menu wrapper-->
+                    </div>
+                    <!--end::sidebar menu-->
+                </div>
+                <!--end::Sidebar-->
+
+
+                <!--begin::Main-->
+                <div class="app-main flex-column flex-row-fluid py-10" id="kt_app_main">
+                    <!--begin::Content wrapper-->
+                    <div class="d-flex flex-column flex-column-fluid">
+                        <!--begin::Content-->
+                        <div id="kt_app_content" class="app-content flex-column-fluid">
+                            <!--begin::Content container-->
+                            <div id="kt_app_content_container" class="app-container container-xxl">
+                                <!--begin::Products-->
+                                <div class="card card-flush">
+                                    <!--begin::Card header-->
+                                    <div class="card-header align-items-center gap-2 gap-md-5">
+                                        <!--begin::Card title-->
+                                        <div class="card-title">
+                                            <!--begin::Search-->
+
+                                            <div class="d-flex align-items-center position-relative">
+                                                <a class="badge rounded-4 mb-6 m-2"
+                                                    style="background-color: #e6e6ff;">Lender</a>
+                                                <p class="fs-4 fw-bold text-dark">Introduction - Africa Finance Corp </p>
+                                            </div>
+                                            <!--end::Search-->
+                                        </div>
+                                        <!--end::Card title-->
+                                        <!--begin::Card toolbar-->
+                                        <div class="card-toolbar flex-row-fluid justify-content-end gap-5">
+                                            <a href="#" class="btn btn-sm fs-5 " data-bs-toggle="modal"
+                                                data-bs-target="#kt_modal_new_target"
+                                                style="background-color: #F4F4F4;">
+                                                <svg width="13" height="15" viewBox="0 0 15 20" fill="none"
+                                                    class="mx-2 " xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M2.18201 19.386C1.72205 19.386 1.33801 19.232 1.02905 18.924C0.720947 18.615 0.567017 18.231 0.567017 17.771V8.00198C0.567017 7.54099 0.720947 7.15698 1.02905 6.84898C1.33801 6.53998 1.72205 6.38599 2.18201 6.38599H4.29797V7.38599H2.18201C2.02795 7.38599 1.88696 7.44998 1.75903 7.57898C1.63098 7.70699 1.56702 7.84799 1.56702 8.00198V17.771C1.56702 17.925 1.63098 18.066 1.75903 18.194C1.88696 18.322 2.02795 18.386 2.18201 18.386H12.951C13.105 18.386 13.246 18.322 13.375 18.194C13.5031 18.066 13.567 17.925 13.567 17.771V8.00198C13.567 7.84799 13.5031 7.70699 13.375 7.57898C13.246 7.44998 13.105 7.38599 12.951 7.38599H10.8361V6.38599H12.951C13.412 6.38599 13.796 6.53998 14.104 6.84898C14.413 7.15698 14.567 7.54099 14.567 8.00198V17.771C14.567 18.231 14.413 18.615 14.104 18.924C13.796 19.232 13.412 19.386 12.951 19.386H2.18201ZM7.06702 12.886V1.99998L4.96704 4.09999L4.25903 3.38599L7.56702 0.0789795L10.875 3.38599L10.167 4.09999L8.06702 1.99998V12.886H7.06702Z"
+                                                        fill="black" />
+                                                </svg>
+                                                Share
+                                            </a>
+                                            <a href="#" class="btn btn-sm fs-6 bg-dark text-white"
+                                                data-bs-toggle="modal" data-bs-target="#kt_modal_new_target">Edit
+                                                Project
+
+                                            </a>
+                                        </div>
+                                        <!--end::Card toolbar-->
+
+                                    </div>
+                                    <!--end::Card header-->
+
+                                    <!--begin::Card body-->
+                                    <!--begin::Row-->
+                                    <div class="row mb-6">
+                                        <!--begin::Col-->
+                                        <div class="col-lg-6 col-md-6 col-xxl-6 col-xl-6 ps-lg-16 mb-4">
+                                            <div class="position-relative">
+                                                <!--begin::Overlay-->
+                                                <div class="overlay overlay-show">
+                                                    <!--begin::Image-->
+                                                    <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-400px"
+                                                        style="background-image:url('assets/media/dashboard/onedata-pic.png')">
+                                                    </div>
+                                                    <!--end::Image-->
+                                                    <!--begin::layer-->
+                                                    <div class="overlay-layer rounded bg-black" style="opacity: 0.4">
+                                                    </div>
+                                                    <!--end::layer-->
+                                                </div>
+                                                <!--end::Overlay-->
+
+                                            </div>
+                                        </div>
+                                        <!--end::Col-->
+
+                                        <!--begin::Col-->
+                                        <div
+                                            class="col-lg-6 col-md-6 col-xxl-6 col-xl-6 pe-lg-16 mb-lg-0 d-none d-md-block">
+                                            <!--begin::Block-->
+                                            <div class="position-relative mb-2">
+                                                <!--begin::Overlay-->
+                                                <div class="overlay overlay-show">
+                                                    <!--begin::Image-->
+                                                    <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-200px"
+                                                        style="background-image:url('assets/media/dashboard/onedata-pic.png')">
+                                                    </div>
+                                                    <!--end::Image-->
+                                                    <!--begin::layer-->
+                                                    <div class="overlay-layer rounded bg-black" style="opacity: 0.4">
+                                                    </div>
+                                                    <!--end::layer-->
+                                                </div>
+                                                <!--end::Overlay-->
+
+                                            </div>
+                                            <!--end::Block-->
+                                            <!--begin::Block-->
+                                            <div class="position-relative">
+                                                <!--begin::Overlay-->
+                                                <div class="overlay overlay-show">
+                                                    <!--begin::Image-->
+                                                    <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-200px"
+                                                        style="background-image:url('assets/media/dashboard/onedata-pic.png')">
+                                                    </div>
+                                                    <!--end::Image-->
+                                                    <!--begin::layer-->
+                                                    <div class="overlay-layer rounded bg-black" style="opacity: 0.4">
+                                                    </div>
+                                                    <!--end::layer-->
+                                                </div>
+                                                <!--end::Overlay-->
+
+                                            </div>
+                                            <!--end::Block-->
+                                        </div>
+                                        <!--end::Col-->
+                                    </div>
+                                    <!--end::Row-->
+
+                                    <!--end::Card body-->
+
+                                    <div class="row">
+                                        <!--begin::Col-->
+                                        <div class="col-lg-8 col-md-8 col-xxl-8 col-xl-8 ps-lg-16">
+                                            <div class="modal-body">
+                                                <!--begin::Main-->
+                                                <div class="app-main flex-column flex-row-fluid py-4" id="kt_app_main">
+                                                    <!--begin::Content wrapper-->
+                                                    <div class="d-flex flex-column flex-column-fluid">
+                                                        <!--begin::Content-->
+                                                        <div id="kt_app_content" class="app-content flex-column-fluid">
+                                                            <!--begin::Content container-->
+                                                            <div id="kt_app_content_container"
+                                                                class="app-container container-xxl">
+                                                                <!--begin::Products-->
+                                                                <div class="card card-flush">
+                                                                    <div class="row">
+                                                                        <!--begin::Col-->
+                                                                        <div
+                                                                            class="col-lg-12 col-md-12 col-xxl-12 col-xl-12">
+
+                                                                            <div class="d-flex flex-stack">
+                                                                                <!--begin::Section-->
+                                                                                <div class="table-responsive">
+                                                                                    <!--begin::Table-->
+                                                                                    <table
+                                                                                        class="table align-start mb-0 fs-7">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td
+                                                                                                    class="text-dark w-300px">
+                                                                                                    <div
+                                                                                                        class="d-flex  fw-bold">
+                                                                                                        Lender's
+                                                                                                        Registered Name
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                                <td class="text-dark">
+                                                                                                    <div class="d-flex">
+                                                                                                        <span
+                                                                                                            class="text-dark fs-6 ">Africa
+                                                                                                            Finance Corp
+                                                                                                        </span>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td class="text-dark ">
+                                                                                                    <div
+                                                                                                        class="d-flex  fw-bold">
+                                                                                                        Lender's Short
+                                                                                                        Name
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <div
+                                                                                                        class="d-flex  fw-bold">
+                                                                                                        Year of
+                                                                                                        Establishment
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td class="text-dark">
+                                                                                                    <span
+                                                                                                        class="text-dark">AFL</span>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="text-dark">2010</span>
+                                                                                                </td>
+
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <!--end::Table-->
+                                                                                </div>
+                                                                                <!--end::Section-->
+
+                                                                            </div>
+
+                                                                            <div class="px-0 mt-10">
+                                                                                <h2 class="fw-bolder mt-3 fs-6">Brief
+                                                                                    description
+                                                                                </h2>
+                                                                                <div class="separator my-3"></div>
+                                                                                <span class="text-dark fs-8">
+                                                                                    <p>AFL is a leading Debt Provider
+                                                                                        for project finance in africa
+                                                                                        AFL is a leading Debt Provider
+                                                                                        for project finance in africa
+                                                                                        AFL is a leading Debt Provider
+                                                                                        for project finance in africa
+                                                                                    </p>
+                                                                                </span>
+                                                                            </div>
+
+                                                                            <div class="px-0 mt-10">
+                                                                                <div class="table-responsive">
+                                                                                    <!--begin::Table-->
+                                                                                    <h2 class="fw-bolder mt-3 fs-6">
+                                                                                        Location</h2>
+                                                                                    <table
+                                                                                        class="table align-start mb-0 fs-7">
+                                                                                        <tbody class="text-dark ">
+
+                                                                                            <tr>
+                                                                                                <td
+                                                                                                    class="text-dark  w-300px ">
+                                                                                                    <div
+                                                                                                        class="d-flex  fw-bold">
+                                                                                                        Main Locations
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <div
+                                                                                                        class="d-flex  fw-bold">
+                                                                                                        Other Locations
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+
+
+                                                                                            <tr>
+                                                                                                <td class="text-dark">
+                                                                                                    <span
+                                                                                                        class="text-dark fs-8">Africa</span>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="text-dark fs-8">Argentina</span>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td class="text-dark">
+                                                                                                    <div
+                                                                                                        class="d-flex  fw-bold">
+                                                                                                        Main Region
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <div
+                                                                                                        class="d-flex  fw-bold">
+                                                                                                        Other Region
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td class="text-dark">
+                                                                                                    <span
+                                                                                                        class="text-dark fs-8">Asia</span>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="text-dark fs-8">South
+                                                                                                        Asia</span>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                    <!--end::Table-->
+                                                                                </div>
+
+                                                                                <div class="table-responsive">
+                                                                                    <!--begin::Table-->
+                                                                                    <h2 class="fw-bolder mt-3 fs-6">
+                                                                                        Industries(Sectors)</h2>
+                                                                                    <table
+                                                                                        class="table align-start mb-0 fs-7">
+                                                                                        <tbody class="text-dark ">
+
+                                                                                            <tr>
+                                                                                                <td
+                                                                                                    class="text-dark  w-300px ">
+                                                                                                    <div
+                                                                                                        class="d-flex  fw-bold">
+                                                                                                        Main Industry
+                                                                                                        (Sector) of
+                                                                                                        Activity
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <div
+                                                                                                        class="d-flex  fw-bold">
+                                                                                                        Other Industries
+                                                                                                        (Sector) of
+                                                                                                        Activity
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+
+
+                                                                                            <tr>
+                                                                                                <td class="text-dark">
+                                                                                                    <span
+                                                                                                        class="text-dark fs-8">Financial
+                                                                                                        and Insurance
+                                                                                                        Activity</span>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="text-dark fs-8">Agriculture,
+                                                                                                        Forestry and
+                                                                                                        Fisheries</span>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+
+                                                                                    <table
+                                                                                        class="table align-start mb-0 fs-7">
+                                                                                        <tbody class="text-dark ">
+
+                                                                                            <tr>
+                                                                                                <td
+                                                                                                    class="text-dark  w-300px ">
+                                                                                                    <div
+                                                                                                        class="d-flex  fw-bold">
+                                                                                                        Status
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <span
+                                                                                                        class="text-dark fs-8">
+                                                                                                        <p>Ongoing</p>
+                                                                                                    </span>
+                                                                                                </td>
+                                                                                            </tr>
+
+                                                                                        </tbody>
+                                                                                    </table>
+
+
+                                                                                    <!--end::Table-->
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <!--end::Products-->
+                                                            </div>
+                                                            <!--end::Content container-->
+                                                        </div>
+                                                        <!--end::Content-->
+                                                    </div>
+                                                    <!--end::Content wrapper-->
+
+                                                </div>
+                                                <!--end:::Main-->
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-4 col-xxl-4 col-xl-4 pe-lg-16  mb-lg-0 ">
+                                            <div class="d-flex flex-center flex-shrink-0">
+                                                <img alt="Logo" src="assets/media/dashboard/onedata.jpg"
+                                                    class="mw-50px mw-lg-200px" />
+
+                                            </div>
+                                            <div class="border bg-gray-100 rounded">
+                                                <div class="card-body d-flex flex-column px-6 ">
+                                                    <a class="btn btn-sm btn-primary text-white fs-4 mb-12">Contact
+                                                        Information</a>
+
+
+                                                    <div class="d-flex flex-column">
+                                                        <span class="text-primary fw-bold fs-8">Contact Person
+                                                        </span>
+                                                        <span class="text-dark fs-7">John Doe</span>
+                                                        <div class="separator my-5"></div>
+                                                        <!--end::Section-->
+                                                    </div>
+
+
+                                                    <div class="d-flex flex-column">
+                                                        <span class="text-primary fw-bold fs-8">Telephone</span>
+                                                        <span class="text-dark fs-7">+256778923345 or
+                                                            +256702345698</span>
+                                                        <div class="separator my-5"></div>
+                                                        <!--end::Section-->
+                                                    </div>
+
+
+
+
+                                                    <div class="d-flex flex-column">
+                                                        <span class="text-primary fw-bold fs-8">Email</span>
+                                                        <span class="text-dark fs-7">John@gmail.com</span>
+                                                        <div class="separator my-5"></div>
+                                                        <!--end::Section-->
+                                                    </div>
+
+
+
+
+                                                    <div class="d-flex flex-column">
+                                                        <span class="text-primary fw-bold fs-8">Website</span>
+                                                        <span class="text-dark fs-7 ">www.helloworld.com</span>
+                                                        <div class="separator my-5"></div>
+                                                        <!--end::Section-->
+                                                    </div>
+
+
+
+
+                                                    <div class="d-flex flex-column">
+                                                        <span class="text-primary fw-bold fs-8">Social Media</span>
+                                                        <div class="d-flex">
+                                                            <a class="badge text-dark rounded-4 mb-4 px-4 ">Twitter</a>
+                                                            <a
+                                                                class="badge  text-dark rounded-4 mb-4 px-4 ">Linkedin</a>
+                                                            <a
+                                                                class="badge  text-dark rounded-4 mb-4 px-4 ">Telegram</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ps-lg-16 mb-10 px-8">
+                                        <div class="px-0">
+                                            <h2 class="fw-bolder fs-6">Products and services
+                                            </h2>
+                                            <div class="separator my-3 "></div>
+                                            <span class="text-dark fs-8">
+                                                <p>Industrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transition Industrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transitionIndustrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transitionIndustrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transition
+                                                </p>
+                                            </span>
+                                        </div>
+
+                                        <div class="px-0 mt-10">
+                                            <h2 class="fw-bolder fs-6">Capital Statement
+                                            </h2>
+                                            <div class="separator my-3 "></div>
+                                            <span class="text-dark fs-8">
+                                                <p>Industrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transition Industrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transitionIndustrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transitionIndustrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transition
+                                                </p>
+                                            </span>
+                                        </div>
+
+
+                                        <div class="px-0 mt-10">
+                                            <h2 class="fw-bolder fs-6">Financing(Lending) and Projects preference(Select
+                                                at least one)
+                                            </h2>
+                                            <div class="separator my-3 "></div>
+                                            <span class="text-dark fs-8">
+                                                <p>Industrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transition Industrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transitionIndustrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transitionIndustrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transition
+                                                </p>
+                                            </span>
+                                        </div>
+
+                                        <div class="px-0 mt-10">
+                                            <h2 class="fw-bolder fs-6">Debt Finance Portifolio, Investments and Projects
+                                            </h2>
+                                            <div class="separator my-3 "></div>
+                                            <span class="text-dark fs-8">
+                                                <p>Industrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transition Industrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transitionIndustrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transitionIndustrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transition
+                                                </p>
+                                            </span>
+                                        </div>
+
+                                        <div class="px-0 mt-10">
+                                            <h2 class="fw-bolder fs-6">Assets Under Management(AUM)
+                                            </h2>
+                                            <div class="separator my-3 "></div>
+                                            <span class="text-dark fs-8">
+                                                <p>Industrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transition Industrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transitionIndustrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transitionIndustrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transition
+                                                </p>
+                                            </span>
+                                        </div>
+
+                                        <div class="px-0 mt-10">
+                                            <h2 class="fw-bolder fs-6">Key Facts and Figures
+                                            </h2>
+                                            <div class="separator my-3 "></div>
+                                            <span class="text-dark fs-8">
+                                                <p>Industrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transition Industrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transitionIndustrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transitionIndustrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transition
+                                                </p>
+                                            </span>
+                                        </div>
+
+                                        <div class="px-0 mt-10">
+                                            <h2 class="fw-bolder fs-6">Additional Information
+                                            </h2>
+                                            <div class="separator my-3 "></div>
+                                            <span class="text-dark fs-8">
+                                                <p>Industrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transition Industrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transitionIndustrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transitionIndustrial waste management
+                                                    Harnessing our expertise to drive your
+                                                    environmental transition
+                                                </p>
+                                            </span>
+                                        </div>
+
+                                        <div class="px-0 mt-10">
+                                            <h2 class="fw-bolder fs-6">Link to lenders information
+                                            </h2>
+                                            <div class="separator my-3 "></div>
+                                            <span class="text-dark fs-8">
+                                                <p>www.helloworld.com
+                                                </p>
+                                            </span>
+                                        </div>
+
+                                        <div class="d-flex flex-stack mt-10">
+                                            <!--begin::Section-->
+                                            <div class="table-responsive">
+                                                <h2 class="fw-bolder fs-6">Documents
+                                                </h2>
+                                                <!--begin::Table-->
+                                                <table class="table align-start mb-0 fs-7">
+                                                    <tbody class="text-dark ">
+
+                                                        <tr>
+                                                            <td class="text-dark  w-300px ">
+                                                                <div class="d-flex  fw-bold">
+                                                                    Intro Document 1
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <span class="text-dark fs-8">Attached Document 1</span>
+                                                            </td>
+                                                        </tr>
+
+
+                                                        <tr>
+                                                            <td class="text-dark">
+                                                                <div class="d-flex  fw-bold">
+                                                                    Intro Document 2
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <span class="text-dark fs-8">Attached Document 2</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-dark">
+                                                                <div class="d-flex  fw-bold">
+                                                                    Intro Document 3
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <span class="text-dark fs-8">Attached Document 3</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <!--end::Table-->
+                                            </div>
+                                            <!--end::Section-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end::Products-->
+                            </div>
+                            <!--end::Content container-->
+                        </div>
+                        <!--end::Content-->
+                    </div>
+                    <!--end::Content wrapper-->
+                    <!--begin::Footer-->
+                    <div id="kt_app_footer" class="app-footer">
+                        <!--begin::Footer container-->
+                        <div
+                            class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">
+                            <!--begin::Copyright-->
+                            <div class="text-dark order-2 order-md-1">
+                                <span class="text-muted fw-semibold me-1">2022 - 2023&copy;</span>
+                                <a href="#" target="_blank" class="text-gray-800 text-hover-primary">One Data
+                                    Limited</a>
+                            </div>
+                            <!--end::Copyright-->
+                            <!--begin::Menu-->
+                            <ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
+                                <li class="menu-item">
+                                    <a href="#" target="_blank" class="menu-link px-2">About</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" target="_blank" class="menu-link px-2">Privacy</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" target="_blank" class="menu-link px-2">Terms and Conditions</a>
+                                </li>
+                            </ul>
+                            <!--end::Menu-->
+                        </div>
+                        <!--end::Footer container-->
+                    </div>
+                    <!--end::Footer-->
+                </div>
+                <!--end:::Main-->
+            </div>
+            <!--end::Wrapper-->
+        </div>
+        <!--end::Page-->
+    </div>
+    <!--end::App-->
+
+    <!--end::Modal - Invite Friend-->
+    <!--end::Modals-->
+    <!--begin::Javascript-->
+    <script>var hostUrl = "assets/";</script>
+    <!--begin::Global Javascript Bundle(mandatory for all pages)-->
+    <script src="assets/plugins/global/plugins.bundle.js"></script>
+    <script src="assets/js/scripts.bundle.js"></script>
+    <!--end::Global Javascript Bundle-->
+    <!--begin::Vendors Javascript(used for this page only)-->
+    <script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+    <!--end::Vendors Javascript-->
+    <!--begin::Custom Javascript(used for this page only)-->
+    <script src="assets/js/custom/apps/ecommerce/catalog/products.js"></script>
+    <script src="assets/js/widgets.bundle.js"></script>
+    <script src="assets/js/custom/widgets.js"></script>
+    <script src="assets/js/custom/apps/chat/chat.js"></script>
+    <script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
+    <script src="assets/js/custom/utilities/modals/create-app.js"></script>
+    <script src="assets/js/custom/utilities/modals/users-search.js"></script>
+    <!--end::Custom Javascript-->
+    <!--end::Javascript-->
+</body>
+<!--end::Body-->
+
+</html>
