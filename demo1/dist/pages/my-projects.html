@@ -1,280 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <base href="../" />
+    <title>My projects Page</title>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="The most advanced Bootstrap 5 Admin Theme with 40 unique prebuilt layouts on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel versions. Grab your copy now and get life-time updates for free."
+    />
+    <meta
+      name="keywords"
+      content="metronic, bootstrap, bootstrap 5, angular, VueJs, React, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel starter kits, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Metronic - Bootstrap Admin Template, HTML, VueJS, React, Angular. Laravel, Asp.Net Core, Ruby on Rails, Spring Boot, Blazor, Django, Express.js, Node.js, Flask Admin Dashboard Theme & Template"
+    />
+    <meta property="og:url" content="https://keenthemes.com/metronic" />
+    <meta property="og:site_name" content="Keenthemes | Metronic" />
+    <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
+    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700"
+    />
+    <link
+      href="assets/plugins/custom/datatables/datatables.bundle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/plugins/global/plugins.bundle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<head>
-	<base href="../" />
-	<title>My projects Page</title>
-	<meta charset="utf-8" />
-	<meta name="description"
-		content="The most advanced Bootstrap 5 Admin Theme with 40 unique prebuilt layouts on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel versions. Grab your copy now and get life-time updates for free." />
-	<meta name="keywords"
-		content="metronic, bootstrap, bootstrap 5, angular, VueJs, React, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel starter kits, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta property="og:locale" content="en_US" />
-	<meta property="og:type" content="article" />
-	<meta property="og:title"
-		content="Metronic - Bootstrap Admin Template, HTML, VueJS, React, Angular. Laravel, Asp.Net Core, Ruby on Rails, Spring Boot, Blazor, Django, Express.js, Node.js, Flask Admin Dashboard Theme & Template" />
-	<meta property="og:url" content="https://keenthemes.com/metronic" />
-	<meta property="og:site_name" content="Keenthemes | Metronic" />
-	<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-	<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
-	<link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
-	<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-</head>
+  <body
+    id="kt_app_body"
+    data-kt-app-layout="dark-sidebar"
+    data-kt-app-header-fixed="true"
+    data-kt-app-sidebar-enabled="true"
+    data-kt-app-sidebar-fixed="true"
+    data-kt-app-sidebar-hoverable="true"
+    data-kt-app-sidebar-push-header="true"
+    data-kt-app-sidebar-push-toolbar="true"
+    data-kt-app-sidebar-push-footer="true"
+    data-kt-app-toolbar-enabled="true"
+    class="app-default"
+  >
+    <script>
+      var defaultThemeMode = "light";
+      var themeMode;
+      if (document.documentElement) {
+        if (document.documentElement.hasAttribute("data-bs-theme-mode")) {
+          themeMode =
+            document.documentElement.getAttribute("data-bs-theme-mode");
+        } else {
+          if (localStorage.getItem("data-bs-theme") !== null) {
+            themeMode = localStorage.getItem("data-bs-theme");
+          } else {
+            themeMode = defaultThemeMode;
+          }
+        }
+        if (themeMode === "system") {
+          themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+        document.documentElement.setAttribute("data-bs-theme", themeMode);
+      }
+    </script>
+    <!--end::Theme mode setup on page load-->
+    <!--begin::App-->
+    <div class="d-flex flex-column flex-root app-root" id="kt_app_root">
+      <!--begin::Page-->
+      <div class="app-page flex-column flex-column-fluid" id="kt_app_page">
+        <!--begin::Header-->
+        <div id="kt_app_header" class="app-header">
+          <!--begin::Header container-->
+          <div
+            class="app-container container-fluid d-flex align-items-stretch justify-content-between bg-gray-900"
+            id="kt_app_header_container"
+          >
+            <!--begin::Sidebar mobile toggle-->
+            <div
+              class="d-flex align-items-center d-lg-none ms-n3 me-1 me-md-2"
+              title="Show sidebar menu"
+            >
+              <div
+                class="btn btn-icon btn-active-color-primary w-35px h-35px"
+                id="kt_app_sidebar_mobile_toggle"
+              >
+                <i class="ki-duotone ki-abstract-14 fs-2 fs-md-1">
+                  <span class="path1"></span>
+                  <span class="path2"></span>
+                </i>
+              </div>
+            </div>
+            <!--end::Sidebar mobile toggle-->
+            <!--begin::Mobile logo-->
+            <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
+              <a href="../../demo1/dist/main-dashboard.html" class="d-lg-none">
+                <img
+                  alt="Logo"
+                  src="assets/media/dashboard/onedata-logo.png"
+                  class="h-25px"
+                />
+              </a>
+            </div>
+            <!--end::Mobile logo-->
 
-<body id="kt_app_body" data-kt-app-layout="dark-sidebar" data-kt-app-header-fixed="true"
-	data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-hoverable="true"
-	data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true"
-	data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
-	<script>var defaultThemeMode = "light"; var themeMode; if (document.documentElement) { if (document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if (localStorage.getItem("data-bs-theme") !== null) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }</script>
-	<!--end::Theme mode setup on page load-->
-	<!--begin::App-->
-	<div class="d-flex flex-column flex-root app-root" id="kt_app_root">
-		<!--begin::Page-->
-		<div class="app-page flex-column flex-column-fluid" id="kt_app_page">
-			<!--begin::Header-->
-			<div id="kt_app_header" class="app-header">
-				<!--begin::Header container-->
-				<div class="app-container container-fluid d-flex align-items-stretch justify-content-between bg-gray-900"
-					id="kt_app_header_container">
-					<!--begin::Sidebar mobile toggle-->
-					<div class="d-flex align-items-center d-lg-none ms-n3 me-1 me-md-2" title="Show sidebar menu">
-						<div class="btn btn-icon btn-active-color-primary w-35px h-35px"
-							id="kt_app_sidebar_mobile_toggle">
-							<i class="ki-duotone ki-abstract-14 fs-2 fs-md-1">
-								<span class="path1"></span>
-								<span class="path2"></span>
-							</i>
-						</div>
-					</div>
-					<!--end::Sidebar mobile toggle-->
-					<!--begin::Mobile logo-->
-					<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
-						<a href="../../demo1/dist/main-dashboard.html" class="d-lg-none">
-							<img alt="Logo" src="assets/media/dashboard/onedata-logo.png" class="h-25px" />
-						</a>
-					</div>
-					<!--end::Mobile logo-->
+            <!--begin::Header wrapper-->
+            <div
+              class="d-flex align-items-stretch justify-content-between flex-lg-grow-1"
+              id="kt_app_header_wrapper"
+            >
+              <!--begin::Menu wrapper-->
+              <div
+                class="app-header-menu app-header-mobile-drawer align-items-stretch"
+                data-kt-drawer="true"
+                data-kt-drawer-name="app-header-menu"
+                data-kt-drawer-activate="{default: true, lg: false}"
+                data-kt-drawer-overlay="true"
+                data-kt-drawer-width="250px"
+                data-kt-drawer-direction="end"
+                data-kt-drawer-toggle="#kt_app_header_menu_toggle"
+                data-kt-swapper="true"
+                data-kt-swapper-mode="{default: 'append', lg: 'prepend'}"
+                data-kt-swapper-parent="{default: '#kt_app_body', lg: '#kt_app_header_wrapper'}"
+              >
+                <!--begin::Menu-->
+                <div
+                  class="menu menu-rounded menu-column menu-lg-row my-5 my-lg-0 align-items-stretch fw-semibold px-2 px-lg-0"
+                  id="kt_app_header_menu"
+                  data-kt-menu="true"
+                >
+                  <!--begin:Menu item-->
+                  <div
+                    data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                    data-kt-menu-placement="bottom-start"
+                    class="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2"
+                  >
+                    <!--begin:Menu link-->
+                    <span class="menu-link">
+                      <img
+                        alt="Logo"
+                        src="assets/media/dashboard/home.png"
+                        class="h-10px app-sidebar-logo-default"
+                      />
+                      <span class="menu-title m-2 fs-7">Home</span>
+                      <span class="menu-arrow d-lg-none"></span>
+                    </span>
+                    <!--end:Menu link-->
+                  </div>
+                  <!--end:Menu item-->
+                  <!--begin:Menu item-->
+                  <div
+                    data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                    data-kt-menu-placement="bottom-start"
+                    class="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2"
+                  >
+                    <!--begin:Menu link-->
+                    <span class="menu-link">
+                      <img
+                        alt="Logo"
+                        src="assets/media/dashboard/projects.png"
+                        class="h-10px app-sidebar-logo-default"
+                      />
+                      <span class="menu-title m-2 fs-7">Projects</span>
+                      <span class="menu-arrow d-lg-none"></span>
+                    </span>
+                    <!--end:Menu link-->
+                  </div>
+                  <!--end:Menu item-->
+                  <!--begin:Menu item-->
+                  <div
+                    data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                    data-kt-menu-placement="bottom-start"
+                    class="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2"
+                  >
+                    <!--begin:Menu link-->
+                    <span class="menu-link">
+                      <img
+                        alt="Logo"
+                        src="assets/media/dashboard/sponsors.png"
+                        class="h-10px app-sidebar-logo-default"
+                      />
+                      <span class="menu-title m-2 fs-7">Sponsors</span>
+                      <span class="menu-arrow d-lg-none"></span>
+                    </span>
+                    <!--end:Menu link-->
+                  </div>
+                  <!--end:Menu item-->
+                  <!--begin:Menu item-->
+                  <div
+                    data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                    data-kt-menu-placement="bottom-start"
+                    class="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2"
+                  >
+                    <!--begin:Menu link-->
+                    <span class="menu-link">
+                      <img
+                        alt="Logo"
+                        src="assets/media/dashboard/investors.png"
+                        class="h-10px app-sidebar-logo-default"
+                      />
+                      <span class="menu-title m-2 fs-7">Investors</span>
+                      <span class="menu-arrow d-lg-none"></span>
+                    </span>
+                    <!--end:Menu link-->
+                  </div>
+                  <!--end:Menu item-->
+                  <!--begin:Menu item-->
+                  <div
+                    data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                    data-kt-menu-placement="bottom-start"
+                    class="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2"
+                  >
+                    <!--begin:Menu link-->
+                    <span class="menu-link">
+                      <img
+                        alt="Logo"
+                        src="assets/media/dashboard/lenders.png"
+                        class="h-10px app-sidebar-logo-default"
+                      />
+                      <span class="menu-title m-2 fs-7">Lenders</span>
+                      <span class="menu-arrow d-lg-none"></span>
+                    </span>
+                    <!--end:Menu link-->
+                  </div>
+                  <!--end:Menu item-->
+                  <!--begin:Menu item-->
+                  <div
+                    data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                    data-kt-menu-placement="bottom-start"
+                    class="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2"
+                  >
+                    <!--begin:Menu link-->
+                    <span class="menu-link">
+                      <img
+                        alt="Logo"
+                        src="assets/media/dashboard/service-providers.png"
+                        class="h-10px app-sidebar-logo-default"
+                      />
+                      <span class="menu-title m-2 fs-7">Service Providers</span>
+                      <span class="menu-arrow d-lg-none"></span>
+                    </span>
+                    <!--end:Menu link-->
+                  </div>
+                  <!--end:Menu item-->
+                </div>
+                <!--end::Menu-->
+              </div>
+              <!--end::Menu wrapper-->
+              <!--begin::Navbar-->
+              <div class="app-navbar flex-shrink-0">
+                <!--begin::Search-->
+                <div class="app-navbar-item align-items-stretch ms-1 ms-md-3">
+                  <!--begin::Search-->
+                  <div
+                    id="kt_header_search"
+                    class="header-search d-flex align-items-stretch"
+                    data-kt-search-keypress="true"
+                    data-kt-search-min-length="2"
+                    data-kt-search-enter="enter"
+                    data-kt-search-layout="menu"
+                    data-kt-menu-trigger="auto"
+                    data-kt-menu-overflow="false"
+                    data-kt-menu-permanent="true"
+                    data-kt-menu-placement="bottom-end"
+                  >
+                    <!--begin::Search toggle-->
+                    <div
+                      class="d-flex align-items-center"
+                      data-kt-search-element="toggle"
+                      id="kt_header_search_toggle"
+                    >
+                      <div
+                        class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-30px h-30px w-md-40px h-md-40px"
+                      >
+                        <i class="ki-duotone ki-magnifier fs-1 fs-lg-1">
+                          <span class="path1"></span>
+                          <span class="path2"></span>
+                        </i>
+                      </div>
+                    </div>
+                    <!--end::Search toggle-->
+                  </div>
+                  <!--end::Search-->
+                </div>
+                <!--end::Search-->
 
-					<!--begin::Header wrapper-->
-					<div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1"
-						id="kt_app_header_wrapper">
-						<!--begin::Menu wrapper-->
-						<div class="app-header-menu app-header-mobile-drawer align-items-stretch" data-kt-drawer="true"
-							data-kt-drawer-name="app-header-menu" data-kt-drawer-activate="{default: true, lg: false}"
-							data-kt-drawer-overlay="true" data-kt-drawer-width="250px" data-kt-drawer-direction="end"
-							data-kt-drawer-toggle="#kt_app_header_menu_toggle" data-kt-swapper="true"
-							data-kt-swapper-mode="{default: 'append', lg: 'prepend'}"
-							data-kt-swapper-parent="{default: '#kt_app_body', lg: '#kt_app_header_wrapper'}">
-							<!--begin::Menu-->
-							<div class="menu menu-rounded menu-column menu-lg-row my-5 my-lg-0 align-items-stretch fw-semibold px-2 px-lg-0"
-								id="kt_app_header_menu" data-kt-menu="true">
-								<!--begin:Menu item-->
-								<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-									data-kt-menu-placement="bottom-start"
-									class="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
-									<!--begin:Menu link-->
-									<span class="menu-link">
-										<img alt="Logo" src="assets/media/dashboard/home.png"
-											class="h-10px app-sidebar-logo-default" />
-										<span class="menu-title m-2 fs-7">Home</span>
-										<span class="menu-arrow d-lg-none"></span>
-									</span>
-									<!--end:Menu link-->
+                <!--begin::Chat-->
+                <div class="app-navbar-item ms-1 ms-md-3">
+                  <!--begin::Menu wrapper-->
+                  <div
+                    class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-30px h-30px w-md-40px h-md-40px position-relative"
+                    id="kt_drawer_chat_toggle"
+                  >
+                    <a href="../../demo1/dist/main-dashboard.html">
+                      <img
+                        alt="Logo"
+                        src="assets/media/dashboard/message.png"
+                        class="h-20px app-sidebar-logo-default"
+                      />
+                    </a>
+                  </div>
+                  <!--end::Menu wrapper-->
+                </div>
+                <!--end::Chat-->
 
-								</div>
-								<!--end:Menu item-->
-								<!--begin:Menu item-->
-								<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-									data-kt-menu-placement="bottom-start"
-									class="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
-									<!--begin:Menu link-->
-									<span class="menu-link">
-										<img alt="Logo" src="assets/media/dashboard/projects.png"
-											class="h-10px app-sidebar-logo-default" />
-										<span class="menu-title m-2 fs-7">Projects</span>
-										<span class="menu-arrow d-lg-none"></span>
-									</span>
-									<!--end:Menu link-->
+                <!--begin::Chat-->
+                <div class="app-navbar-item ms-1 ms-md-3">
+                  <!--begin::Menu wrapper-->
+                  <div class="d-flex align-items-center m-2">
+                    <a href="../../demo1/dist/main-dashboard.html">
+                      <img
+                        alt="Logo"
+                        src="assets/media/dashboard/bell.png"
+                        class="h-20px app-sidebar-logo-default"
+                      />
+                    </a>
+                  </div>
+                  <!--end::Menu wrapper-->
+                </div>
+                <!--end::Chat-->
 
-								</div>
-								<!--end:Menu item-->
-								<!--begin:Menu item-->
-								<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-									data-kt-menu-placement="bottom-start"
-									class="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
-									<!--begin:Menu link-->
-									<span class="menu-link">
-										<img alt="Logo" src="assets/media/dashboard/sponsors.png"
-											class="h-10px app-sidebar-logo-default" />
-										<span class="menu-title m-2 fs-7">Sponsors</span>
-										<span class="menu-arrow d-lg-none"></span>
-									</span>
-									<!--end:Menu link-->
+                <!--begin::Theme mode-->
+                <div class="app-navbar-item ms-1 ms-md-3">
+                  <div class="d-flex align-items-center m-2">
+                    <a href="../../demo1/dist/main-dashboard.html">
+                      <img
+                        alt="Logo"
+                        src="assets/media/dashboard/start-logo.png"
+                        class="h-20px app-sidebar-logo-default"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <!--end::Theme mode-->
+                <!--begin::User menu-->
+                <div
+                  class="app-navbar-item ms-1 ms-md-3"
+                  id="kt_header_user_menu_toggle"
+                >
+                  <!--begin::Menu wrapper-->
+                  <div
+                    class="cursor-pointer symbol symbol-30px symbol-md-40px"
+                    data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
+                    data-kt-menu-attach="parent"
+                    data-kt-menu-placement="bottom-end"
+                  >
+                    <img src="assets/media/avatars/300-1.jpg" alt="user" />
+                  </div>
+                </div>
+                <!--end::User menu-->
+              </div>
+              <!--end::Navbar-->
+            </div>
+            <!--end::Header wrapper-->
+          </div>
+          <!--end::Header container-->
+        </div>
+        <!--end::Header-->
 
-								</div>
-								<!--end:Menu item-->
-								<!--begin:Menu item-->
-								<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-									data-kt-menu-placement="bottom-start"
-									class="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
-									<!--begin:Menu link-->
-									<span class="menu-link">
-										<img alt="Logo" src="assets/media/dashboard/investors.png"
-											class="h-10px app-sidebar-logo-default" />
-										<span class="menu-title m-2 fs-7">Investors</span>
-										<span class="menu-arrow d-lg-none"></span>
-									</span>
-									<!--end:Menu link-->
-
-								</div>
-								<!--end:Menu item-->
-								<!--begin:Menu item-->
-								<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-									data-kt-menu-placement="bottom-start"
-									class="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
-									<!--begin:Menu link-->
-									<span class="menu-link">
-										<img alt="Logo" src="assets/media/dashboard/lenders.png"
-											class="h-10px app-sidebar-logo-default" />
-										<span class="menu-title m-2 fs-7">Lenders</span>
-										<span class="menu-arrow d-lg-none"></span>
-									</span>
-									<!--end:Menu link-->
-
-								</div>
-								<!--end:Menu item-->
-								<!--begin:Menu item-->
-								<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-									data-kt-menu-placement="bottom-start"
-									class="menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
-									<!--begin:Menu link-->
-									<span class="menu-link">
-										<img alt="Logo" src="assets/media/dashboard/service-providers.png"
-											class="h-10px app-sidebar-logo-default" />
-										<span class="menu-title m-2 fs-7">Service Providers</span>
-										<span class="menu-arrow d-lg-none"></span>
-									</span>
-									<!--end:Menu link-->
-
-								</div>
-								<!--end:Menu item-->
-
-							</div>
-							<!--end::Menu-->
-						</div>
-						<!--end::Menu wrapper-->
-						<!--begin::Navbar-->
-						<div class="app-navbar flex-shrink-0">
-							<!--begin::Search-->
-							<div class="app-navbar-item align-items-stretch ms-1 ms-md-3">
-								<!--begin::Search-->
-								<div id="kt_header_search" class="header-search d-flex align-items-stretch"
-									data-kt-search-keypress="true" data-kt-search-min-length="2"
-									data-kt-search-enter="enter" data-kt-search-layout="menu"
-									data-kt-menu-trigger="auto" data-kt-menu-overflow="false"
-									data-kt-menu-permanent="true" data-kt-menu-placement="bottom-end">
-									<!--begin::Search toggle-->
-									<div class="d-flex align-items-center" data-kt-search-element="toggle"
-										id="kt_header_search_toggle">
-										<div
-											class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-30px h-30px w-md-40px h-md-40px">
-											<i class="ki-duotone ki-magnifier fs-1 fs-lg-1">
-												<span class="path1"></span>
-												<span class="path2"></span>
-											</i>
-										</div>
-									</div>
-									<!--end::Search toggle-->
-
-								</div>
-								<!--end::Search-->
-							</div>
-							<!--end::Search-->
-
-
-							<!--begin::Chat-->
-							<div class="app-navbar-item ms-1 ms-md-3">
-								<!--begin::Menu wrapper-->
-								<div class="btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-30px h-30px w-md-40px h-md-40px position-relative"
-									id="kt_drawer_chat_toggle">
-									<a href="../../demo1/dist/main-dashboard.html">
-										<img alt="Logo" src="assets/media/dashboard/message.png"
-											class="h-20px app-sidebar-logo-default" />
-									</a>
-								</div>
-								<!--end::Menu wrapper-->
-							</div>
-							<!--end::Chat-->
-
-							<!--begin::Chat-->
-							<div class="app-navbar-item ms-1 ms-md-3">
-								<!--begin::Menu wrapper-->
-								<div class="d-flex align-items-center m-2">
-									<a href="../../demo1/dist/main-dashboard.html">
-										<img alt="Logo" src="assets/media/dashboard/bell.png"
-											class="h-20px app-sidebar-logo-default" />
-
-									</a>
-								</div>
-								<!--end::Menu wrapper-->
-							</div>
-							<!--end::Chat-->
-
-							<!--begin::Theme mode-->
-							<div class="app-navbar-item ms-1 ms-md-3">
-								<div class="d-flex align-items-center m-2">
-									<a href="../../demo1/dist/main-dashboard.html">
-										<img alt="Logo" src="assets/media/dashboard/start-logo.png"
-											class="h-20px app-sidebar-logo-default" />
-
-									</a>
-								</div>
-
-							</div>
-							<!--end::Theme mode-->
-							<!--begin::User menu-->
-							<div class="app-navbar-item ms-1 ms-md-3" id="kt_header_user_menu_toggle">
-								<!--begin::Menu wrapper-->
-								<div class="cursor-pointer symbol symbol-30px symbol-md-40px"
-									data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent"
-									data-kt-menu-placement="bottom-end">
-									<img src="assets/media/avatars/300-1.jpg" alt="user" />
-								</div>
-
-							</div>
-							<!--end::User menu-->
-
-						</div>
-						<!--end::Navbar-->
-					</div>
-					<!--end::Header wrapper-->
-				</div>
-				<!--end::Header container-->
-			</div>
-			<!--end::Header-->
-
-			<!--begin::Wrapper-->
-			<div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
-				<!--begin::Sidebar-->
-				<div id="kt_app_sidebar" class="app-sidebar flex-column" data-kt-drawer="true"
-					data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}"
-					data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start"
-					data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
-					<!--begin::Logo-->
-					<div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
-						<!--begin::Logo image-->
-						<a href="../../demo1/dist/main-dashboard.html">
-							<img alt="Logo" src="assets/media/dashboard/onedata-logo.png"
-								class="h-25px app-sidebar-logo-default" />
-							<img alt="Logo" src="assets/media/dashboard/onedata-logo.png"
-								class="h-20px app-sidebar-logo-minimize" />
-						</a>
-						<!--end::Logo image-->
-						<!--begin::Sidebar toggle-->
-						<!--begin::Minimized sidebar setup:
+        <!--begin::Wrapper-->
+        <div class="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
+          <!--begin::Sidebar-->
+          <div
+            id="kt_app_sidebar"
+            class="app-sidebar flex-column"
+            data-kt-drawer="true"
+            data-kt-drawer-name="app-sidebar"
+            data-kt-drawer-activate="{default: true, lg: false}"
+            data-kt-drawer-overlay="true"
+            data-kt-drawer-width="225px"
+            data-kt-drawer-direction="start"
+            data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle"
+          >
+            <!--begin::Logo-->
+            <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
+              <!--begin::Logo image-->
+              <a href="../../demo1/dist/main-dashboard.html">
+                <img
+                  alt="Logo"
+                  src="assets/media/dashboard/onedata-logo.png"
+                  class="h-25px app-sidebar-logo-default"
+                />
+                <img
+                  alt="Logo"
+                  src="assets/media/dashboard/onedata-logo.png"
+                  class="h-20px app-sidebar-logo-minimize"
+                />
+              </a>
+              <!--end::Logo image-->
+              <!--begin::Sidebar toggle-->
+              <!--begin::Minimized sidebar setup:
             if (isset($_COOKIE["sidebar_minimize_state"]) && $_COOKIE["sidebar_minimize_state"] === "on") {
                 1. "src/js/layout/sidebar.js" adds "sidebar_minimize_state" cookie value to save the sidebar minimize state.
                 2. Set data-kt-app-sidebar-minimize="on" attribute for body tag.
@@ -282,957 +408,1244 @@
                 4. Add "active" class to to sidebar toggle element with "kt_app_sidebar_toggle" id.
             }
         -->
-						<div id="kt_app_sidebar_toggle"
-							class="app-sidebar-toggle btn btn-icon btn-shadow btn-sm btn-color-muted btn-active-color-primary body-bg h-30px w-30px position-absolute top-50 start-100 translate-middle rotate"
-							data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"
-							data-kt-toggle-name="app-sidebar-minimize">
-							<i class="ki-duotone ki-double-left fs-2 rotate-180">
-								<span class="path1"></span>
-								<span class="path2"></span>
-							</i>
-						</div>
-						<!--end::Sidebar toggle-->
-					</div>
-
-					<!--end::Logo-->
-					<!--begin::sidebar menu-->
-					<div class="app-sidebar-menu overflow-hidden flex-column-fluid">
-						<!--begin::Menu wrapper-->
-						<div id="kt_app_sidebar_menu_wrapper" class="app-sidebar-wrapper hover-scroll-overlay-y my-5"
-							data-kt-scroll="true" data-kt-scroll-activate="true" data-kt-scroll-height="auto"
-							data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer"
-							data-kt-scroll-wrappers="#kt_app_sidebar_menu" data-kt-scroll-offset="5px"
-							data-kt-scroll-save-state="true">
-							<!--begin::Menu-->
-							<div class="menu menu-column menu-rounded menu-sub-indention px-3" id="#kt_app_sidebar_menu"
-								data-kt-menu="true" data-kt-menu-expand="false">
-								<!--begin:Menu item-->
-								<div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
-									<!--begin:Menu link-->
-
-									<!--end:Menu link-->
-									<!--begin:Menu sub-->
-									<div class="menu-sub menu-sub-accordion">
-										<!--begin:Menu item-->
-										<div class="menu-item">
-											<!--begin:Menu link-->
-											<a class="menu-link" href="../../demo1/dist/main-dashboard.html">
-												<i class="ki-duotone ki-profile-user fs-3 m-1">
-													<span class="path1"></span>
-													<span class="path2"></span>
-													<span class="path3"></span>
-													<span class="path4"></span>
-												</i>
-												<span class="menu-title fs-7">Members</span>
-											</a>
-											<!--end:Menu link-->
-										</div>
-										<!--end:Menu item-->
-										<!--begin:Menu item-->
-										<div class="menu-item">
-											<!--begin:Menu link-->
-											<a class="menu-link" href="../../demo1/dist/main-dashboard.html">
-												<i class="ki-duotone ki-sms fs-3 m-1">
-													<span class="path1"></span>
-													<span class="path2"></span>
-												</i>
-												<span class="menu-title fs-7">Send Invitations</span>
-											</a>
-											<!--end:Menu link-->
-										</div>
-									</div>
-									<!--end:Menu sub-->
-								</div>
-
-								<div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
-									<!--begin:Menu link-->
-									<div class="menu-item">
-										<!--begin:Menu content-->
-										<div class="menu-content">
-
-											<span class="fw-semibold text-uppercase text-white fs-7">Projects</span>
-										</div>
-										<!--end:Menu content-->
-									</div>
-									<!--end:Menu link-->
-									<!--begin:Menu sub-->
-									<div class="menu-sub menu-sub-accordion">
-										<!--begin:Menu item-->
-										<div class="">
-											<!--begin:Menu link-->
-											<a class="menu-link active" href="../../demo1/dist/pages/my-projects.html">
-												<img alt="Logo" src="assets/media/dashboard/projects.png"
-													class="h-10px app-sidebar-logo-default" />
-												<span class="menu-title m-2 fs-7"> My Projects</span>
-											</a>
-											<!--end:Menu link-->
-										</div>
-										<!--end:Menu item-->
-										<!--begin:Menu item-->
-										<div class="">
-											<!--begin:Menu link-->
-											<a class="menu-link" href="../../demo1/dist/main-dashboard.html">
-												<i class="ki-duotone ki-lock-3 fs-4 m-0">
-													<span class="path1"></span>
-													<span class="path2"></span>
-													<span class="path3"></span>
-												</i>
-												<span class="menu-title m-1 fs-7">Projects Permissions</span>
-											</a>
-											<!--end:Menu link-->
-										</div>
-									</div>
-									<!--end:Menu sub-->
-								</div>
-
-								<div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
-									<!--begin:Menu link-->
-									<div class="">
-										<!--begin:Menu content-->
-										<div class="menu-content">
-											<span class="fw-semibold text-uppercase fs-7 text-white">Sponsors</span>
-										</div>
-										<!--end:Menu content-->
-									</div>
-									<!--end:Menu link-->
-									<!--begin:Menu sub-->
-									<div class="menu-sub menu-sub-accordion">
-										<!--begin:Menu item-->
-										<div class="">
-											<!--begin:Menu link-->
-											<a class="menu-link" href="../../demo1/dist/pages/my-sponsors.html">
-												<img alt="Logo" src="assets/media/dashboard/sponsors.png"
-													class="h-10px app-sidebar-logo-default" />
-												<span class="menu-title m-2 fs-7">My Sponsors</span>
-											</a>
-											<!--end:Menu link-->
-										</div>
-										<!--end:Menu item-->
-										<!--begin:Menu item-->
-										<div class="">
-											<!--begin:Menu link-->
-											<a class="menu-link" href="../../demo1/dist/main-dashboard.html">
-												<i class="ki-duotone ki-lock-3 fs-4 m-0">
-													<span class="path1"></span>
-													<span class="path2"></span>
-													<span class="path3"></span>
-												</i>
-												<span class="menu-title m-1 fs-7">Sponsor Permissions</span>
-											</a>
-											<!--end:Menu link-->
-										</div>
-									</div>
-									<!--end:Menu sub-->
-								</div>
-
-								<div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
-									<!--begin:Menu link-->
-									<div class="menu-item">
-										<!--begin:Menu content-->
-										<div class="menu-content">
-											<span class="fw-semibold text-uppercase text-white fs-7">Investors</span>
-										</div>
-										<!--end:Menu content-->
-									</div>
-									<!--end:Menu link-->
-									<!--begin:Menu sub-->
-									<div class="menu-sub menu-sub-accordion">
-										<!--begin:Menu item-->
-										<div class="menu-item">
-											<!--begin:Menu link-->
-											<a class="menu-link" href="../../demo1/dist/pages/my-investors.html">
-												<img alt="Logo" src="assets/media/dashboard/investors.png"
-													class="h-10px app-sidebar-logo-default" />
-												<span class="menu-title m-2 fs-7"> My Investors</span>
-											</a>
-											<!--end:Menu link-->
-										</div>
-										<!--end:Menu item-->
-										<!--begin:Menu item-->
-										<div class="">
-											<!--begin:Menu link-->
-											<a class="menu-link" href="../../demo1/dist/main-dashboard.html">
-												<i class="ki-duotone ki-lock-3 fs-4 m-0">
-													<span class="path1"></span>
-													<span class="path2"></span>
-													<span class="path3"></span>
-												</i>
-												<span class="menu-title m-1 fs-7">Investor Permissions</span>
-											</a>
-											<!--end:Menu link-->
-										</div>
-									</div>
-									<!--end:Menu sub-->
-								</div>
-
-								<div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
-									<!--begin:Menu link-->
-									<div class="menu-item">
-										<!--begin:Menu content-->
-										<div class="menu-content">
-											<span class="fw-semibold text-uppercase fs-7 text-white">Lenders</span>
-										</div>
-										<!--end:Menu content-->
-									</div>
-									<!--end:Menu link-->
-									<!--begin:Menu sub-->
-									<div class="menu-sub menu-sub-accordion">
-										<!--begin:Menu item-->
-										<div class="menu-item">
-											<!--begin:Menu link-->
-											<a class="menu-link" href="../../demo1/dist/pages/my-lenders.html">
-												<img alt="Logo" src="assets/media/dashboard/lenders.png"
-													class="h-10px app-sidebar-logo-default" />
-												<span class="menu-title m-2 fs-7"> My Lenders</span>
-											</a>
-											<!--end:Menu link-->
-										</div>
-										<!--end:Menu item-->
-										<!--begin:Menu item-->
-										<div class="">
-											<!--begin:Menu link-->
-											<a class="menu-link" href="../../demo1/dist/main-dashboard.html">
-												<i class="ki-duotone ki-lock-3 fs-4 m-0">
-													<span class="path1"></span>
-													<span class="path2"></span>
-													<span class="path3"></span>
-												</i>
-												<span class="menu-title m-1 fs-7">Lender Permissions</span>
-											</a>
-											<!--end:Menu link-->
-										</div>
-									</div>
-									<!--end:Menu sub-->
-								</div>
-
-								<div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
-									<!--begin:Menu link-->
-									<div class="menu-item">
-										<!--begin:Menu content-->
-										<div class="menu-content">
-											<span class="fw-semibold text-uppercase fs-7 text-white">Service
-												Providers</span>
-										</div>
-										<!--end:Menu content-->
-									</div>
-									<!--end:Menu link-->
-									<!--begin:Menu sub-->
-									<div class="menu-sub menu-sub-accordion">
-										<!--begin:Menu item-->
-										<div class="menu-item">
-											<!--begin:Menu link-->
-											<a class="menu-link" href="../../demo1/dist/pages/my-providers.html">
-												<img alt="Logo" src="assets/media/dashboard/service-providers.png"
-													class="h-10px app-sidebar-logo-default" />
-												<span class="menu-title m-2 fs-7">My Service Providers</span>
-											</a>
-											<!--end:Menu link-->
-										</div>
-										<!--end:Menu item-->
-										<!--begin:Menu item-->
-										<div class="">
-											<!--begin:Menu link-->
-											<a class="menu-link" href="../../demo1/dist/main-dashboard.html">
-												<i class="ki-duotone ki-lock-3 fs-4 m-0">
-													<span class="path1"></span>
-													<span class="path2"></span>
-													<span class="path3"></span>
-												</i>
-												<span class="menu-title m-1 fs-7">Providers Permissions</span>
-											</a>
-											<!--end:Menu link-->
-										</div>
-									</div>
-									<!--end:Menu sub-->
-								</div>
-							</div>
-							<!--end::Menu-->
-						</div>
-						<!--end::Menu wrapper-->
-					</div>
-					<!--end::sidebar menu-->
-				</div>
-				<!--end::Sidebar-->
-
-
-				<!--begin::Main-->
-				<div class="app-main flex-column flex-row-fluid py-15" id="kt_app_main">
-					<!--begin::Content wrapper-->
-					<div class="d-flex flex-column flex-column-fluid">
-						<!--begin::Content-->
-						<div id="kt_app_content" class="app-content flex-column-fluid">
-							<!--begin::Content container-->
-							<div id="kt_app_content_container" class="app-container container-xxl">
-								<!--begin::Products-->
-								<div class="card card-flush">
-									<!--begin::Card header-->
-									<div class="card-header align-items-center py-5 gap-2 gap-md-5">
-										<!--begin::Card title-->
-										<div class="card-title">
-											<!--begin::Search-->
-											<div class="d-flex align-items-center position-relative my-1 px-4">
-												<p style="background-color:#c4e3ed;"
-													class="btn btn-sm fs-4 fw-bold m-2 text-dark">My Projects</p>
-											</div>
-											<!--end::Search-->
-										</div>
-										<!--end::Card title-->
-										<!--begin::Card toolbar-->
-										<div class="card-toolbar flex-row-fluid justify-content-end gap-5">
-											<a href="#" class="btn btn-sm fw-bold btn-primary" data-bs-toggle="modal"
-												data-bs-target="#kt_modal_new_target">Create New Project
-												<i class="ki-duotone ki-plus-circle toggle-off fs-1">
-													<span class="path1"></span>
-													<span class="path2"></span>
-													<span class="path3"></span>
-												</i>
-											</a>
-										</div>
-										<!--end::Card toolbar-->
-									</div>
-									<div class="separator my-3"></div>
-									<!--end::Card header-->
-									<!--begin::Card body-->
-
-									<div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
-										<!--begin::Toolbar container-->
-										<div id="kt_app_toolbar_container"
-											class="app-container container-xxl d-flex flex-stack">
-											<!--begin::Page title-->
-											<div
-												class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
-											</div>
-											<!--end::Page title-->
-											<!--begin::Actions-->
-											<div class="d-flex align-items-center gap-2 gap-lg-3">
-
-											</div>
-											<div class="d-flex align-items-center gap-2 gap-lg-3">
-												<!--begin::Filter menu-->
-
-												<!--end::Primary button-->
-											</div>
-											<!--end::Actions-->
-										</div>
-										<!--end::Toolbar container-->
-									</div>
-									<div class="card-body pt-0">
-										<!--begin::Table-->
-
-										<table class="table align-middle table-row-dashed fs-6 gy-5">
-											<thead>
-												<tr class="text-start text-gray-900 fw-bold fs-7 text-uppercase gs-0">
-													<th class="w-10px pe-2">
-													</th>
-													<th class="min-w-70px">Project Name</th>
-													<th class="min-w-70px">Account</th>
-													<th class=""></th>
-													<th class="min-w-50px">Country</th>
-													<th class="min-w-60px">Status</th>
-													<th class="min-w-200px">Date Created</th>
-													<th class="min-w-100px">Action</th>
-												</tr>
-											</thead>
-											<tbody class="fs-7">
-												<tr>
-													<td>
-													</td>
-													<td>
-														<div class="d-flex align-items-center position-relative my-1">
-															<i
-																class="ki-duotone ki-magnifier fs-5 position-absolute ms-5">
-																<span class="path1"></span>
-																<span class="path2"></span>
-															</i>
-															<input type="text" data-kt-customer-table-filter="search"
-																class="form-control form-control w-175px ps-12 fs-8"
-																placeholder="filter projects by name" />
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<span class="text-dark"></span>
-													</td>
-
-													<td class="pe-0" data-order="21">
-														<span class="text-dark ms-3"></span>
-													</td>
-
-													<td class="text-dark pe-0"></td>
-
-													<td class="pe-0">
-														<div class="badge badge-light-success rounded-4"></div>
-													</td>
-													<td>
-														<div class="d-flex">
-															<ul
-																class="breadcrumb breadcrumb-separatorless fs-7 my-0 pt-1 ">
-																<!--begin::Item-->
-
-																<label class="fw-bolder">From</label>
-																<input type="date" id="date" name="" value=""
-																	class="form-control form-control-sm p-1 m-3"
-																	style="width: 100px;" />
-
-																<label class="fw-bolder">To</label>
-																<input type="date" id="date" name="" value=""
-																	class="form-control form-control-sm p-1 m-2"
-																	style="width: 100px;" />
-																<!--end::Item-->
-															</ul>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<div class="d-flex align-items-center">
-															<a
-																class="btn btn-small bg-black text-white border border-gray-600 m-2 px-5 py-2 fs-8">Filter</a>
-															<a
-																class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-5 py-2 fs-8">Reset</a>
-														</div>
-													</td>
-
-												</tr>
-
-
-												<tr>
-													<td>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark fs-7">Nairobi Solar Power
-																Project</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<span class="text-dark">Elemental Energy Limited</span>
-													</td>
-
-													<td class="pe-0" data-order="21">
-													</td>
-
-													<td class="text-dark pe-0">Uganda</td>
-
-													<td class="pe-0">
-														<div class="badge badge-light-success rounded-4">On going</div>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">15 Dec 2024, 9:30 AM</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<div class="d-flex align-items-center gap-2 gap-lg-3">
-															<!--begin::Filter menu-->
-															<div class="d-flex align-items-center">
-																<a
-																	class="btn btn-small btn-primary text-white  m-2 px-5 py-2 fs-8">View</a>
-																<a
-																	class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-5 py-2 fs-8">Delete</a>
-															</div>
-														</div>
-													</td>
-
-												</tr>
-
-												<tr>
-													<td>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">Nairobi Solar Power Project</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<span class="text-dark">Elemental Energy Limited</span>
-													</td>
-
-													<td class="pe-0" data-order="21">
-													</td>
-
-													<td class="text-dark pe-0">Uganda</td>
-
-													<td class="pe-0">
-														<div class="badge badge-light-success rounded-4">On going</div>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">15 Dec 2024, 9:30 AM</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<div class="d-flex align-items-center gap-2 gap-lg-3">
-															<!--begin::Filter menu-->
-															<a
-																class="btn btn-small btn-primary text-white  m-2 px-5 py-2 fs-8">View</a>
-															<a
-																class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8">Delete</a>
-														</div>
-													</td>
-												</tr>
-
-												<tr>
-													<td>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">Nairobi Solar Power Project</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<span class="text-dark">Elemental Energy Limited</span>
-													</td>
-
-													<td class="pe-0" data-order="21">
-													</td>
-
-													<td class="text-dark pe-0">Uganda</td>
-
-													<td class="pe-0">
-														<div class="badge badge-light-success rounded-4">On going</div>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">15 Dec 2024, 9:30 AM</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<div class="d-flex align-items-center gap-2 gap-lg-3">
-															<!--begin::Filter menu-->
-															<a
-																class="btn btn-small btn-primary text-white  m-2 px-5 py-2 fs-8">View</a>
-															<a
-																class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8">Delete</a>
-														</div>
-													</td>
-												</tr>
-
-												<tr>
-													<td>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">Nairobi Solar Power Project</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<span class="text-dark">Elemental Energy Limited</span>
-													</td>
-
-													<td class="pe-0" data-order="21">
-													</td>
-
-													<td class="text-dark pe-0">Uganda</td>
-
-													<td class="-0">
-														<div
-															class="badge badge-light-secondary rounded-4 text-gray-700 ">
-															draft</div>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">15 Dec 2024, 9:30 AM</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<div class="d-flex align-items-center gap-2 gap-lg-3">
-															<!--begin::Filter menu-->
-															<a
-																class="btn btn-small btn-primary text-white  m-2 px-5 py-2 fs-8">View</a>
-															<a
-																class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8">Delete</a>
-														</div>
-													</td>
-												</tr>
-
-
-												<tr>
-													<td>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">Nairobi Solar Power Project</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<span class="text-dark">Elemental Energy Limited</span>
-													</td>
-
-													<td class="pe-0" data-order="21">
-													</td>
-
-													<td class="text-dark pe-0">Uganda</td>
-
-													<td class="pe-0">
-														<div
-															class="badge badge-light-secondary rounded-4 text-gray-700 ">
-															draft</div>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">15 Dec 2024, 9:30 AM</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<div class="d-flex align-items-center gap-2 gap-lg-3">
-															<!--begin::Filter menu-->
-															<a
-																class="btn btn-small btn-primary text-white  m-2 px-5 py-2 fs-8">View</a>
-															<a
-																class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8">Delete</a>
-														</div>
-													</td>
-												</tr>
-
-
-												<tr>
-													<td>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">Nairobi Solar Power Project</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<span class="text-dark">Elemental Energy Limited</span>
-													</td>
-
-													<td class="pe-0" data-order="21">
-													</td>
-
-													<td class="text-dark pe-0">Uganda</td>
-
-													<td class="pe-0">
-														<div
-															class="badge badge-light-secondary rounded-4 text-gray-700 ">
-															draft</div>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">15 Dec 2024, 9:30 AM</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<div class="d-flex align-items-center gap-2 gap-lg-3">
-															<!--begin::Filter menu-->
-															<a
-																class="btn btn-small btn-primary text-white  m-2 px-5 py-2 fs-8">View</a>
-															<a
-																class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8">Delete</a>
-														</div>
-													</td>
-												</tr>
-
-												<tr>
-													<td>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">Nairobi Solar Power Project</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<span class="text-dark">Elemental Energy Limited</span>
-													</td>
-
-													<td class="pe-0" data-order="21">
-													</td>
-
-													<td class="text-dark pe-0">Uganda</td>
-
-													<td class="pe-0">
-														<div
-															class="badge badge-light-secondary rounded-4 text-gray-700 ">
-															draft</div>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">15 Dec 2024, 9:30 AM</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<div class="d-flex align-items-center gap-2 gap-lg-3">
-															<!--begin::Filter menu-->
-															<a
-																class="btn btn-small btn-primary text-white  m-2 px-5 py-2 fs-8">View</a>
-															<a
-																class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8">Delete</a>
-														</div>
-													</td>
-												</tr>
-
-
-												<tr>
-													<td>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">Nairobi Solar Power Project</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<span class="text-dark">Elemental Energy Limited</span>
-													</td>
-
-													<td class="pe-0" data-order="21">
-													</td>
-
-													<td class="text-dark pe-0">Uganda</td>
-
-													<td class="pe-0">
-														<div class="badge badge-light-primary rounded-4">Completed</div>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">15 Dec 2024, 9:30 AM</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<div class="d-flex align-items-center gap-2 gap-lg-3">
-															<!--begin::Filter menu-->
-															<a
-																class="btn btn-small btn-primary text-white  m-2 px-5 py-2 fs-8">View</a>
-															<a
-																class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8">Delete</a>
-														</div>
-													</td>
-												</tr>
-
-												<tr>
-													<td>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">Nairobi Solar Power Project</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<span class="text-dark">Elemental Energy Limited</span>
-													</td>
-
-													<td class="pe-0" data-order="21">
-													</td>
-
-													<td class="text-dark pe-0">Uganda</td>
-
-													<td class="pe-0">
-														<div class="badge badge-light-primary rounded-4">Completed</div>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">15 Dec 2024, 9:30 AM</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<div class="d-flex align-items-center gap-2 gap-lg-3">
-															<!--begin::Filter menu-->
-															<a
-																class="btn btn-small btn-primary text-white  m-2 px-5 py-2 fs-8">View</a>
-															<a
-																class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8">Delete</a>
-														</div>
-													</td>
-												</tr>
-
-
-												<tr>
-													<td>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">Nairobi Solar Power Project</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<span class="text-dark">Elemental Energy Limited</span>
-													</td>
-
-													<td class="pe-0" data-order="21">
-													</td>
-
-													<td class="text-dark pe-0">Uganda</td>
-
-													<td class="pe-0">
-														<div class="badge badge-light-primary rounded-4">Completed</div>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">15 Dec 2024, 9:30 AM</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<div class="d-flex align-items-center gap-2 gap-lg-3">
-															<!--begin::Filter menu-->
-															<a
-																class="btn btn-small btn-primary text-white  m-2 px-5 py-2 fs-8">View</a>
-															<a
-																class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8">Delete</a>
-														</div>
-													</td>
-												</tr>
-
-
-												<tr>
-													<td>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">Nairobi Solar Power Project</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<span class="text-dark">Elemental Energy Limited</span>
-													</td>
-
-													<td class="pe-0" data-order="21">
-													</td>
-
-													<td class="text-dark pe-0">Uganda</td>
-
-													<td class="pe-0">
-														<div class="badge badge-light-success rounded-4">On going</div>
-													</td>
-													<td>
-														<div class="d-flex align-items-center">
-															<span class="text-dark">15 Dec 2024, 9:30 AM</span>
-														</div>
-													</td>
-
-													<td class="pe-0">
-														<div class="d-flex align-items-center gap-2 gap-lg-3">
-															<!--begin::Filter menu-->
-															<a
-																class="btn btn-small btn-primary text-white  m-2 px-5 py-2 fs-8">View</a>
-															<a
-																class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8">Delete</a>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-
-										<div class="separator mb-3"></div>
-										<div class="px-6 pb-6">
-											<!--begin::Pagination-->
-											<div class="d-flex flex-stack flex-wrap">
-												<div class="fs-7 fw-semibold text-gray-700">Showing 1 to 10 of 50
-													records</div>
-												<!--begin::Pages-->
-												<ul class="pagination">
-													<li class="page-item previous">
-														<a href="#" class="page-link">
-															<i class="previous"></i>
-														</a>
-													</li>
-													<li class="page-item active">
-														<a href="#" class="page-link">1</a>
-													</li>
-													<li class="page-item">
-														<a href="#" class="page-link">2</a>
-													</li>
-
-													<li class="page-item next">
-														<a href="#" class="page-link">
-															<i class="next"></i>
-														</a>
-													</li>
-												</ul>
-												<!--end::Pages-->
-											</div>
-											<!--end::Pagination-->
-										</div>
-										<!--end::Table-->
-									</div>
-									<!--end::Card body-->
-								</div>
-								<!--end::Products-->
-							</div>
-							<!--end::Content container-->
-						</div>
-						<!--end::Content-->
-					</div>
-					<!--end::Content wrapper-->
-					<!--begin::Footer-->
-					<div id="kt_app_footer" class="app-footer">
-						<!--begin::Footer container-->
-						<div
-							class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3">
-							<!--begin::Copyright-->
-							<div class="text-dark order-2 order-md-1">
-								<span class="text-muted fw-semibold me-1">2022 - 2023&copy;</span>
-								<a href="#" target="_blank" class="text-gray-800 text-hover-primary">One Data
-									Limited</a>
-							</div>
-							<!--end::Copyright-->
-							<!--begin::Menu-->
-							<ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1">
-								<li class="menu-item">
-									<a href="#" target="_blank" class="menu-link px-2">About</a>
-								</li>
-								<li class="menu-item">
-									<a href="#" target="_blank" class="menu-link px-2">Privacy</a>
-								</li>
-								<li class="menu-item">
-									<a href="#" target="_blank" class="menu-link px-2">Terms and Conditions</a>
-								</li>
-							</ul>
-							<!--end::Menu-->
-						</div>
-						<!--end::Footer container-->
-					</div>
-					<!--end::Footer-->
-				</div>
-				<!--end:::Main-->
-			</div>
-			<!--end::Wrapper-->
-		</div>
-		<!--end::Page-->
-	</div>
-	<!--end::App-->
-
-	<!--end::Modal - Invite Friend-->
-	<!--end::Modals-->
-	<!--begin::Javascript-->
-	<script>var hostUrl = "assets/";</script>
-	<!--begin::Global Javascript Bundle(mandatory for all pages)-->
-	<script src="assets/plugins/global/plugins.bundle.js"></script>
-	<script src="assets/js/scripts.bundle.js"></script>
-	<!--end::Global Javascript Bundle-->
-	<!--begin::Vendors Javascript(used for this page only)-->
-	<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
-	<!--end::Vendors Javascript-->
-	<!--begin::Custom Javascript(used for this page only)-->
-	<script src="assets/js/custom/apps/ecommerce/catalog/products.js"></script>
-	<script src="assets/js/widgets.bundle.js"></script>
-	<script src="assets/js/custom/widgets.js"></script>
-	<script src="assets/js/custom/apps/chat/chat.js"></script>
-	<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
-	<script src="assets/js/custom/utilities/modals/create-app.js"></script>
-	<script src="assets/js/custom/utilities/modals/users-search.js"></script>
-	<!--end::Custom Javascript-->
-	<!--end::Javascript-->
-</body>
-<!--end::Body-->
-
+              <div
+                id="kt_app_sidebar_toggle"
+                class="app-sidebar-toggle btn btn-icon btn-shadow btn-sm btn-color-muted btn-active-color-primary body-bg h-30px w-30px position-absolute top-50 start-100 translate-middle rotate"
+                data-kt-toggle="true"
+                data-kt-toggle-state="active"
+                data-kt-toggle-target="body"
+                data-kt-toggle-name="app-sidebar-minimize"
+              >
+                <i class="ki-duotone ki-double-left fs-2 rotate-180">
+                  <span class="path1"></span>
+                  <span class="path2"></span>
+                </i>
+              </div>
+              <!--end::Sidebar toggle-->
+            </div>
+
+            <!--end::Logo-->
+            <!--begin::sidebar menu-->
+            <div class="app-sidebar-menu overflow-hidden flex-column-fluid">
+              <!--begin::Menu wrapper-->
+              <div
+                id="kt_app_sidebar_menu_wrapper"
+                class="app-sidebar-wrapper hover-scroll-overlay-y my-5"
+                data-kt-scroll="true"
+                data-kt-scroll-activate="true"
+                data-kt-scroll-height="auto"
+                data-kt-scroll-dependencies="#kt_app_sidebar_logo, #kt_app_sidebar_footer"
+                data-kt-scroll-wrappers="#kt_app_sidebar_menu"
+                data-kt-scroll-offset="5px"
+                data-kt-scroll-save-state="true"
+              >
+                <!--begin::Menu-->
+                <div
+                  class="menu menu-column menu-rounded menu-sub-indention px-3"
+                  id="#kt_app_sidebar_menu"
+                  data-kt-menu="true"
+                  data-kt-menu-expand="false"
+                >
+                  <!--begin:Menu item-->
+                  <div
+                    data-kt-menu-trigger="click"
+                    class="menu-item here show menu-accordion"
+                  >
+                    <!--begin:Menu link-->
+
+                    <!--end:Menu link-->
+                    <!--begin:Menu sub-->
+                    <div class="menu-sub menu-sub-accordion">
+                      <!--begin:Menu item-->
+                      <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a
+                          class="menu-link"
+                          href="../../demo1/dist/main-dashboard.html"
+                        >
+                          <i class="ki-duotone ki-profile-user fs-3 m-1">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                            <span class="path3"></span>
+                            <span class="path4"></span>
+                          </i>
+                          <span class="menu-title fs-7">Members</span>
+                        </a>
+                        <!--end:Menu link-->
+                      </div>
+                      <!--end:Menu item-->
+                      <!--begin:Menu item-->
+                      <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a
+                          class="menu-link"
+                          href="../../demo1/dist/main-dashboard.html"
+                        >
+                          <i class="ki-duotone ki-sms fs-3 m-1">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                          </i>
+                          <span class="menu-title fs-7">Send Invitations</span>
+                        </a>
+                        <!--end:Menu link-->
+                      </div>
+                    </div>
+                    <!--end:Menu sub-->
+                  </div>
+
+                  <div
+                    data-kt-menu-trigger="click"
+                    class="menu-item here show menu-accordion"
+                  >
+                    <!--begin:Menu link-->
+                    <div class="menu-item">
+                      <!--begin:Menu content-->
+                      <div class="menu-content">
+                        <span class="fw-semibold text-uppercase text-white fs-7"
+                          >Projects</span
+                        >
+                      </div>
+                      <!--end:Menu content-->
+                    </div>
+                    <!--end:Menu link-->
+                    <!--begin:Menu sub-->
+                    <div class="menu-sub menu-sub-accordion">
+                      <!--begin:Menu item-->
+                      <div class="">
+                        <!--begin:Menu link-->
+                        <a
+                          class="menu-link active"
+                          href="../../demo1/dist/pages/my-projects.html"
+                        >
+                          <img
+                            alt="Logo"
+                            src="assets/media/dashboard/projects.png"
+                            class="h-10px app-sidebar-logo-default"
+                          />
+                          <span class="menu-title m-2 fs-7"> My Projects</span>
+                        </a>
+                        <!--end:Menu link-->
+                      </div>
+                      <!--end:Menu item-->
+                      <!--begin:Menu item-->
+                      <div class="">
+                        <!--begin:Menu link-->
+                        <a
+                          class="menu-link"
+                          href="../../demo1/dist/main-dashboard.html"
+                        >
+                          <i class="ki-duotone ki-lock-3 fs-4 m-0">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                            <span class="path3"></span>
+                          </i>
+                          <span class="menu-title m-1 fs-7"
+                            >Projects Permissions</span
+                          >
+                        </a>
+                        <!--end:Menu link-->
+                      </div>
+                    </div>
+                    <!--end:Menu sub-->
+                  </div>
+
+                  <div
+                    data-kt-menu-trigger="click"
+                    class="menu-item here show menu-accordion"
+                  >
+                    <!--begin:Menu link-->
+                    <div class="">
+                      <!--begin:Menu content-->
+                      <div class="menu-content">
+                        <span class="fw-semibold text-uppercase fs-7 text-white"
+                          >Sponsors</span
+                        >
+                      </div>
+                      <!--end:Menu content-->
+                    </div>
+                    <!--end:Menu link-->
+                    <!--begin:Menu sub-->
+                    <div class="menu-sub menu-sub-accordion">
+                      <!--begin:Menu item-->
+                      <div class="">
+                        <!--begin:Menu link-->
+                        <a
+                          class="menu-link"
+                          href="../../demo1/dist/pages/my-sponsors.html"
+                        >
+                          <img
+                            alt="Logo"
+                            src="assets/media/dashboard/sponsors.png"
+                            class="h-10px app-sidebar-logo-default"
+                          />
+                          <span class="menu-title m-2 fs-7">My Sponsors</span>
+                        </a>
+                        <!--end:Menu link-->
+                      </div>
+                      <!--end:Menu item-->
+                      <!--begin:Menu item-->
+                      <div class="">
+                        <!--begin:Menu link-->
+                        <a
+                          class="menu-link"
+                          href="../../demo1/dist/main-dashboard.html"
+                        >
+                          <i class="ki-duotone ki-lock-3 fs-4 m-0">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                            <span class="path3"></span>
+                          </i>
+                          <span class="menu-title m-1 fs-7"
+                            >Sponsor Permissions</span
+                          >
+                        </a>
+                        <!--end:Menu link-->
+                      </div>
+                    </div>
+                    <!--end:Menu sub-->
+                  </div>
+
+                  <div
+                    data-kt-menu-trigger="click"
+                    class="menu-item here show menu-accordion"
+                  >
+                    <!--begin:Menu link-->
+                    <div class="menu-item">
+                      <!--begin:Menu content-->
+                      <div class="menu-content">
+                        <span class="fw-semibold text-uppercase text-white fs-7"
+                          >Investors</span
+                        >
+                      </div>
+                      <!--end:Menu content-->
+                    </div>
+                    <!--end:Menu link-->
+                    <!--begin:Menu sub-->
+                    <div class="menu-sub menu-sub-accordion">
+                      <!--begin:Menu item-->
+                      <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a
+                          class="menu-link"
+                          href="../../demo1/dist/pages/my-investors.html"
+                        >
+                          <img
+                            alt="Logo"
+                            src="assets/media/dashboard/investors.png"
+                            class="h-10px app-sidebar-logo-default"
+                          />
+                          <span class="menu-title m-2 fs-7"> My Investors</span>
+                        </a>
+                        <!--end:Menu link-->
+                      </div>
+                      <!--end:Menu item-->
+                      <!--begin:Menu item-->
+                      <div class="">
+                        <!--begin:Menu link-->
+                        <a
+                          class="menu-link"
+                          href="../../demo1/dist/main-dashboard.html"
+                        >
+                          <i class="ki-duotone ki-lock-3 fs-4 m-0">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                            <span class="path3"></span>
+                          </i>
+                          <span class="menu-title m-1 fs-7"
+                            >Investor Permissions</span
+                          >
+                        </a>
+                        <!--end:Menu link-->
+                      </div>
+                    </div>
+                    <!--end:Menu sub-->
+                  </div>
+
+                  <div
+                    data-kt-menu-trigger="click"
+                    class="menu-item here show menu-accordion"
+                  >
+                    <!--begin:Menu link-->
+                    <div class="menu-item">
+                      <!--begin:Menu content-->
+                      <div class="menu-content">
+                        <span class="fw-semibold text-uppercase fs-7 text-white"
+                          >Lenders</span
+                        >
+                      </div>
+                      <!--end:Menu content-->
+                    </div>
+                    <!--end:Menu link-->
+                    <!--begin:Menu sub-->
+                    <div class="menu-sub menu-sub-accordion">
+                      <!--begin:Menu item-->
+                      <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a
+                          class="menu-link"
+                          href="../../demo1/dist/pages/my-lenders.html"
+                        >
+                          <img
+                            alt="Logo"
+                            src="assets/media/dashboard/lenders.png"
+                            class="h-10px app-sidebar-logo-default"
+                          />
+                          <span class="menu-title m-2 fs-7"> My Lenders</span>
+                        </a>
+                        <!--end:Menu link-->
+                      </div>
+                      <!--end:Menu item-->
+                      <!--begin:Menu item-->
+                      <div class="">
+                        <!--begin:Menu link-->
+                        <a
+                          class="menu-link"
+                          href="../../demo1/dist/main-dashboard.html"
+                        >
+                          <i class="ki-duotone ki-lock-3 fs-4 m-0">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                            <span class="path3"></span>
+                          </i>
+                          <span class="menu-title m-1 fs-7"
+                            >Lender Permissions</span
+                          >
+                        </a>
+                        <!--end:Menu link-->
+                      </div>
+                    </div>
+                    <!--end:Menu sub-->
+                  </div>
+
+                  <div
+                    data-kt-menu-trigger="click"
+                    class="menu-item here show menu-accordion"
+                  >
+                    <!--begin:Menu link-->
+                    <div class="menu-item">
+                      <!--begin:Menu content-->
+                      <div class="menu-content">
+                        <span class="fw-semibold text-uppercase fs-7 text-white"
+                          >Service Providers</span
+                        >
+                      </div>
+                      <!--end:Menu content-->
+                    </div>
+                    <!--end:Menu link-->
+                    <!--begin:Menu sub-->
+                    <div class="menu-sub menu-sub-accordion">
+                      <!--begin:Menu item-->
+                      <div class="menu-item">
+                        <!--begin:Menu link-->
+                        <a
+                          class="menu-link"
+                          href="../../demo1/dist/pages/my-providers.html"
+                        >
+                          <img
+                            alt="Logo"
+                            src="assets/media/dashboard/service-providers.png"
+                            class="h-10px app-sidebar-logo-default"
+                          />
+                          <span class="menu-title m-2 fs-7"
+                            >My Service Providers</span
+                          >
+                        </a>
+                        <!--end:Menu link-->
+                      </div>
+                      <!--end:Menu item-->
+                      <!--begin:Menu item-->
+                      <div class="">
+                        <!--begin:Menu link-->
+                        <a
+                          class="menu-link"
+                          href="../../demo1/dist/main-dashboard.html"
+                        >
+                          <i class="ki-duotone ki-lock-3 fs-4 m-0">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                            <span class="path3"></span>
+                          </i>
+                          <span class="menu-title m-1 fs-7"
+                            >Providers Permissions</span
+                          >
+                        </a>
+                        <!--end:Menu link-->
+                      </div>
+                    </div>
+                    <!--end:Menu sub-->
+                  </div>
+                </div>
+                <!--end::Menu-->
+              </div>
+              <!--end::Menu wrapper-->
+            </div>
+            <!--end::sidebar menu-->
+          </div>
+          <!--end::Sidebar-->
+
+          <!--begin::Main-->
+          <div
+            class="app-main flex-column flex-row-fluid py-15"
+            id="kt_app_main"
+          >
+            <!--begin::Content wrapper-->
+            <div class="d-flex flex-column flex-column-fluid">
+              <!--begin::Content-->
+              <div id="kt_app_content" class="app-content flex-column-fluid">
+                <!--begin::Content container-->
+                <div
+                  id="kt_app_content_container"
+                  class="app-container container-xxl"
+                >
+                  <!--begin::Products-->
+                  <div class="card card-flush">
+                    <!--begin::Card header-->
+                    <div
+                      class="card-header align-items-center py-5 gap-2 gap-md-5"
+                    >
+                      <!--begin::Card title-->
+                      <div class="card-title">
+                        <!--begin::Search-->
+                        <div
+                          class="d-flex align-items-center position-relative my-1 px-4"
+                        >
+                          <p
+                            style="background-color: #c4e3ed"
+                            class="btn btn-sm fs-4 fw-bold m-2 text-dark"
+                          >
+                            My Projects
+                          </p>
+                        </div>
+                        <!--end::Search-->
+                      </div>
+                      <!--end::Card title-->
+                      <!--begin::Card toolbar-->
+                      <div
+                        class="card-toolbar flex-row-fluid justify-content-end gap-5"
+                      >
+                        <a
+                          href="#"
+                          class="btn btn-sm fw-bold btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#kt_modal_new_target"
+                          >Create New Project
+                          <i class="ki-duotone ki-plus-circle toggle-off fs-1">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                            <span class="path3"></span>
+                          </i>
+                        </a>
+                      </div>
+                      <!--end::Card toolbar-->
+                    </div>
+                    <div class="separator my-3"></div>
+                    <!--end::Card header-->
+                    <!--begin::Card body-->
+
+                    <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+                      <!--begin::Toolbar container-->
+                      <div
+                        id="kt_app_toolbar_container"
+                        class="app-container container-xxl d-flex flex-stack"
+                      >
+                        <!--begin::Page title-->
+                        <div
+                          class="page-title d-flex flex-column justify-content-center flex-wrap me-3"
+                        ></div>
+                        <!--end::Page title-->
+                        <!--begin::Actions-->
+                        <div
+                          class="d-flex align-items-center gap-2 gap-lg-3"
+                        ></div>
+                        <div class="d-flex align-items-center gap-2 gap-lg-3">
+                          <!--begin::Filter menu-->
+
+                          <!--end::Primary button-->
+                        </div>
+                        <!--end::Actions-->
+                      </div>
+                      <!--end::Toolbar container-->
+                    </div>
+                    <div class="card-body pt-0">
+                      <!--begin::Table-->
+
+                      <table
+                        class="table align-middle table-row-dashed fs-6 gy-5"
+                      >
+                        <thead>
+                          <tr
+                            class="text-start text-gray-900 fw-bold fs-7 text-uppercase gs-0"
+                          >
+                            <th class="w-10px pe-2"></th>
+                            <th class="min-w-70px">Project Name</th>
+                            <th class="min-w-70px">Account</th>
+                            <th class=""></th>
+                            <th class="min-w-50px">Country</th>
+                            <th class="min-w-60px">Status</th>
+                            <th class="min-w-200px">Date Created</th>
+                            <th class="min-w-100px">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody class="fs-7">
+                          <tr>
+                            <td></td>
+                            <td>
+                              <div
+                                class="d-flex align-items-center position-relative my-1"
+                              >
+                                <i
+                                  class="ki-duotone ki-magnifier fs-5 position-absolute ms-5"
+                                >
+                                  <span class="path1"></span>
+                                  <span class="path2"></span>
+                                </i>
+                                <input
+                                  type="text"
+                                  data-kt-customer-table-filter="search"
+                                  class="form-control form-control w-175px ps-12 fs-8"
+                                  placeholder="filter projects by name"
+                                />
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <span class="text-dark"></span>
+                            </td>
+
+                            <td class="pe-0" data-order="21">
+                              <span class="text-dark ms-3"></span>
+                            </td>
+
+                            <td class="text-dark pe-0"></td>
+
+                            <td class="pe-0">
+                              <div
+                                class="badge badge-light-success rounded-4"
+                              ></div>
+                            </td>
+                            <td>
+                              <div class="d-flex">
+                                <ul
+                                  class="breadcrumb breadcrumb-separatorless fs-7 my-0 pt-1"
+                                >
+                                  <!--begin::Item-->
+
+                                  <label class="fw-bolder">From</label>
+                                  <input
+                                    type="date"
+                                    id="date"
+                                    name=""
+                                    value=""
+                                    class="form-control form-control-sm p-1 m-3"
+                                    style="width: 100px"
+                                  />
+
+                                  <label class="fw-bolder">To</label>
+                                  <input
+                                    type="date"
+                                    id="date"
+                                    name=""
+                                    value=""
+                                    class="form-control form-control-sm p-1 m-2"
+                                    style="width: 100px"
+                                  />
+                                  <!--end::Item-->
+                                </ul>
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <div class="d-flex align-items-center">
+                                <a
+                                  class="btn btn-small bg-black text-white border border-gray-600 m-2 px-5 py-2 fs-8"
+                                  >Filter</a
+                                >
+                                <a
+                                  class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-5 py-2 fs-8"
+                                  >Reset</a
+                                >
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark fs-7"
+                                  >Nairobi Solar Power Project</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <span class="text-dark"
+                                >Elemental Energy Limited</span
+                              >
+                            </td>
+
+                            <td class="pe-0" data-order="21"></td>
+
+                            <td class="text-dark pe-0">Uganda</td>
+
+                            <td class="pe-0">
+                              <div class="badge badge-light-success rounded-4">
+                                On going
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >15 Dec 2024, 9:30 AM</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <div
+                                class="d-flex align-items-center gap-2 gap-lg-3"
+                              >
+                                <!--begin::Filter menu-->
+                                <div class="d-flex align-items-center">
+                                  <a
+                                    class="btn btn-small btn-primary text-white m-2 px-5 py-2 fs-8"
+                                    >View</a
+                                  >
+                                  <a
+                                    class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-5 py-2 fs-8"
+                                    >Delete</a
+                                  >
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >Nairobi Solar Power Project</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <span class="text-dark"
+                                >Elemental Energy Limited</span
+                              >
+                            </td>
+
+                            <td class="pe-0" data-order="21"></td>
+
+                            <td class="text-dark pe-0">Uganda</td>
+
+                            <td class="pe-0">
+                              <div class="badge badge-light-success rounded-4">
+                                On going
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >15 Dec 2024, 9:30 AM</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <div
+                                class="d-flex align-items-center gap-2 gap-lg-3"
+                              >
+                                <!--begin::Filter menu-->
+                                <a
+                                  class="btn btn-small btn-primary text-white m-2 px-5 py-2 fs-8"
+                                  >View</a
+                                >
+                                <a
+                                  class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8"
+                                  >Delete</a
+                                >
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >Nairobi Solar Power Project</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <span class="text-dark"
+                                >Elemental Energy Limited</span
+                              >
+                            </td>
+
+                            <td class="pe-0" data-order="21"></td>
+
+                            <td class="text-dark pe-0">Uganda</td>
+
+                            <td class="pe-0">
+                              <div class="badge badge-light-success rounded-4">
+                                On going
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >15 Dec 2024, 9:30 AM</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <div
+                                class="d-flex align-items-center gap-2 gap-lg-3"
+                              >
+                                <!--begin::Filter menu-->
+                                <a
+                                  class="btn btn-small btn-primary text-white m-2 px-5 py-2 fs-8"
+                                  >View</a
+                                >
+                                <a
+                                  class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8"
+                                  >Delete</a
+                                >
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >Nairobi Solar Power Project</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <span class="text-dark"
+                                >Elemental Energy Limited</span
+                              >
+                            </td>
+
+                            <td class="pe-0" data-order="21"></td>
+
+                            <td class="text-dark pe-0">Uganda</td>
+
+                            <td class="-0">
+                              <div
+                                class="badge badge-light-secondary rounded-4 text-gray-700"
+                              >
+                                draft
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >15 Dec 2024, 9:30 AM</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <div
+                                class="d-flex align-items-center gap-2 gap-lg-3"
+                              >
+                                <!--begin::Filter menu-->
+                                <a
+                                  class="btn btn-small btn-primary text-white m-2 px-5 py-2 fs-8"
+                                  >View</a
+                                >
+                                <a
+                                  class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8"
+                                  >Delete</a
+                                >
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >Nairobi Solar Power Project</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <span class="text-dark"
+                                >Elemental Energy Limited</span
+                              >
+                            </td>
+
+                            <td class="pe-0" data-order="21"></td>
+
+                            <td class="text-dark pe-0">Uganda</td>
+
+                            <td class="pe-0">
+                              <div
+                                class="badge badge-light-secondary rounded-4 text-gray-700"
+                              >
+                                draft
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >15 Dec 2024, 9:30 AM</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <div
+                                class="d-flex align-items-center gap-2 gap-lg-3"
+                              >
+                                <!--begin::Filter menu-->
+                                <a
+                                  class="btn btn-small btn-primary text-white m-2 px-5 py-2 fs-8"
+                                  >View</a
+                                >
+                                <a
+                                  class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8"
+                                  >Delete</a
+                                >
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >Nairobi Solar Power Project</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <span class="text-dark"
+                                >Elemental Energy Limited</span
+                              >
+                            </td>
+
+                            <td class="pe-0" data-order="21"></td>
+
+                            <td class="text-dark pe-0">Uganda</td>
+
+                            <td class="pe-0">
+                              <div
+                                class="badge badge-light-secondary rounded-4 text-gray-700"
+                              >
+                                draft
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >15 Dec 2024, 9:30 AM</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <div
+                                class="d-flex align-items-center gap-2 gap-lg-3"
+                              >
+                                <!--begin::Filter menu-->
+                                <a
+                                  class="btn btn-small btn-primary text-white m-2 px-5 py-2 fs-8"
+                                  >View</a
+                                >
+                                <a
+                                  class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8"
+                                  >Delete</a
+                                >
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >Nairobi Solar Power Project</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <span class="text-dark"
+                                >Elemental Energy Limited</span
+                              >
+                            </td>
+
+                            <td class="pe-0" data-order="21"></td>
+
+                            <td class="text-dark pe-0">Uganda</td>
+
+                            <td class="pe-0">
+                              <div
+                                class="badge badge-light-secondary rounded-4 text-gray-700"
+                              >
+                                draft
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >15 Dec 2024, 9:30 AM</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <div
+                                class="d-flex align-items-center gap-2 gap-lg-3"
+                              >
+                                <!--begin::Filter menu-->
+                                <a
+                                  class="btn btn-small btn-primary text-white m-2 px-5 py-2 fs-8"
+                                  >View</a
+                                >
+                                <a
+                                  class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8"
+                                  >Delete</a
+                                >
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >Nairobi Solar Power Project</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <span class="text-dark"
+                                >Elemental Energy Limited</span
+                              >
+                            </td>
+
+                            <td class="pe-0" data-order="21"></td>
+
+                            <td class="text-dark pe-0">Uganda</td>
+
+                            <td class="pe-0">
+                              <div class="badge badge-light-primary rounded-4">
+                                Completed
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >15 Dec 2024, 9:30 AM</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <div
+                                class="d-flex align-items-center gap-2 gap-lg-3"
+                              >
+                                <!--begin::Filter menu-->
+                                <a
+                                  class="btn btn-small btn-primary text-white m-2 px-5 py-2 fs-8"
+                                  >View</a
+                                >
+                                <a
+                                  class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8"
+                                  >Delete</a
+                                >
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >Nairobi Solar Power Project</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <span class="text-dark"
+                                >Elemental Energy Limited</span
+                              >
+                            </td>
+
+                            <td class="pe-0" data-order="21"></td>
+
+                            <td class="text-dark pe-0">Uganda</td>
+
+                            <td class="pe-0">
+                              <div class="badge badge-light-primary rounded-4">
+                                Completed
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >15 Dec 2024, 9:30 AM</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <div
+                                class="d-flex align-items-center gap-2 gap-lg-3"
+                              >
+                                <!--begin::Filter menu-->
+                                <a
+                                  class="btn btn-small btn-primary text-white m-2 px-5 py-2 fs-8"
+                                  >View</a
+                                >
+                                <a
+                                  class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8"
+                                  >Delete</a
+                                >
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >Nairobi Solar Power Project</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <span class="text-dark"
+                                >Elemental Energy Limited</span
+                              >
+                            </td>
+
+                            <td class="pe-0" data-order="21"></td>
+
+                            <td class="text-dark pe-0">Uganda</td>
+
+                            <td class="pe-0">
+                              <div class="badge badge-light-primary rounded-4">
+                                Completed
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >15 Dec 2024, 9:30 AM</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <div
+                                class="d-flex align-items-center gap-2 gap-lg-3"
+                              >
+                                <!--begin::Filter menu-->
+                                <a
+                                  class="btn btn-small btn-primary text-white m-2 px-5 py-2 fs-8"
+                                  >View</a
+                                >
+                                <a
+                                  class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8"
+                                  >Delete</a
+                                >
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >Nairobi Solar Power Project</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <span class="text-dark"
+                                >Elemental Energy Limited</span
+                              >
+                            </td>
+
+                            <td class="pe-0" data-order="21"></td>
+
+                            <td class="text-dark pe-0">Uganda</td>
+
+                            <td class="pe-0">
+                              <div class="badge badge-light-success rounded-4">
+                                On going
+                              </div>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <span class="text-dark"
+                                  >15 Dec 2024, 9:30 AM</span
+                                >
+                              </div>
+                            </td>
+
+                            <td class="pe-0">
+                              <div
+                                class="d-flex align-items-center gap-2 gap-lg-3"
+                              >
+                                <!--begin::Filter menu-->
+                                <a
+                                  class="btn btn-small btn-primary text-white m-2 px-5 py-2 fs-8"
+                                  >View</a
+                                >
+                                <a
+                                  class="btn btn-small bg-gray-300 border-gray-600 text-gray-600 m-2 px-4 py-2 fs-8"
+                                  >Delete</a
+                                >
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <div class="separator mb-3"></div>
+                      <div class="px-6 pb-6">
+                        <!--begin::Pagination-->
+                        <div class="d-flex flex-stack flex-wrap">
+                          <div class="fs-7 fw-semibold text-gray-700">
+                            Showing 1 to 10 of 50 records
+                          </div>
+                          <!--begin::Pages-->
+                          <ul class="pagination">
+                            <li class="page-item previous">
+                              <a href="#" class="page-link">
+                                <i class="previous"></i>
+                              </a>
+                            </li>
+                            <li class="page-item active">
+                              <a href="#" class="page-link">1</a>
+                            </li>
+                            <li class="page-item">
+                              <a href="#" class="page-link">2</a>
+                            </li>
+
+                            <li class="page-item next">
+                              <a href="#" class="page-link">
+                                <i class="next"></i>
+                              </a>
+                            </li>
+                          </ul>
+                          <!--end::Pages-->
+                        </div>
+                        <!--end::Pagination-->
+                      </div>
+                      <!--end::Table-->
+                    </div>
+                    <!--end::Card body-->
+                  </div>
+                  <!--end::Products-->
+                </div>
+                <!--end::Content container-->
+              </div>
+              <!--end::Content-->
+            </div>
+            <!--end::Content wrapper-->
+            <!--begin::Footer-->
+            <div id="kt_app_footer" class="app-footer">
+              <!--begin::Footer container-->
+              <div
+                class="app-container container-fluid d-flex flex-column flex-md-row flex-center flex-md-stack py-3"
+              >
+                <!--begin::Copyright-->
+                <div class="text-dark order-2 order-md-1">
+                  <span class="text-muted fw-semibold me-1"
+                    >2022 - 2023&copy;</span
+                  >
+                  <a
+                    href="#"
+                    target="_blank"
+                    class="text-gray-800 text-hover-primary"
+                    >One Data Limited</a
+                  >
+                </div>
+                <!--end::Copyright-->
+                <!--begin::Menu-->
+                <ul
+                  class="menu menu-gray-600 menu-hover-primary fw-semibold order-1"
+                >
+                  <li class="menu-item">
+                    <a href="#" target="_blank" class="menu-link px-2">About</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" target="_blank" class="menu-link px-2"
+                      >Privacy</a
+                    >
+                  </li>
+                  <li class="menu-item">
+                    <a href="#" target="_blank" class="menu-link px-2"
+                      >Terms and Conditions</a
+                    >
+                  </li>
+                </ul>
+                <!--end::Menu-->
+              </div>
+              <!--end::Footer container-->
+            </div>
+            <!--end::Footer-->
+          </div>
+          <!--end:::Main-->
+        </div>
+        <!--end::Wrapper-->
+      </div>
+      <!--end::Page-->
+    </div>
+    <!--end::App-->
+
+    <!--end::Modal - Invite Friend-->
+    <!--end::Modals-->
+    <!--begin::Javascript-->
+    <script>
+      var hostUrl = "assets/";
+    </script>
+    <!--begin::Global Javascript Bundle(mandatory for all pages)-->
+    <script src="assets/plugins/global/plugins.bundle.js"></script>
+    <script src="assets/js/scripts.bundle.js"></script>
+    <!--end::Global Javascript Bundle-->
+    <!--begin::Vendors Javascript(used for this page only)-->
+    <script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+    <!--end::Vendors Javascript-->
+    <!--begin::Custom Javascript(used for this page only)-->
+    <script src="assets/js/custom/apps/ecommerce/catalog/products.js"></script>
+    <script src="assets/js/widgets.bundle.js"></script>
+    <script src="assets/js/custom/widgets.js"></script>
+    <script src="assets/js/custom/apps/chat/chat.js"></script>
+    <script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
+    <script src="assets/js/custom/utilities/modals/create-app.js"></script>
+    <script src="assets/js/custom/utilities/modals/users-search.js"></script>
+    <!--end::Custom Javascript-->
+    <!--end::Javascript-->
+  </body>
+  <!--end::Body-->
 </html>
