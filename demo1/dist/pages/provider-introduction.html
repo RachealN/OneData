@@ -38,6 +38,7 @@
       type="text/css"
     />
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="/style.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body
@@ -954,38 +955,22 @@
                 >
                   <!--begin::Products-->
                   <div class="card card-flush">
-                    <!--begin::Card header-->
-                    <div class="card-header align-items-center gap-2 gap-md-5">
-                      <!--begin::Card title-->
-                      <div class="card-title">
-                        <!--begin::Search-->
-                        <div
-                          class="d-flex align-items-center position-relative"
-                        >
-                          <a
-                            class="badge rounded-4 mb-6 m-2"
-                            style="background-color: #ffffcc"
-                            >Service Provider</a
-                          >
-                          <p class="fs-4 fw-bold text-dark">
-                            Introduction - Play Date Creative Ltd
-                          </p>
+                    <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+                      <div id="kt_app_toolbar_container" class="app-container container-fluid d-flex flex-stack">
+                        <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+
+                          <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+                            <li class="breadcrumb-item text-muted">
+                              <a href="../../demo1/dist/index.html" class="badge rounded-4 mb-6 m-2" style="background-color: #FFFFCC">Providers</a>
+                            </li>
+                           
+                            <li>
+                              <p class="fs-4 fw-bold text-dark">Introduction</p></li>
+                          </ul>
                         </div>
-                        <!--end::Search-->
-                      </div>
-                      <!--end::Card title-->
-                      <!--begin::Card toolbar-->
-                      <div
-                        class="card-toolbar flex-row-fluid justify-content-end gap-5"
-                      >
-                        <a
-                          href="#"
-                          class="btn btn-sm fs-5"
-                          data-bs-toggle="modal"
-                          data-bs-target="#kt_modal_new_target"
-                          style="background-color: #f4f4f4"
-                        >
-                          <svg
+                        <div class="d-flex align-items-center gap-2 gap-lg-3">
+                          <a href="#" class="btn btn-sm fs-5" style="background-color: #f4f4f4">
+                            <svg
                             width="13"
                             height="15"
                             viewBox="0 0 15 20"
@@ -997,20 +982,11 @@
                               d="M2.18201 19.386C1.72205 19.386 1.33801 19.232 1.02905 18.924C0.720947 18.615 0.567017 18.231 0.567017 17.771V8.00198C0.567017 7.54099 0.720947 7.15698 1.02905 6.84898C1.33801 6.53998 1.72205 6.38599 2.18201 6.38599H4.29797V7.38599H2.18201C2.02795 7.38599 1.88696 7.44998 1.75903 7.57898C1.63098 7.70699 1.56702 7.84799 1.56702 8.00198V17.771C1.56702 17.925 1.63098 18.066 1.75903 18.194C1.88696 18.322 2.02795 18.386 2.18201 18.386H12.951C13.105 18.386 13.246 18.322 13.375 18.194C13.5031 18.066 13.567 17.925 13.567 17.771V8.00198C13.567 7.84799 13.5031 7.70699 13.375 7.57898C13.246 7.44998 13.105 7.38599 12.951 7.38599H10.8361V6.38599H12.951C13.412 6.38599 13.796 6.53998 14.104 6.84898C14.413 7.15698 14.567 7.54099 14.567 8.00198V17.771C14.567 18.231 14.413 18.615 14.104 18.924C13.796 19.232 13.412 19.386 12.951 19.386H2.18201ZM7.06702 12.886V1.99998L4.96704 4.09999L4.25903 3.38599L7.56702 0.0789795L10.875 3.38599L10.167 4.09999L8.06702 1.99998V12.886H7.06702Z"
                               fill="black"
                             />
-                          </svg>
-                          Share
-                        </a>
-                        <a
-                          href="#"
-                          class="btn btn-sm fs-6 bg-dark text-white"
-                          data-bs-toggle="modal"
-                          data-bs-target="#kt_modal_new_target"
-                          >Edit Service Provider
-                        </a>
+                          </svg>Share</a>
+                          <a href="#" class="btn btn-sm fs-6 bg-dark text-white">Edit Project</a>
+                        </div>
                       </div>
-                      <!--end::Card toolbar-->
                     </div>
-                    <!--end::Card header-->
 
                     <!--begin::Card body-->
                     <!--begin::Row-->
@@ -1095,14 +1071,14 @@
                                               <tbody>
                                                 <tr>
                                                   <td class="text-dark w-300px">
-                                                    <div class="d-flex fw-bold">
+                                                    <div class="d-flex fw-bold label--text">
                                                       Registered Name
                                                     </div>
                                                   </td>
                                                   <td class="text-dark">
                                                     <div class="d-flex">
                                                       <span
-                                                        class="text-dark fs-6"
+                                                        class="text-dark normal--text"
                                                         >Africa Finance Corp
                                                       </span>
                                                     </div>
@@ -1110,24 +1086,24 @@
                                                 </tr>
                                                 <tr>
                                                   <td class="text-dark">
-                                                    <div class="d-flex fw-bold">
+                                                    <div class="d-flex fw-bold label--text">
                                                       Short Name
                                                     </div>
                                                   </td>
                                                   <td>
-                                                    <div class="d-flex fw-bold">
+                                                    <div class="d-flex fw-bold label--text">
                                                       Year of Establishment
                                                     </div>
                                                   </td>
                                                 </tr>
                                                 <tr>
                                                   <td class="text-dark">
-                                                    <span class="text-dark"
+                                                    <span class="text-dark normal--text"
                                                       >AFL</span
                                                     >
                                                   </td>
                                                   <td>
-                                                    <span class="text-dark"
+                                                    <span class="text-dark normal--text"
                                                       >2010</span
                                                     >
                                                   </td>
@@ -1140,13 +1116,12 @@
                                         </div>
 
                                         <div class="px-0 mt-10">
-                                          <h2 class="fw-bolder mt-3 fs-6">
+                                          <h2 class="fw-bolder mt-3 label--text">
                                             Brief description of service
                                             provider
                                           </h2>
                                           <div class="separator my-3"></div>
-                                          <span class="text-dark fs-8">
-                                            <p>
+                                            <p class="text-dark normal--text">
                                               AFL is a leading Debt Provider for
                                               project finance in africa AFL is a
                                               leading Debt Provider for project
@@ -1154,7 +1129,6 @@
                                               Debt Provider for project finance
                                               in africa
                                             </p>
-                                          </span>
                                         </div>
 
                                         <div class="px-0 mt-10">
@@ -1166,12 +1140,12 @@
                                               <tbody class="text-dark">
                                                 <tr>
                                                   <td class="text-dark w-300px">
-                                                    <div class="d-flex fw-bold">
+                                                    <div class="d-flex fw-bold label--text">
                                                       Industry(Sector)
                                                     </div>
                                                   </td>
                                                   <td>
-                                                    <div class="d-flex fw-bold">
+                                                    <div class="d-flex fw-bold label--text">
                                                       Industry Division
                                                     </div>
                                                   </td>
@@ -1179,36 +1153,36 @@
 
                                                 <tr>
                                                   <td class="text-dark">
-                                                    <span class="text-dark fs-8"
+                                                    <span class="text-dark normal--text"
                                                       >xxxxxxx</span
                                                     >
                                                   </td>
                                                   <td>
-                                                    <span class="text-dark fs-8"
+                                                    <span class="text-dark normal--text"
                                                       >xxxxxxx</span
                                                     >
                                                   </td>
                                                 </tr>
                                                 <tr>
                                                   <td class="text-dark">
-                                                    <div class="d-flex fw-bold">
+                                                    <div class="d-flex fw-bold label--text">
                                                       Industry Group
                                                     </div>
                                                   </td>
                                                   <td>
-                                                    <div class="d-flex fw-bold">
+                                                    <div class="d-flex fw-bold label--text">
                                                       Industry Class
                                                     </div>
                                                   </td>
                                                 </tr>
                                                 <tr>
                                                   <td class="text-dark">
-                                                    <span class="text-dark fs-8"
+                                                    <span class="text-dark normal--text"
                                                       >xxxxxxx</span
                                                     >
                                                   </td>
                                                   <td>
-                                                    <span class="text-dark fs-8"
+                                                    <span class="text-dark normal--text"
                                                       >xxxxxx</span
                                                     >
                                                   </td>
@@ -1216,7 +1190,7 @@
 
                                                 <tr>
                                                   <td class="text-dark w-300px">
-                                                    <div class="d-flex fw-bold">
+                                                    <div class="d-flex fw-bold label--text">
                                                       Select other
                                                       industries(Sectors)of
                                                       activities
@@ -1227,7 +1201,7 @@
 
                                                 <tr>
                                                   <td class="text-dark w-300px">
-                                                    <div class="text-dark fs-8">
+                                                    <div class="text-dark normal--text">
                                                       Agriculture, Forestry and
                                                       Fisheries
                                                     </div>
@@ -1247,13 +1221,13 @@
                                               <tbody class="text-dark">
                                                 <tr>
                                                   <td class="text-dark w-300px">
-                                                    <div class="d-flex fw-bold">
+                                                    <div class="d-flex fw-bold label--text">
                                                       Location of main
                                                       activities(head office)
                                                     </div>
                                                   </td>
                                                   <td>
-                                                    <div class="d-flex fw-bold">
+                                                    <div class="d-flex fw-bold label--text">
                                                       Other Locations
                                                     </div>
                                                   </td>
@@ -1261,12 +1235,12 @@
 
                                                 <tr>
                                                   <td class="text-dark">
-                                                    <span class="text-dark fs-8"
+                                                    <span class="text-dark normal--text"
                                                       >Uganda</span
                                                     >
                                                   </td>
                                                   <td>
-                                                    <span class="text-dark fs-8"
+                                                    <span class="text-dark normal--text"
                                                       >Rwanda</span
                                                     >
                                                   </td>
@@ -1280,13 +1254,13 @@
                                               <tbody class="text-dark">
                                                 <tr>
                                                   <td class="text-dark w-300px">
-                                                    <div class="d-flex fw-bold">
+                                                    <div class="d-flex fw-bold label--text">
                                                       Geographical Regions
                                                     </div>
                                                   </td>
                                                   <td>
                                                     <span
-                                                      class="text-dark fs-8"
+                                                      class="text-dark normal--text"
                                                     >
                                                       <p>Sub Sahara Region</p>
                                                     </span>
@@ -1301,13 +1275,13 @@
                                               <tbody class="text-dark">
                                                 <tr>
                                                   <td class="text-dark w-300px">
-                                                    <div class="d-flex fw-bold">
+                                                    <div class="d-flex fw-bold label--text">
                                                       Main Product and Service
                                                     </div>
                                                   </td>
                                                   <td>
                                                     <span
-                                                      class="text-dark fs-8"
+                                                      class="text-dark normal--text"
                                                     >
                                                       <p>
                                                         Renewable Energy
@@ -1318,6 +1292,186 @@
                                                 </tr>
                                               </tbody>
                                             </table>
+
+                                            <div class="px-0">
+                                              <h2 class="fw-bolder fs-6">Products and services</h2>
+                                              <div class="separator my-3"></div>
+                                              <span class="text-dark normal--text">
+                                                <p>
+                                                  Industrial waste management Harnessing our expertise
+                                                  to drive your environmental transition Industrial
+                                                  waste management Harnessing our expertise to drive
+                                                  your environmental transitionIndustrial waste
+                                                  management Harnessing our expertise to drive your
+                                                  environmental transitionIndustrial waste management
+                                                  Harnessing our expertise to drive your environmental
+                                                  transition
+                                                </p>
+                                              </span>
+                                            </div>
+                      
+
+                                            <div class="table-responsive">
+                                              <!--begin::Table-->
+                                              <table
+                                                class="table align-start mb-0 fs-7"
+                                              >
+                                                <tbody class="text-dark">
+                                                  <tr>
+                                                    <td class="text-dark w-200px">
+                                                      <div
+                                                        class="d-flex fw-bold label--text"
+                                                      >
+                                                        
+                                                      Classification of products
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div
+                                                        class="d-flex fw-bold label--text"
+                                                      >
+                                                      Other Products and Services
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+    
+                                                  <tr>
+                                                    <td class="text-dark">
+                                                      <span
+                                                        class="text-dark normal--text"
+                                                        >Environmental transitionIndustrial waste management
+                                                      </span>
+                                                    </td>
+                                                    <td>
+                                                      <span
+                                                        class="text-dark normal--text"
+                                                        >Environmental transitionIndustrial waste management
+                                                      </span>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="text-dark">
+                                                      <div
+                                                        class="d-flex fw-bold label--text"
+                                                      >
+                                                      Preferred and target customers and clients
+                                                      </div>
+                                                    </td>
+                                                    <td>
+                                                      <div
+                                                        class="d-flex fw-bold label--text"
+                                                      >
+                                                      Preferred and target opportunities
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="text-dark">
+                                                      <span
+                                                        class="text-dark normal--text"
+                                                        >Energy Project Developers
+                                                      </span>
+                                                    </td>
+                                                    <td>
+                                                      <span
+                                                        class="text-dark normal--text"
+                                                        >Feasibility studies, ESIA, RAP, Transmission Studies
+                                                      </span>
+                                                    </td>
+                                                  </tr>
+    
+                                                  <tr>
+                                                    <td class="text-dark">
+                                                      <div
+                                                        class="d-flex fw-bold label--text"
+                                                      >
+                                                      Preferred and target locations
+                                                      </div>
+                                                    </td>
+                                                  </tr>
+    
+                                                  <tr>
+                                                    <td class="text-dark">
+                                                      <span
+                                                        class="text-dark normal--text"
+                                                        >EA
+                                                      </span>
+                                                    </td>
+                                                  </tr>
+
+                                                </tbody>
+                                              </table>
+                                              <!--end::Table-->
+                                            </div>
+                      
+                                            <div class="px-0 mt-10">
+                                              <h2 class="fw-bolder label--text">Key Facts and Figures</h2>
+                                              <div class="separator my-3"></div>
+                                              <span class="text-dark normal--text">
+                                                <p>Industrial waste management</p>
+                                              </span>
+                                            </div>
+                      
+                                            <div class="px-0">
+                                              <h2 class="fw-bolder label--text">
+                                                Additional Introduction Information
+                                              </h2>
+                                              <div class="separator my-3"></div>
+                                              <span class="text-dark normal--text">
+                                                <p>Industrial waste management</p>
+                                              </span>
+                                            </div>
+                      
+                                            <div class="d-flex flex-stack mt-10">
+                                              <!--begin::Section-->
+                                              <div class="table-responsive">
+                                                <h2 class="fw-bolder label--text">Documents</h2>
+                                                <!--begin::Table-->
+                                                <table class="table align-start mb-0 fs-7">
+                                                  <tbody class="text-dark">
+                                                    <tr>
+                                                      <td class="text-dark w-300px">
+                                                        <div class="d-flex fw-bold label--text">
+                                                          Intro Document 1
+                                                        </div>
+                                                      </td>
+                                                      <td>
+                                                        <span class="text-dark normal--text"
+                                                          >Attached Document 1</span
+                                                        >
+                                                      </td>
+                                                    </tr>
+                      
+                                                    <tr>
+                                                      <td class="text-dark">
+                                                        <div class="d-flex fw-bold label--text">
+                                                          Intro Document 2
+                                                        </div>
+                                                      </td>
+                                                      <td>
+                                                        <span class="text-dark normal--text"
+                                                          >Attached Document 2</span
+                                                        >
+                                                      </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td class="text-dark">
+                                                        <div class="d-flex fw-bold label--text">
+                                                          Intro Document 3
+                                                        </div>
+                                                      </td>
+                                                      <td>
+                                                        <span class="text-dark normal--text"
+                                                          >Attached Document 3</span
+                                                        >
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                                <!--end::Table-->
+                                              </div>
+                                              <!--end::Section-->
+                                            </div>
 
                                             <!--end::Table-->
                                           </div>
@@ -1340,7 +1494,7 @@
                       <div
                         class="col-lg-4 col-md-4 col-xxl-4 col-xl-4 pe-lg-16 mb-lg-0"
                       >
-                        <div class="d-flex flex-center flex-shrink-0">
+                        <div class="d-flex flex-center flex-shrink-0 d-none d-sm-block">
                           <img
                             alt="Logo"
                             src="assets/media/dashboard/onedata.jpg"
@@ -1434,165 +1588,6 @@
                       </div>
                     </div>
 
-                    <div class="ps-lg-16 mb-10 px-8">
-                      <div class="px-0">
-                        <h2 class="fw-bolder fs-6">Products and services</h2>
-                        <div class="separator my-3"></div>
-                        <span class="text-dark fs-8">
-                          <p>
-                            Industrial waste management Harnessing our expertise
-                            to drive your environmental transition Industrial
-                            waste management Harnessing our expertise to drive
-                            your environmental transitionIndustrial waste
-                            management Harnessing our expertise to drive your
-                            environmental transitionIndustrial waste management
-                            Harnessing our expertise to drive your environmental
-                            transition
-                          </p>
-                        </span>
-                      </div>
-
-                      <div class="table-responsive">
-                        <!--begin::Table-->
-                        <table class="table align-start mb-0 fs-7">
-                          <tbody class="text-dark">
-                            <tr>
-                              <td class="text-dark w-300px">
-                                <div class="d-flex fw-bold">
-                                  Classification of products
-                                </div>
-                              </td>
-                              <td>
-                                <div class="text-dark fs-8">
-                                  Environmental transitionIndustrial waste
-                                  management
-                                </div>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td class="text-dark">
-                                <span class="d-flex fw-bold"
-                                  >Other Products and Services</span
-                                >
-                              </td>
-                              <td>
-                                <span class="text-dark fs-8"
-                                  >environmental transitionIndustrial waste
-                                  management</span
-                                >
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="text-dark">
-                                <div class="d-flex fw-bold">
-                                  Preferred and target customers and clients
-                                </div>
-                              </td>
-                              <td>
-                                <div class="text-dark fs-8">
-                                  Energy Project Developers
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="text-dark">
-                                <span class="d-flex fw-bold"
-                                  >Preferred and target opportunities</span
-                                >
-                              </td>
-                              <td>
-                                <span class="text-dark fs-8"
-                                  >Feasibility studies, ESIA, RAP, Transmission
-                                  Studies
-                                </span>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td class="text-dark w-300px">
-                                <div class="d-flex fw-bold">
-                                  Preferred and target locations
-                                </div>
-                              </td>
-                              <td>
-                                <div class="text-dark fs-8">EA</div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <!--end::Table-->
-                      </div>
-
-                      <div class="px-0 mt-10">
-                        <h2 class="fw-bolder fs-6">Key Facts and Figures</h2>
-                        <div class="separator my-3"></div>
-                        <span class="text-dark fs-8">
-                          <p>Industrial waste management</p>
-                        </span>
-                      </div>
-
-                      <div class="px-0">
-                        <h2 class="fw-bolder fs-6">
-                          Additional Introduction Information
-                        </h2>
-                        <div class="separator my-3"></div>
-                        <span class="text-dark fs-8">
-                          <p>Industrial waste management</p>
-                        </span>
-                      </div>
-
-                      <div class="d-flex flex-stack mt-10">
-                        <!--begin::Section-->
-                        <div class="table-responsive">
-                          <h2 class="fw-bolder fs-6">Documents</h2>
-                          <!--begin::Table-->
-                          <table class="table align-start mb-0 fs-7">
-                            <tbody class="text-dark">
-                              <tr>
-                                <td class="text-dark w-300px">
-                                  <div class="d-flex fw-bold">
-                                    Intro Document 1
-                                  </div>
-                                </td>
-                                <td>
-                                  <span class="text-dark fs-8"
-                                    >Attached Document 1</span
-                                  >
-                                </td>
-                              </tr>
-
-                              <tr>
-                                <td class="text-dark">
-                                  <div class="d-flex fw-bold">
-                                    Intro Document 2
-                                  </div>
-                                </td>
-                                <td>
-                                  <span class="text-dark fs-8"
-                                    >Attached Document 2</span
-                                  >
-                                </td>
-                              </tr>
-                              <tr>
-                                <td class="text-dark">
-                                  <div class="d-flex fw-bold">
-                                    Intro Document 3
-                                  </div>
-                                </td>
-                                <td>
-                                  <span class="text-dark fs-8"
-                                    >Attached Document 3</span
-                                  >
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                          <!--end::Table-->
-                        </div>
-                        <!--end::Section-->
-                      </div>
-                    </div>
                   </div>
                   <!--end::Products-->
                 </div>
