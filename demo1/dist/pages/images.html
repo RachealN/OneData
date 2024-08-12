@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <base href="../" />
-    <title>Project Introduction</title>
+    <title>Images</title>
     <meta charset="utf-8" />
     <meta
       name="description"
@@ -39,6 +39,14 @@
     />
     <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/images.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    
   </head>
 
   <body
@@ -882,7 +890,7 @@
                         <!--begin:Menu link-->
                         <a
                           class="menu-link"
-                          href="../../demo1/dist/pages/images.html"
+                          href="../../demo1/dist/main-dashboard.html"
                         >
                           <svg
                             width="15"
@@ -944,558 +952,170 @@
             class="app-main flex-column flex-row-fluid py-10"
             id="kt_app_main"
           >
-            <!--begin::Content wrapper-->
             <div class="d-flex flex-column flex-column-fluid">
               <div id="kt_app_content" class="app-content flex-column-fluid">
                 <div
                   id="kt_app_content_container"
                   class="app-container container-xxl"
                 >
-                  <div class="card card-flush">
-                    <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
-                      <div id="kt_app_toolbar_container" class="app-container container-fluid d-flex flex-stack">
-                        <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
-
-                          <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
-                            <li class="breadcrumb-item text-muted">
-                              <a href="../../demo1/dist/index.html" class="badge rounded-4 mb-6 m-2" style="background-color: #c4e3ed">Projects</a>
-                            </li>
-                           
-                            <li>
-                              <p class="fs-4 fw-bold text-dark">Introduction</p></li>
-                          </ul>
+                <div class="container main-tab-content">
+                    <div class="video-accordion-wrapper">
+                        <div class="video-accordion-head">
+                            <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
+                              <li class="breadcrumb-item text-muted">
+                                <a href="../../demo1/dist/index.html" class="badge rounded-4 mb-6 m-2" style="background-color: #c4e3ed">Projects</a>
+                              </li>
+                              <li>
+                                <p class="fs-4 fw-bold text-dark">Images</p></li>
+                            </ul>
                         </div>
-                        <div class="d-flex align-items-center gap-2 gap-lg-3">
-                          <a href="#" class="btn btn-sm fs-5" style="background-color: #f4f4f4">
-                            <svg
-                            width="13"
-                            height="15"
-                            viewBox="0 0 15 20"
-                            fill="none"
-                            class="mx-2"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M2.18201 19.386C1.72205 19.386 1.33801 19.232 1.02905 18.924C0.720947 18.615 0.567017 18.231 0.567017 17.771V8.00198C0.567017 7.54099 0.720947 7.15698 1.02905 6.84898C1.33801 6.53998 1.72205 6.38599 2.18201 6.38599H4.29797V7.38599H2.18201C2.02795 7.38599 1.88696 7.44998 1.75903 7.57898C1.63098 7.70699 1.56702 7.84799 1.56702 8.00198V17.771C1.56702 17.925 1.63098 18.066 1.75903 18.194C1.88696 18.322 2.02795 18.386 2.18201 18.386H12.951C13.105 18.386 13.246 18.322 13.375 18.194C13.5031 18.066 13.567 17.925 13.567 17.771V8.00198C13.567 7.84799 13.5031 7.70699 13.375 7.57898C13.246 7.44998 13.105 7.38599 12.951 7.38599H10.8361V6.38599H12.951C13.412 6.38599 13.796 6.53998 14.104 6.84898C14.413 7.15698 14.567 7.54099 14.567 8.00198V17.771C14.567 18.231 14.413 18.615 14.104 18.924C13.796 19.232 13.412 19.386 12.951 19.386H2.18201ZM7.06702 12.886V1.99998L4.96704 4.09999L4.25903 3.38599L7.56702 0.0789795L10.875 3.38599L10.167 4.09999L8.06702 1.99998V12.886H7.06702Z"
-                              fill="black"
-                            />
-                          </svg>Share</a>
-                          <a href="#" class="btn btn-sm btn-primary fs-6 text-white">Edit Project</a>
+                        <div id="collapseOne" >
+                          <div class="row slider responsive">
+                            <div class="col-md-4 my-3">
+
+                              <div class="overlay overlay-show">
+                                <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-200px"
+                                  style="background-image:url('assets/media/images/debt.jpg')">
+                                </div>
+                                <div class="overlay-layer rounded bg-black"
+                                  style="opacity: 0.1">
+                                </div>
+                              </div>
+                              
+                            </div>
+                            <div class="col-md-4 my-3">
+                              <div class="overlay overlay-show">
+                                <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-200px"
+                                  style="background-image:url('assets/media/images/debt.jpg')">
+                                </div>
+                                <div class="overlay-layer rounded bg-black"
+                                  style="opacity: 0.1">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4 my-3">
+                              <div class="overlay overlay-show">
+                                <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-200px"
+                                  style="background-image:url('assets/media/images/debt.jpg')">
+                                </div>
+                                <div class="overlay-layer rounded bg-black"
+                                  style="opacity: 0.1">
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-md-4 my-3">
+                              <div class="overlay overlay-show">
+                                <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-200px"
+                                  style="background-image:url('assets/media/images/debt.jpg')">
+                                </div>
+                                <div class="overlay-layer rounded bg-black"
+                                  style="opacity: 0.1">
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-md-4 my-3">
+                              <div class="overlay overlay-show">
+                                <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-200px"
+                                  style="background-image:url('assets/media/images/debt.jpg')">
+                                </div>
+                                <div class="overlay-layer rounded bg-black"
+                                  style="opacity: 0.1">
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-md-4 my-3">
+                              <div class="overlay overlay-show">
+                                <div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-200px"
+                                  style="background-image:url('assets/media/images/debt.jpg')">
+                                </div>
+                                <div class="overlay-layer rounded bg-black"
+                                  style="opacity: 0.1">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="video-accordion-wrapper">
+                      <div class="video-accordion-head" data-toggle="collapse" data-target="#collapseTwo">
+                        <p class="fs-4 fw-bold text-dark">Videos</p></li>
+                        
+                      </div>
+                      <div id="collapseTwo" class="collapse show">
+                        <div class="slider responsive">
+                          <div class="video-thumbnail" data-video-url="https://www.youtube.com/embed/7PIji8OubXU">
+                            <img src="assets/media/images/grant.jpg" alt="Video Thumbnail">
+                            <div class="play-icon">
+                              <i class="fa fa-play-circle" style="font-size:48px;color:black"></i>
+                            </div>
+                          </div>
+
+                          <div class="video-thumbnail" data-video-url="https://www.youtube.com/embed/7PIji8OubXU">
+                            <img src="assets/media/images/grant.jpg" alt="Video Thumbnail">
+                            <div class="play-icon">
+                              <i class="fa fa-play-circle" style="font-size:48px;color:black"></i>
+                            </div>
+                          </div>
+
+                          <div class="video-thumbnail" data-video-url="https://www.youtube.com/embed/7PIji8OubXU">
+                            <img src="assets/media/images/grant.jpg" alt="Video Thumbnail">
+                            <div class="play-icon">
+                              <i class="fa fa-play-circle" style="font-size:48px;color:black"></i>
+                            </div>
+                          </div>
+
+
+                          <div class="video-thumbnail" data-video-url="https://www.youtube.com/embed/7PIji8OubXU">
+                            <img src="assets/media/images/grant.jpg" alt="Video Thumbnail">
+                            <div class="play-icon">
+                              <i class="fa fa-play-circle" style="font-size:48px;color:black"></i>
+                            </div>
+                          </div>
+
+
+                          <div class="video-thumbnail" data-video-url="https://www.youtube.com/embed/7PIji8OubXU">
+                            <img src="assets/media/images/grant.jpg" alt="Video Thumbnail">
+                            <div class="play-icon">
+                              <i class="fa fa-play-circle" style="font-size:48px;color:black"></i>
+                            </div>
+                          </div>
+
+                          <div class="video-thumbnail" data-video-url="https://www.youtube.com/embed/7PIji8OubXU">
+                            <img src="assets/media/images/grant.jpg" alt="Video Thumbnail">
+                            <div class="play-icon">
+                              <i class="fa fa-play-circle" style="font-size:48px;color:black"></i>
+                            </div>
+                          </div>
+
                         </div>
                       </div>
                     </div>
-                      <div
-                        class="col-lg-12 col-md-12 col-xxl-12 col-xl-12 px-12"
-                      >
-                        <div class="position-relative">
-                          <!--begin::Overlay-->
-                          <div class="overlay overlay-show">
-                            <!--begin::Image-->
-                            <div
-                              class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-375px w-1280px"
-                              style="
-                                background-image: url('assets/media/dashboard/pic1.jpg');
-                              "
-                            ></div>
-                            <!--end::Image-->
-                            <!--begin::layer-->
-                            <div
-                              class="overlay-layer rounded bg-black"
-                              style="opacity: 0.4"
-                            ></div>
-                            <!--end::layer-->
-                          </div>
-                          <div
-                            class="position-absolute text-white mb-2 ms-4 bottom-0"
-                          >
-                            <div
-                              class="symbol symbol-60px symbol-group"
-                              data-bs-toggle="tooltip"
-                              title="Michael Eberon"
-                            >
-                            </div>
-                          </div>
-                          <!--end::Overlay-->
-                        </div>
-                      </div>
-
-                      <div class="row">
-                        <div
-                          class="col-lg-8 col-md-8 col-xxl-8 col-xl-8 pe-lg-12"
-                        >
-                          <div class="modal-body">
-                            <div
-                              class="app-main flex-column flex-row-fluid py-4"
-                              id="kt_app_main"
-                            >
-                              <div class="d-flex flex-column flex-column-fluid">
-                                <div
-                                  id="kt_app_content"
-                                  class="app-content flex-column-fluid"
-                                >
-                                  <div
-                                    id="kt_app_content_container"
-                                    class="app-container container-xxl"
-                                  >
-                                    <div
-                                      class="m-0 rounded-2 px-5 py-4"
-                                      style="background-color: #fffeeb"
-                                    >
-                                      <div class="d-flex align-items-center collapsible py-3 toggle mb-0" data-bs-toggle="collapse" data-bs-target="#kt_job_4_1">
-                                        <div class="btn btn-sm btn-icon mw-20px btn-active-color-primary me-5">
-                                          <i class="ki-duotone ki-minus-square toggle-on text-primary fs-1">
-                                            <span class="path1"></span>
-                                            <span class="path2"></span>
-                                          </i>
-                                          <i class="ki-duotone ki-plus-square toggle-off fs-1">
-                                            <span class="path1"></span>
-                                            <span class="path2"></span>
-                                            <span class="path3"></span>
-                                          </i>
-                                        </div>
-                                        <h4 class="label--text cursor-pointer mb-0">Important Notice</h4>
-                                      </div>
-                                      
-                                      <div id="kt_job_4_1" class="collapse show fs-6 ms-1 cursor-pointer">
-                                          <p class="normal--text">
-                                              This Project Information Memorandum (PIM)
-                                        presented on the One Data platform is for
-                                        the proposed Nyamabuye Hydropower Project
-                                        in Uganda (“the Project”). This PIM has
-                                        been prepared and approved for and on
-                                        behalf of the Elemental Energy Limited
-                                        (EEL) based in Uganda. This PIM is issued
-                                        strictly for information purposes only for
-                                        persons and/or organizations that may be
-                                        interested in the planning and development
-                                        of the project. This PIM does not purport
-                                        to be all inclusive or to contain all the
-                                        information that any person or
-                                        organization may require to make decisions
-                                        pertaining to the project. This PIM is
-                                        intended solely to enhance the
-                                        availability of project information. The
-                                        data and dates presented should be
-                                        considered as estimates only. For any
-                                        decision-making information and
-                                        disclosures regarding the project, please
-                                        refer to and/or contact Elemental Energy
-                                        Limited directly prior to the reliance on
-                                        the information presented in the PIM. This
-                                        PIM is subject to the policies, terms and
-                                        conditions of Elemental Energy Limited.
-                                          </p>
-                                      </div>
-                                    </div>
-                                    <!--begin::Products-->
-                                    <div class="card card-flush">
-                                      <div class="row">
-                                        <!--begin::Col-->
-                                        <div
-                                          class="col-lg-12 col-md-12 col-xxl-12 col-xl-12"
-                                        >
-
-                                        <div class="d-flex flex-column flex-md-row justify-content-right align-items-start mt-8">
-                                            <h2 class="p-2 label--text w-350px">Project Full Name</h2>
-                                            <div class="p-2 normal--text">Mpigi Solar Power Project</div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row justify-content-right align-items-start  mb-3">
-                                            <h2 class="p-2 label--text w-350px">Project Short Name</h2>
-                                            <div class="p-2 normal--text">Mpigi Solar</div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Project Sponsor Name</h2>
-                                            <div class="p-2 normal--text">Mpigi Power Company Limited</div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Sponsor Short Name</h2>
-                                            <div class="p-2 normal--text">MPC</div>
-                                          </div>
-
-
-  
-                                          <div class="p-2">
-                                            <h2 class="fw-bolder mt-3 label--text">
-                                              Brief Description of Project
-                                            </h2>
-                                            <div class="separator my-3"></div>
-                                            <span class="text-dark normal--text">
-                                              <p>
-                                                Short and Long luxury cruise
-                                                experiemces along lake Victoria
-                                              </p>
-                                            </span>
-                                          </div>
-                                          
-                                         
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3 mt-8">
-                                            <h2 class="p-2 label--text w-350px">Industry (Sector) </h2>
-                                            <div class="p-2 normal--text">#REF!</div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Division (Sub-Sector) </h2>
-                                            <div class="p-2 normal--text">#REF!</div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Industry Group </h2>
-                                            <div class="p-2 normal--text">#REF!</div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Industry Class</h2>
-                                            <div class="p-2 normal--text">#REF!</div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Segment </h2>
-                                            <div class="p-2 normal--text">Electricity Generation and Distribution </div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Primary Energy Resource  </h2>
-                                            <div class="p-2 normal--text">Solar</div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Other Energy Resources </h2>
-                                            <div class="p-2 normal--text">none </div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Primary Technology </h2>
-                                            <div class="p-2 normal--text">Solar Photovoltaic (Solar PV)</div>
-                                          </div>
-
-  
-                                          <div class="p-2">
-                                            <h2 class="fw-bolder mt-3 label--text">
-                                                Brief Description of Primary Technology 		
-                                            </h2>
-                                            <div class="separator my-3"></div>
-                                            <span class="text-dark normal--text">
-                                              <p>
-                                                Use of ground mounted solar PV Panels to  generate electrcity using solat iradiation </p>
-                                            </span>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3 mt-8">
-                                            <h2 class="p-2 label--text w-350px">Other Technologies </h2>
-                                            <div class="p-2 normal--text">none </div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Units of Installed Capacity  </h2>
-                                            <div class="p-2 normal--text">Mega Watt (MW)</div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Installed Capacity (power units acronym eg MW) </h2>
-                                            <div class="p-2 normal--text">  5.0 </div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Location (Country )</h2>
-                                            <div class="p-2 normal--text">  5.0 </div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Location within country </h2>
-                                            <div class="p-2 normal--text">Mpigi District  </div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Other countries  </h2>
-                                            <div class="p-2 normal--text">None </div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px"> Geographic Region(s) </h2>
-                                            <div class="p-2 normal--text">East Asia and Pacific (EAP) </div>
-                                          </div>
-
-                                          <div class="p-2">
-                                            <h2 class="mt-3 label--text">
-                                              Project Categories 		
-                                            </h2>
-                                            <div class="separator my-3"></div>
-                                            <span class="text-dark normal--text">
-                                              <p>
-                                                Advisory Project - Is your project looking to procure advisory or consultancy services? (e.g. planning, engineering, legal or audit) </p>
-                                            </span>
-                                          </div>
-
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Type of Project  </h2>
-                                            <div class="p-2 normal--text">Greenfield project (creating new project)</div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Project development model </h2>
-                                            <div class="p-2 normal--text">Build, Operate and Own (BOO)</div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Financial currency for project transactions </h2>
-                                            <div class="p-2 normal--text">US$</div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Project investment budget/cost  (financial currency)</h2>
-                                            <div class="p-2 normal--text">5,000,000</div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Investment amount already mobilized (financial currency) </h2>
-                                            <div class="p-2 normal--text">500,000 </div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Investment amount that still needs to be mobilized (financial currency)   </h2>
-                                            <div class="p-2 normal--text">4,500,000</div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Is this project looking for investment (Equity) from Equity Investors?</h2>
-                                            <div class="p-2 normal--text">Yes </div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Is the project looking for Debt (Loans) Financing from Financial Institutions? </h2>
-                                            <div class="p-2 normal--text">Yes</div>
-                                          </div>
-
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Is the project looking for Grant Finance from Grant Providers? </h2>
-                                            <div class="p-2 normal--text">Yes</div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Project Status  </h2>
-                                            <div class="p-2 normal--text">Active (ongoing)</div>
-                                          </div>
-
-                                          <div class="p-2 mt-10">
-                                            <h2 class="fw-bolder mt-3 label--text">
-                                                Completed Activities 				
-                                            </h2>
-                                            <div class="separator my-3"></div>
-                                            <span class="text-dark normal--text">
-                                              <p>
-                                                Feasibility studies, Environmental & Social Impact Assessment				
-                                              </p>
-                                            </span>
-                                          </div>
-                                          <div class="p-2">
-                                            <h2 class="fw-bolder mt-3 label--text">
-                                                Ongoing Activities 				
-                                            </h2>
-                                            <div class="separator my-3"></div>
-                                            <span class="text-dark normal--text">
-                                              <p>
-                                                Application for License to Generate and sale electricity 				
-                                              </p>
-                                            </span>
-                                          </div>
-                                          <div class="p-2">
-                                            <h2 class="fw-bolder mt-3 label--text">
-                                                Outstanding Activities 			
-                                            </h2>
-                                            <div class="separator my-3"></div>
-                                            <span class="text-dark normal--text">
-                                              <p>
-                                                Financial Close 				
-                                              </p>
-                                            </span>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Commencement Date </h2>
-                                            <div class="p-2 normal--text">1st March 2021</div>
-                                          </div>
-
-                                          <div class="d-flex flex-column flex-md-row  justify-content-right align-items-start mb-3">
-                                            <h2 class="p-2 label--text w-350px">Proposed Completion Date </h2>
-                                            <div class="p-2 normal--text">1st March 2023</div>
-                                          </div>
-
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-  
-                        <div
-                          class="col-lg-4 col-md-4 col-xxl-4 col-xl-4 pe-lg-12 mb-lg-0"
-                        >
-                          <div class="d-flex flex-center flex-shrink-0 d-none d-sm-block">
-                            <img
-                              alt="Logo"
-                              src="assets/media/dashboard/onedata.jpg"
-                              class="mw-50px mw-lg-200px"
-                            />
-                          </div>
-                          <div class="border bg-gray-100 rounded">
-                            <div class="card-body d-flex flex-column px-6">
-                              <a
-                                class="btn btn-sm btn-primary text-white fs-4 mb-12"
-                                href="../../demo1/dist/pages/project-contact-information.html"
-                                >Project Contact Information
-                              </a>
-  
-                              <div class="d-flex flex-column">
-                                <span class="text-primary fw-bold label--text">
-                                  Project Contact Person(s)
-                                </span>
-                                <span class="normal">John Doe</span>
-                                <div class="separator my-5"></div>
-                                <!--end::Section-->
-                              </div>
-  
-                              <div class="d-flex flex-column">
-                                <span class="text-primary fw-bold label--text"
-                                  >Telephone(s)</span
-                                >
-                                <span class="normal"
-                                  >+256778923345 or +256702345698</span
-                                >
-                                <div class="separator my-5"></div>
-                                <!--end::Section-->
-                              </div>
-
-                              <div class="d-flex flex-column">
-                                <span class="text-primary fw-bold label--text"
-                                  >Mobile number(s)</span
-                                >
-                                <span class="normal--text"
-                                  >+256778923345 or +256702345698</span
-                                >
-                                <div class="separator my-5"></div>
-                                <!--end::Section-->
-                              </div>
-  
-                              <div class="d-flex flex-column">
-                                <span class="text-primary fw-bold label--text"
-                                  >Email(s)</span
-                                >
-                                <span class="normal">John@gmail.com</span>
-                                <div class="separator my-5"></div>
-                                <!--end::Section-->
-                              </div>
-  
-                              <div class="d-flex flex-column">
-                                <span class="text-primary fw-bold label--text"
-                                  >Website(s)</span
-                                >
-                                <span class="normal"
-                                  >www.helloworld.com</span
-                                >
-                                <div class="separator my-5"></div>
-                                <!--end::Section-->
-                              </div>
-  
-                              <div class="d-flex flex-column">
-                                <span class="text-primary fw-bold label--text"
-                                  >Social Media</span
-                                >
-                                <div class="d-flex">
-                                  <a class="badge normal--text rounded-4 mb-4 px-4"
-                                    >Twitter</a
-                                  >
-                                  <a class="badge normal--text rounded-4 mb-4 px-4"
-                                    >Linkedin</a
-                                  >
-                                </div>
-                              </div>
-                            </div>
-  
-                            <div class="card-body d-flex flex-column px-6">
-                              <a
-                                class="btn btn-sm btn-primary text-white fs-4 mb-12"
-                                href="../../demo1/dist/pages/project-contact-information.html"
-                                >General Contact Information
-                              </a>
-  
-                              <div class="d-flex flex-column">
-                                <span class="text-primary fw-bold label--text">
-                                  Contact person(s)
-                                </span>
-                                <span class="normal">John Doe</span>
-                                <div class="separator my-5"></div>
-                                <!--end::Section-->
-                              </div>
-  
-                              <div class="d-flex flex-column">
-                                <span class="text-primary fw-bold label--text"
-                                  >Telephone(s)</span
-                                >
-                                <span class="normal"
-                                  >+256778923345 or +256702345698</span
-                                >
-                                <div class="separator my-5"></div>
-                                <!--end::Section-->
-                              </div>
-
-                              <div class="d-flex flex-column">
-                                <span class="text-primary fw-bold label--text"
-                                  >Mobile number(s)</span
-                                >
-                                <span class="normal--text"
-                                  >+256778923345 or +256702345698</span
-                                >
-                                <div class="separator my-5"></div>
-                                <!--end::Section-->
-                              </div>
-  
-                              <div class="d-flex flex-column">
-                                <span class="text-primary fw-bold label--text"
-                                  >Email(s)</span
-                                >
-                                <span class="normal">John@gmail.com</span>
-                                <div class="separator my-5"></div>
-                                <!--end::Section-->
-                              </div>
-  
-                              <div class="d-flex flex-column">
-                                <span class="text-primary fw-bold label--text"
-                                  >Website(s)</span
-                                >
-                                <span class="normal"
-                                  >www.helloworld.com</span
-                                >
-                                <div class="separator my-5"></div>
-                                <!--end::Section-->
-                              </div>
-  
-                              <div class="d-flex flex-column">
-                                <span class="text-primary fw-bold label--text"
-                                  >Social Media</span
-                                >
-                                <div class="d-flex">
-                                  <a class="badge normal--text rounded-4 mb-4 px-4"
-                                    >Twitter</a
-                                  >
-                                  <a class="badge normal--text rounded-4 mb-4 px-4"
-                                    >Linkedin</a
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                 </div>
-              </div>
+
+                <!-- Modal for Images -->
+                <div id="imageModal" class="modal">
+                  <span class="close">&times;</span>
+                  <img class="modal-content" id="expandedImg">
+                  <div id="caption"></div>
+                </div>
+                
+            
+                <!-- Modal for Video Playback -->
+                <div class="modal fade" id="videoModal" tabindex="-1" role="dialog">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <div class="modal-body">
+                        <iframe id="videoFrame" width="100%" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
             </div>
             <div id="kt_app_footer" class="app-footer">
               <div
@@ -1535,9 +1155,13 @@
         </div>
       </div>
     </div>
-    <script>
-      var hostUrl = "assets/";
-    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"
+    ></script>
+    <script src="assets/js/images.js"></script>
     <script src="assets/plugins/global/plugins.bundle.js"></script>
     <script src="assets/js/scripts.bundle.js"></script>
     <script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
