@@ -91,6 +91,14 @@
     color: white;
     padding: 10px 0;
   }
+  .img-caption{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: black;
+  }
 
   .modal {
     display: none;
